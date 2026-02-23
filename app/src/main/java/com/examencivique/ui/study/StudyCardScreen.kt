@@ -1,7 +1,11 @@
 package com.examencivique.ui.study
 
 import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
@@ -16,7 +20,10 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -142,6 +149,17 @@ private fun OptionButton(
     val isSelected = selectedIndex == index
     val isCorrect  = index == question.correctIndex
 
+    // Bouncy press animation
+    var isPressed by remember { mutableStateOf(false) }
+    val scale by animateFloatAsState(
+        targetValue = if (isPressed) 0.96f else 1f,
+        animationSpec = spring(
+            dampingRatio = Spring.DampingRatioMediumBouncy,
+            stiffness = Spring.StiffnessLow
+        ),
+        label = "scale"
+    )
+
     val bgColor by animateColorAsState(
         when {
             !showAnswer -> if (isSelected) FrenchBlue.copy(alpha = 0.1f) else MaterialTheme.colorScheme.surfaceVariant
@@ -160,48 +178,93 @@ private fun OptionButton(
         }, label = "optBorder"
     )
 
-    val letterBg = when {
-        !showAnswer -> if (isSelected) FrenchBlue else Color.Gray.copy(alpha = 0.4f)
-        isCorrect   -> Color(0xFF2E7D32)
-        isSelected  -> Color(0xFFC62828)
-        else        -> Color.Gray.copy(alpha = 0.4f)
-    }
+    val letterBg by animateColorAsState(
+        when {
+            !showAnswer -> if (isSelected) FrenchBlue else Color.Gray.copy(alpha = 0.4f)
+            isCorrect   -> Color(0xFF2E7D32)
+            isSelected  -> Color(0xFFC62828)
+            else        -> Color.Gray.copy(alpha = 0.4f)
+        }, label = "letterBg"
+    )
 
-    OutlinedCard(
-        onClick = onClick,
-        enabled = !showAnswer,
-        shape = RoundedCornerShape(12.dp),
-        border = CardDefaults.outlinedCardBorder().copy(
-            brush = androidx.compose.ui.graphics.SolidColor(borderColor),
-            width = 2.dp
-        ),
-        colors = CardDefaults.outlinedCardColors(containerColor = bgColor)
+    // Bottom shadow color for Duolingo-style "raised" look
+    val shadowColor by animateColorAsState(
+        when {
+            !showAnswer -> if (isSelected) FrenchBlue.copy(alpha = 0.3f) else Color.Gray.copy(alpha = 0.15f)
+            isCorrect   -> Color(0xFF2E7D32).copy(alpha = 0.3f)
+            isSelected  -> Color(0xFFC62828).copy(alpha = 0.3f)
+            else        -> Color.Gray.copy(alpha = 0.15f)
+        }, label = "shadow"
+    )
+
+    val elevation by animateFloatAsState(
+        targetValue = if (isPressed || (showAnswer && !isCorrect && !isSelected)) 0f else if (isSelected) 6f else 3f,
+        label = "elev"
+    )
+
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .graphicsLayer {
+                scaleX = scale
+                scaleY = scale
+            }
+            .shadow(elevation.dp, RoundedCornerShape(16.dp), spotColor = shadowColor)
+            .then(
+                if (!showAnswer) Modifier.pointerInput(Unit) {
+                    detectTapGestures(
+                        onPress = {
+                            isPressed = true
+                            tryAwaitRelease()
+                            isPressed = false
+                            onClick()
+                        }
+                    )
+                } else Modifier
+            ),
+        shape = RoundedCornerShape(16.dp),
+        colors = CardDefaults.cardColors(containerColor = bgColor),
+        border = if (borderColor != Color.Transparent)
+            CardDefaults.outlinedCardBorder().copy(
+                brush = androidx.compose.ui.graphics.SolidColor(borderColor),
+                width = 2.5.dp
+            ) else null
     ) {
         Row(
-            modifier = Modifier.padding(14.dp),
+            modifier = Modifier.padding(16.dp),
             verticalAlignment = Alignment.Top,
-            horizontalArrangement = Arrangement.spacedBy(12.dp)
+            horizontalArrangement = Arrangement.spacedBy(14.dp)
         ) {
             Box(
-                modifier = Modifier.size(26.dp).clip(CircleShape).background(letterBg),
+                modifier = Modifier.size(30.dp).clip(CircleShape).background(letterBg),
                 contentAlignment = Alignment.Center
             ) {
-                Text(letter, color = Color.White, fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                Text(letter, color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.Bold)
             }
 
             Column(modifier = Modifier.weight(1f)) {
-                Text(text, fontSize = 14.sp)
+                Text(text, fontSize = 15.sp, fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Normal)
                 if (textZh != null) {
                     Text(textZh, fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             }
 
             if (showAnswer && (isCorrect || isSelected)) {
+                val iconScale by animateFloatAsState(
+                    targetValue = 1f,
+                    animationSpec = spring(
+                        dampingRatio = Spring.DampingRatioMediumBouncy,
+                        stiffness = Spring.StiffnessMedium
+                    ),
+                    label = "iconPop"
+                )
                 Icon(
                     if (isCorrect) Icons.Filled.CheckCircle else Icons.Filled.Cancel,
                     contentDescription = null,
                     tint = if (isCorrect) Color(0xFF2E7D32) else Color(0xFFC62828),
-                    modifier = Modifier.size(20.dp)
+                    modifier = Modifier
+                        .size(24.dp)
+                        .graphicsLayer { scaleX = iconScale; scaleY = iconScale }
                 )
             }
         }

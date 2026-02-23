@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import com.examencivique.data.repository.AuthRepository
 import com.examencivique.data.repository.LanguageManager
 import com.examencivique.data.repository.ProgressRepository
 import com.examencivique.data.repository.QuestionRepository
@@ -16,6 +17,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
+        val authRepo = AuthRepository(applicationContext)
         val questionRepo = QuestionRepository(applicationContext)
         val progressRepo = ProgressRepository(applicationContext)
         val languageManager = LanguageManager(applicationContext)
@@ -23,6 +25,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ExamenCiviqueTheme {
                 AppNavigation(
+                    authRepo = authRepo,
                     questionRepo = questionRepo,
                     progressRepo = progressRepo,
                     languageManager = languageManager

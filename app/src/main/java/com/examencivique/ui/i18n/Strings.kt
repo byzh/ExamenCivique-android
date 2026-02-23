@@ -120,6 +120,37 @@ interface Strings {
     val levelCspDesc: String
     val levelCrName: String
     val levelCrDesc: String
+
+    // Auth
+    val authLogin: String
+    val authRegister: String
+    val authEmail: String
+    val authPassword: String
+    val authConfirmPassword: String
+    val authLoginButton: String
+    val authRegisterButton: String
+    val authGoogleSignIn: String
+    val authForgotPassword: String
+    val authNoAccount: String
+    val authHasAccount: String
+    val authLogout: String
+    val authLogoutConfirmTitle: String
+    val authLogoutConfirmBody: String
+    val authForgotPasswordTitle: String
+    val authSendResetEmail: String
+    val authResetEmailSent: String
+    val authOr: String
+    // Auth errors
+    val authErrorInvalidEmail: String
+    val authErrorWrongPassword: String
+    val authErrorUserNotFound: String
+    val authErrorEmailInUse: String
+    val authErrorWeakPassword: String
+    val authErrorNetwork: String
+    val authErrorTooManyRequests: String
+    val authErrorPasswordMismatch: String
+    val authErrorGeneric: String
+    fun authErrorMap(code: String): String
 }
 
 object FrenchStrings : Strings {
@@ -222,6 +253,45 @@ object FrenchStrings : Strings {
     override val levelCspDesc = "Pour le renouvellement en carte de séjour pluriannuelle ou pour la carte de résident"
     override val levelCrName = "Carte de Résident / Naturalisation"
     override val levelCrDesc = "Pour la carte de résident ou la demande de naturalisation"
+
+    override val authLogin = "Connexion"
+    override val authRegister = "Inscription"
+    override val authEmail = "Adresse e-mail"
+    override val authPassword = "Mot de passe"
+    override val authConfirmPassword = "Confirmer le mot de passe"
+    override val authLoginButton = "Se connecter"
+    override val authRegisterButton = "S'inscrire"
+    override val authGoogleSignIn = "Continuer avec Google"
+    override val authForgotPassword = "Mot de passe oublié ?"
+    override val authNoAccount = "Pas de compte ? S'inscrire"
+    override val authHasAccount = "Déjà un compte ? Se connecter"
+    override val authLogout = "Se déconnecter"
+    override val authLogoutConfirmTitle = "Se déconnecter ?"
+    override val authLogoutConfirmBody = "Vous devrez vous reconnecter pour accéder à votre compte."
+    override val authForgotPasswordTitle = "Réinitialiser le mot de passe"
+    override val authSendResetEmail = "Envoyer le lien"
+    override val authResetEmailSent = "Un e-mail de réinitialisation a été envoyé."
+    override val authOr = "ou"
+    override val authErrorInvalidEmail = "Adresse e-mail invalide."
+    override val authErrorWrongPassword = "Mot de passe incorrect."
+    override val authErrorUserNotFound = "Aucun compte trouvé avec cet e-mail."
+    override val authErrorEmailInUse = "Cet e-mail est déjà utilisé."
+    override val authErrorWeakPassword = "Le mot de passe doit contenir au moins 6 caractères."
+    override val authErrorNetwork = "Erreur réseau. Vérifiez votre connexion."
+    override val authErrorTooManyRequests = "Trop de tentatives. Réessayez plus tard."
+    override val authErrorPasswordMismatch = "Les mots de passe ne correspondent pas."
+    override val authErrorGeneric = "Une erreur est survenue."
+    override fun authErrorMap(code: String) = when (code) {
+        "INVALID_EMAIL" -> authErrorInvalidEmail
+        "WRONG_PASSWORD" -> authErrorWrongPassword
+        "USER_NOT_FOUND" -> authErrorUserNotFound
+        "EMAIL_ALREADY_IN_USE" -> authErrorEmailInUse
+        "WEAK_PASSWORD" -> authErrorWeakPassword
+        "NETWORK_ERROR" -> authErrorNetwork
+        "TOO_MANY_REQUESTS" -> authErrorTooManyRequests
+        "CANCELLED" -> ""
+        else -> authErrorGeneric
+    }
 }
 
 object ChineseStrings : Strings {
@@ -324,6 +394,45 @@ object ChineseStrings : Strings {
     override val levelCspDesc = "用于续签多年居留卡或申请居民卡"
     override val levelCrName = "居民卡 / 入籍"
     override val levelCrDesc = "用于申请居民卡或入籍"
+
+    override val authLogin = "登录"
+    override val authRegister = "注册"
+    override val authEmail = "邮箱地址"
+    override val authPassword = "密码"
+    override val authConfirmPassword = "确认密码"
+    override val authLoginButton = "登录"
+    override val authRegisterButton = "注册"
+    override val authGoogleSignIn = "使用 Google 登录"
+    override val authForgotPassword = "忘记密码？"
+    override val authNoAccount = "没有账号？立即注册"
+    override val authHasAccount = "已有账号？立即登录"
+    override val authLogout = "退出登录"
+    override val authLogoutConfirmTitle = "确认退出？"
+    override val authLogoutConfirmBody = "退出后需要重新登录才能访问您的账户。"
+    override val authForgotPasswordTitle = "重置密码"
+    override val authSendResetEmail = "发送重置链接"
+    override val authResetEmailSent = "重置邮件已发送，请查看您的邮箱。"
+    override val authOr = "或"
+    override val authErrorInvalidEmail = "邮箱地址格式不正确。"
+    override val authErrorWrongPassword = "密码错误。"
+    override val authErrorUserNotFound = "未找到该邮箱对应的账号。"
+    override val authErrorEmailInUse = "该邮箱已被注册。"
+    override val authErrorWeakPassword = "密码至少需要6个字符。"
+    override val authErrorNetwork = "网络错误，请检查网络连接。"
+    override val authErrorTooManyRequests = "尝试次数过多，请稍后再试。"
+    override val authErrorPasswordMismatch = "两次输入的密码不一致。"
+    override val authErrorGeneric = "发生错误，请重试。"
+    override fun authErrorMap(code: String) = when (code) {
+        "INVALID_EMAIL" -> authErrorInvalidEmail
+        "WRONG_PASSWORD" -> authErrorWrongPassword
+        "USER_NOT_FOUND" -> authErrorUserNotFound
+        "EMAIL_ALREADY_IN_USE" -> authErrorEmailInUse
+        "WEAK_PASSWORD" -> authErrorWeakPassword
+        "NETWORK_ERROR" -> authErrorNetwork
+        "TOO_MANY_REQUESTS" -> authErrorTooManyRequests
+        "CANCELLED" -> ""
+        else -> authErrorGeneric
+    }
 }
 
 fun strings(lang: AppLanguage): Strings = when (lang) {

@@ -17,9 +17,13 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.examencivique.data.model.ExamLevel
 import com.examencivique.data.model.QuestionCategory
+import com.examencivique.data.repository.AuthRepository
 import com.examencivique.data.repository.LanguageManager
 import com.examencivique.data.repository.ProgressRepository
 import com.examencivique.data.repository.QuestionRepository
+import com.examencivique.ui.auth.ForgotPasswordScreen
+import com.examencivique.ui.auth.LoginScreen
+import com.examencivique.ui.auth.RegisterScreen
 import com.examencivique.ui.exam.ExamScreen
 import com.examencivique.ui.exam.ExamSetupScreen
 import com.examencivique.ui.exam.ExamViewModel
@@ -45,12 +49,14 @@ val bottomTabs = listOf(BottomTab.Study, BottomTab.Exam, BottomTab.Progress)
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AppNavigation(
+    authRepo: AuthRepository,
     questionRepo: QuestionRepository,
     progressRepo: ProgressRepository,
     languageManager: LanguageManager
 ) {
     val language by languageManager.language.collectAsState()
     val s = strings(language)
+    val currentUser by authRepo.currentUser.collectAsState()
 
     CompositionLocalProvider(
         LocalStrings provides s,
@@ -60,6 +66,11 @@ fun AppNavigation(
         val navBackStack  by navController.currentBackStackEntryAsState()
         val currentRoute  = navBackStack?.destination?.route
 
+        val isLoggedIn = currentUser != null
+        val startDestination = if (isLoggedIn) BottomTab.Study.route else "login"
+
+        // Auth routes where bottom bar should be hidden
+        val authRoutes = setOf("login", "register", "forgot_password")
         val showBottomBar = currentRoute in bottomTabs.map { it.route }
 
         val tabLabels = mapOf(
@@ -93,9 +104,46 @@ fun AppNavigation(
         ) { innerPadding ->
             NavHost(
                 navController = navController,
-                startDestination = BottomTab.Study.route,
+                startDestination = startDestination,
                 modifier = Modifier.padding(innerPadding)
             ) {
+                // Auth screens
+                composable("login") {
+                    LoginScreen(
+                        authRepo = authRepo,
+                        onNavigateToRegister = {
+                            navController.navigate("register") { launchSingleTop = true }
+                        },
+                        onNavigateToForgotPassword = {
+                            navController.navigate("forgot_password") { launchSingleTop = true }
+                        },
+                        onLoginSuccess = {
+                            navController.navigate(BottomTab.Study.route) {
+                                popUpTo("login") { inclusive = true }
+                            }
+                        }
+                    )
+                }
+
+                composable("register") {
+                    RegisterScreen(
+                        authRepo = authRepo,
+                        onNavigateToLogin = { navController.popBackStack() },
+                        onRegisterSuccess = {
+                            navController.navigate(BottomTab.Study.route) {
+                                popUpTo("login") { inclusive = true }
+                            }
+                        }
+                    )
+                }
+
+                composable("forgot_password") {
+                    ForgotPasswordScreen(
+                        authRepo = authRepo,
+                        onBack = { navController.popBackStack() }
+                    )
+                }
+
                 // Study tab
                 composable(BottomTab.Study.route) {
                     StudyScreen(
@@ -180,7 +228,16 @@ fun AppNavigation(
                 // Progress/Account tab
                 composable(BottomTab.Progress.route) {
                     val vm = remember { ProgressViewModel(questionRepo, progressRepo) }
-                    ProgressScreen(viewModel = vm, languageManager = languageManager)
+                    ProgressScreen(
+                        viewModel = vm,
+                        languageManager = languageManager,
+                        authRepo = authRepo,
+                        onLoggedOut = {
+                            navController.navigate("login") {
+                                popUpTo(0) { inclusive = true }
+                            }
+                        }
+                    )
                 }
             }
         }

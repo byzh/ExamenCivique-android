@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.examencivique.data.model.ExamResult
 import com.examencivique.data.model.QuestionCategory
+import com.examencivique.data.repository.AuthRepository
 import com.examencivique.data.repository.LanguageManager
 import com.examencivique.ui.i18n.AppLanguage
 import com.examencivique.ui.i18n.LocalStrings
@@ -31,11 +32,18 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 @Composable
-fun ProgressScreen(viewModel: ProgressViewModel, languageManager: LanguageManager) {
+fun ProgressScreen(
+    viewModel: ProgressViewModel,
+    languageManager: LanguageManager,
+    authRepo: AuthRepository,
+    onLoggedOut: () -> Unit
+) {
     val progress by viewModel.progress.collectAsState()
     val s = LocalStrings.current
     val currentLang by languageManager.language.collectAsState()
+    val currentUser by authRepo.currentUser.collectAsState()
     var showResetAlert by remember { mutableStateOf(false) }
+    var showLogoutAlert by remember { mutableStateOf(false) }
 
     Column(
         modifier = Modifier
@@ -49,6 +57,40 @@ fun ProgressScreen(viewModel: ProgressViewModel, languageManager: LanguageManage
             Text(s.accountTitle, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
             IconButton(onClick = { showResetAlert = true }) {
                 Icon(Icons.Filled.Delete, s.reset, tint = Color(0xFFC62828))
+            }
+        }
+
+        // User info card
+        if (currentUser != null) {
+            Card(
+                shape = RoundedCornerShape(20.dp),
+                colors = CardDefaults.cardColors(containerColor = FrenchBlue.copy(alpha = 0.06f))
+            ) {
+                Row(
+                    modifier = Modifier.fillMaxWidth().padding(16.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    Box(
+                        modifier = Modifier.size(44.dp).clip(CircleShape).background(FrenchBlue.copy(alpha = 0.15f)),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Icon(Icons.Filled.Person, null, tint = FrenchBlue, modifier = Modifier.size(24.dp))
+                    }
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            currentUser?.displayName ?: currentUser?.email ?: "",
+                            fontWeight = FontWeight.SemiBold,
+                            fontSize = 14.sp
+                        )
+                        if (currentUser?.displayName != null && currentUser?.email != null) {
+                            Text(currentUser!!.email!!, fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        }
+                    }
+                    IconButton(onClick = { showLogoutAlert = true }) {
+                        Icon(Icons.Filled.Logout, s.authLogout, tint = MaterialTheme.colorScheme.onSurfaceVariant)
+                    }
+                }
             }
         }
 
@@ -226,6 +268,22 @@ fun ProgressScreen(viewModel: ProgressViewModel, languageManager: LanguageManage
             },
             dismissButton = {
                 TextButton(onClick = { showResetAlert = false }) { Text(s.cancel) }
+            }
+        )
+    }
+
+    if (showLogoutAlert) {
+        AlertDialog(
+            onDismissRequest = { showLogoutAlert = false },
+            title = { Text(s.authLogoutConfirmTitle) },
+            text = { Text(s.authLogoutConfirmBody) },
+            confirmButton = {
+                TextButton(onClick = { authRepo.signOut(); showLogoutAlert = false; onLoggedOut() }) {
+                    Text(s.authLogout, color = Color(0xFFC62828))
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { showLogoutAlert = false }) { Text(s.cancel) }
             }
         )
     }

@@ -12,3 +12,11 @@
 *.ap_
 *.dex
 /output.json
+
+# Firebase (contains API keys - do NOT commit)
+app/google-services.json
+
+# Signing keys
+*.jks
+*.keystore
+secrets.properties
