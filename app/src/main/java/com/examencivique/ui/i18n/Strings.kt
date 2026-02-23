@@ -26,6 +26,8 @@ interface Strings {
     val studyNew: String
     val studyByTheme: String
     fun studyQuestionCount(count: Int): String
+    fun studyAnsweredOf(answered: Int, total: Int): String
+    val studyAccuracyLabel: String
 
     // StudyCardScreen
     val back: String
@@ -169,6 +171,8 @@ object FrenchStrings : Strings {
     override val studyNew = "Nouvelles"
     override val studyByTheme = "Par thème"
     override fun studyQuestionCount(count: Int) = "$count questions"
+    override fun studyAnsweredOf(answered: Int, total: Int) = "$answered / $total répondues"
+    override val studyAccuracyLabel = "correct"
 
     override val back = "Retour"
     override val situation = "Situation"
@@ -312,6 +316,8 @@ object ChineseStrings : Strings {
     override val studyNew = "未答题"
     override val studyByTheme = "按主题"
     override fun studyQuestionCount(count: Int) = "$count 道题"
+    override fun studyAnsweredOf(answered: Int, total: Int) = "已答 $answered / $total"
+    override val studyAccuracyLabel = "正确率"
 
     override val back = "返回"
     override val situation = "情景题"

@@ -343,11 +343,15 @@ private fun NavigationFooter(state: StudyState, viewModel: StudyViewModel) {
 
             Spacer(Modifier.weight(1f))
 
-            IconButton(
-                onClick = { viewModel.nextQuestion() },
-                enabled = !state.isLastQuestion
-            ) {
-                Icon(Icons.AutoMirrored.Filled.NavigateNext, s.next)
+            if (!state.showAnswer) {
+                IconButton(
+                    onClick = { viewModel.nextQuestion() },
+                    enabled = !state.isLastQuestion
+                ) {
+                    Icon(Icons.AutoMirrored.Filled.NavigateNext, s.next)
+                }
+            } else {
+                Spacer(Modifier.size(48.dp))
             }
         }
     }

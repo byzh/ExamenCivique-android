@@ -110,9 +110,11 @@ fun StudyScreen(
         Text(s.studyByTheme, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
 
         QuestionCategory.entries.forEach { cat ->
+            val catQuestions = questionRepo.questionsForCategory(cat)
             CategoryRow(
                 category = cat,
-                count = questionRepo.questionsForCategory(cat).size,
+                total = catQuestions.size,
+                answered = catQuestions.count { it.id in progress.questionResults },
                 accuracy = progress.accuracy(cat, questions),
                 onClick = { onNavigateToCards("CATEGORY", cat.key) }
             )
@@ -151,11 +153,18 @@ private fun QuickButton(
 @Composable
 private fun CategoryRow(
     category: QuestionCategory,
-    count: Int,
+    total: Int,
+    answered: Int,
     accuracy: Double,
     onClick: () -> Unit
 ) {
     val s = LocalStrings.current
+    val completionFraction = if (total > 0) answered.toFloat() / total else 0f
+    val accuracyColor = when {
+        accuracy >= 0.8 -> Color(0xFF2E7D32)
+        accuracy >= 0.5 -> Color(0xFFE65100)
+        else -> Color(0xFFC62828)
+    }
 
     Card(
         modifier = Modifier.fillMaxWidth().clickable(onClick = onClick),
@@ -177,27 +186,33 @@ private fun CategoryRow(
                 Icon(category.icon, contentDescription = null, tint = category.color, modifier = Modifier.size(22.dp))
             }
 
-            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(5.dp)) {
+                // Title row
+                Text(category.localizedName(s), fontWeight = FontWeight.SemiBold, fontSize = 14.sp)
+
+                // Two metrics side by side
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    Text(category.localizedName(s), fontWeight = FontWeight.SemiBold, fontSize = 14.sp)
+                    // Completion: answered / total
+                    Text(
+                        s.studyAnsweredOf(answered, total),
+                        fontSize = 12.sp,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
                     Spacer(Modifier.weight(1f))
-                    if (accuracy > 0) {
+                    // Accuracy: correct / answered
+                    if (answered > 0) {
                         Text(
-                            "${(accuracy * 100).toInt()}%",
-                            fontSize = 13.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = when {
-                                accuracy >= 0.8 -> Color(0xFF2E7D32)
-                                accuracy >= 0.5 -> Color(0xFFE65100)
-                                else -> Color(0xFFC62828)
-                            }
+                            "${(accuracy * 100).toInt()}%  ${s.studyAccuracyLabel}",
+                            fontSize = 12.sp,
+                            fontWeight = FontWeight.Medium,
+                            color = accuracyColor
                         )
                     }
                 }
-                Text(s.studyQuestionCount(count), fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
 
+                // Progress bar = completion (answered / total)
                 LinearProgressIndicator(
-                    progress = { accuracy.toFloat() },
+                    progress = { completionFraction },
                     modifier = Modifier.fillMaxWidth().height(4.dp).clip(RoundedCornerShape(2.dp)),
                     color = category.color,
                     trackColor = MaterialTheme.colorScheme.surfaceVariant,
