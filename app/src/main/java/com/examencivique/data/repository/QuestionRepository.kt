@@ -5,7 +5,7 @@ import com.examencivique.data.model.ExamLevel
 import com.examencivique.data.model.Question
 import com.examencivique.data.model.QuestionCategory
 import com.examencivique.data.model.QuestionType
-import com.examencivique.data.model.UserProgress as UserProgressModel
+import com.examencivique.data.model.ProgressData
 import kotlinx.serialization.json.Json
 import java.io.InputStreamReader
 
@@ -53,13 +53,13 @@ class QuestionRepository(context: Context) {
 
     // MARK: - Weak & unanswered
 
-    fun weakQuestions(progressData: com.examencivique.data.model.ProgressData): List<Question> {
+    fun weakQuestions(progressData: ProgressData): List<Question> {
         val weakIds = progressData.weakQuestionIds().toSet()
         return allQuestions
             .filter { it.id in weakIds }
             .sortedBy { progressData.questionResults[it.id]?.accuracy ?: 0.0 }
     }
 
-    fun unansweredQuestions(progressData: com.examencivique.data.model.ProgressData): List<Question> =
+    fun unansweredQuestions(progressData: ProgressData): List<Question> =
         allQuestions.filter { it.id !in progressData.questionResults }
 }
