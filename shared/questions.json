@@ -1,0 +1,1432 @@
+[
+  {
+    "id": "pv_001",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quelle est la devise de la République française ?",
+    "options": ["Travail, Famille, Patrie", "Liberté, Égalité, Fraternité", "Unité, Sécurité, Progrès", "Paix, Justice, Solidarité"],
+    "correct_index": 1,
+    "explanation": "La devise de la République française est « Liberté, Égalité, Fraternité ». Elle figure dans l'article 2 de la Constitution de 1958 et est inscrite sur les frontons des bâtiments officiels."
+  },
+  {
+    "id": "pv_002",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quelles sont les couleurs du drapeau français ?",
+    "options": ["Rouge, blanc, vert", "Rouge, jaune, bleu", "Bleu, blanc, rouge", "Blanc, vert, rouge"],
+    "correct_index": 2,
+    "explanation": "Le drapeau tricolore français est composé de trois bandes verticales : bleu (à gauche), blanc (au centre) et rouge (à droite). Il est adopté lors de la Révolution française."
+  },
+  {
+    "id": "pv_003",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quel est le nom de l'hymne national français ?",
+    "options": ["La Parisienne", "Le Chant du Départ", "La Marseillaise", "L'Internationale"],
+    "correct_index": 2,
+    "explanation": "La Marseillaise est l'hymne national français. Elle a été composée en 1792 par Rouget de Lisle et est devenue hymne national en 1795."
+  },
+  {
+    "id": "pv_004",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Qui est Marianne ?",
+    "options": ["La femme du Président de la République", "Une héroïne de la Résistance française", "Le symbole de la République française", "La patronne des soldats français"],
+    "correct_index": 2,
+    "explanation": "Marianne est le symbole personnifié de la République française. Son buste figure dans toutes les mairies et ses traits apparaissent sur les pièces de monnaie et les timbres officiels."
+  },
+  {
+    "id": "pv_005",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quelle est la date de la fête nationale française ?",
+    "options": ["Le 8 mai", "Le 11 novembre", "Le 1er mai", "Le 14 juillet"],
+    "correct_index": 3,
+    "explanation": "La fête nationale française est célébrée le 14 juillet, en commémoration de la prise de la Bastille en 1789, symbole du début de la Révolution française."
+  },
+  {
+    "id": "pv_006",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Que commémore-t-on le 14 juillet ?",
+    "options": ["La fin de la Première Guerre mondiale", "La proclamation de la Ve République", "La prise de la Bastille en 1789", "La signature de la DDHC"],
+    "correct_index": 2,
+    "explanation": "Le 14 juillet commémore la prise de la forteresse de la Bastille en 1789, symbole de l'absolutisme royal, marquant le début de la Révolution française."
+  },
+  {
+    "id": "pv_007",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Qu'est-ce que la laïcité ?",
+    "options": ["L'interdiction de toute pratique religieuse en France", "La primauté accordée à la religion catholique par l'État", "La séparation de l'État et des religions, garantissant la liberté de conscience", "L'obligation pour tous les citoyens d'avoir une religion"],
+    "correct_index": 2,
+    "explanation": "La laïcité est un principe fondamental de la République française qui garantit la séparation de l'État et des religions, ainsi que la liberté de conscience et de culte pour tous."
+  },
+  {
+    "id": "pv_008",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "En quelle année a été votée la loi de séparation des Églises et de l'État ?",
+    "options": ["1789", "1848", "1905", "1958"],
+    "correct_index": 2,
+    "explanation": "La loi du 9 décembre 1905 a établi la séparation des Églises et de l'État en France. Elle garantit la liberté de conscience et organise la neutralité de l'État vis-à-vis des religions."
+  },
+  {
+    "id": "pv_009",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Que garantit le principe de laïcité ?",
+    "options": ["Le financement des religions par l'État", "L'interdiction de tout signe religieux dans l'espace public", "La liberté de croire ou de ne pas croire", "L'obligation d'enseigner une religion à l'école"],
+    "correct_index": 2,
+    "explanation": "Le principe de laïcité garantit à chacun la liberté de conscience, c'est-à-dire le droit de croire ou de ne pas croire en une religion, sans que l'État n'impose ni ne combatte aucune croyance."
+  },
+  {
+    "id": "pv_010",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "À l'école publique, qui peut porter des signes religieux très visibles (voile, kippa, croix ostensible) ?",
+    "options": ["Les élèves, mais pas les enseignants", "Les enseignants, mais pas les élèves", "Tout le monde peut en porter librement", "Personne : ni les élèves ni les personnels"],
+    "correct_index": 3,
+    "explanation": "Depuis la loi du 15 mars 2004, les élèves ne peuvent pas porter de signes religieux ostensibles à l'école publique. Les agents publics (enseignants, personnels) sont soumis à l'obligation de neutralité."
+  },
+  {
+    "id": "pv_011",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Que signifie le principe d'égalité dans la devise républicaine ?",
+    "options": ["Les hommes ont plus de droits que les femmes", "Tous les citoyens ont les mêmes droits devant la loi", "L'égalité s'applique uniquement aux nationaux français", "Les étrangers n'ont pas les mêmes droits que les Français"],
+    "correct_index": 1,
+    "explanation": "Le principe d'égalité signifie que tous les citoyens sont égaux en droits et en devoirs devant la loi, sans distinction de sexe, d'origine, de religion ou de condition sociale."
+  },
+  {
+    "id": "pv_012",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Que signifie la liberté d'expression ?",
+    "options": ["Le droit de dire n'importe quoi sans aucune limite", "Le droit d'exprimer ses opinions dans le respect de la loi", "Le droit d'insulter les autres impunément", "Le droit de diffuser de fausses informations"],
+    "correct_index": 1,
+    "explanation": "La liberté d'expression est le droit d'exprimer librement ses idées et opinions. Elle est encadrée par la loi : elle ne permet pas la diffamation, l'incitation à la haine ou les propos discriminatoires."
+  },
+  {
+    "id": "pv_013",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Une personne peut-elle changer librement de religion en France ?",
+    "options": ["Non, on ne peut pas changer de religion", "Non, seulement si l'État l'autorise", "Oui, la liberté de religion inclut le droit de changer de croyance", "Oui, mais uniquement si on est citoyen français"],
+    "correct_index": 2,
+    "explanation": "En France, la liberté de conscience et de religion garantit à chacun le droit de croire, de changer de religion ou de n'en avoir aucune. L'État ne peut s'immiscer dans les convictions religieuses."
+  },
+  {
+    "id": "pv_014",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Certains métiers peuvent-ils être réservés aux hommes uniquement ?",
+    "options": ["Oui, les métiers dangereux comme le BTP", "Oui, les métiers militaires et de sécurité", "Non, le principe d'égalité interdit toute discrimination basée sur le sexe", "Oui, avec l'accord de l'employeur"],
+    "correct_index": 2,
+    "explanation": "Le principe d'égalité entre hommes et femmes, inscrit dans la Constitution, interdit toute discrimination dans l'accès à l'emploi fondée sur le sexe. Tout employeur qui refuse d'embaucher une femme pour cette raison commet une infraction."
+  },
+  {
+    "id": "pv_015",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "A-t-on le droit d'insulter publiquement quelqu'un en raison de ses origines ?",
+    "options": ["Oui, si c'est une opinion personnelle", "Oui, la liberté d'expression le permet", "Non, c'est un délit puni par la loi", "Oui, dans un cadre privé uniquement"],
+    "correct_index": 2,
+    "explanation": "Insulter publiquement quelqu'un en raison de ses origines, de sa religion ou de tout autre critère discriminatoire est un délit en France, puni par la loi. La liberté d'expression ne couvre pas les propos haineux."
+  },
+  {
+    "id": "pv_016",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "\"La France est une République indivisible, laïque, démocratique et sociale.\" Où trouve-t-on cette phrase ?",
+    "options": ["Dans la Déclaration des droits de l'homme et du citoyen de 1789", "Dans le Code civil français", "Dans la Constitution de 1958", "Dans la loi de séparation de 1905"],
+    "correct_index": 2,
+    "explanation": "Cette phrase figure à l'article 1er de la Constitution du 4 octobre 1958, loi fondamentale de la Ve République française."
+  },
+  {
+    "id": "pv_017",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Que signifie le mot « fraternité » dans la devise française ?",
+    "options": ["Le respect strict des lois", "La solidarité et l'entraide entre les membres de la société", "L'obligation de défendre la patrie", "La primauté de la famille sur l'individu"],
+    "correct_index": 1,
+    "explanation": "La fraternité désigne le sentiment de solidarité et d'entraide qui doit unir les membres de la société. Elle est à l'origine du concept de cohésion sociale et du droit à l'assistance."
+  },
+  {
+    "id": "pv_018",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quelle est la langue officielle de la République française ?",
+    "options": ["Le français et l'anglais", "Le français, le breton et l'alsacien", "Le français", "Le français et l'occitan"],
+    "correct_index": 2,
+    "explanation": "Le français est l'unique langue officielle de la République française, selon l'article 2 de la Constitution de 1958. La maîtrise du français est essentielle pour l'intégration et la vie sociale."
+  },
+  {
+    "id": "pv_019",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Peut-on brûler publiquement un drapeau français ?",
+    "options": ["Oui, c'est une forme d'expression artistique", "Oui, si on le fait dans un cadre militant", "Non, c'est interdit et puni par la loi", "Oui, si c'est à l'étranger"],
+    "correct_index": 2,
+    "explanation": "Brûler ou détruire publiquement le drapeau national est interdit et constitue un délit en France, puni par la loi. Cela est considéré comme un outrage au drapeau national."
+  },
+  {
+    "id": "pv_020",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Selon la laïcité, que signifie la neutralité de l'État ?",
+    "options": ["L'État interdit toute expression religieuse", "L'État favorise la religion majoritaire", "L'État ne favorise ni ne combat aucune religion", "L'État finance toutes les religions de manière égale"],
+    "correct_index": 2,
+    "explanation": "La neutralité de l'État signifie que les pouvoirs publics ne prennent pas parti pour ou contre une religion. L'État garantit la liberté de conscience et ne s'ingère pas dans les croyances des citoyens."
+  },
+  {
+    "id": "pv_021",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Un enfant peut-il refuser d'aller à l'école pour une raison religieuse ?",
+    "options": ["Oui, si ses parents le décident", "Oui, à partir de 12 ans", "Non, l'école est obligatoire indépendamment des convictions religieuses", "Oui, lors des fêtes religieuses importantes"],
+    "correct_index": 2,
+    "explanation": "L'instruction est obligatoire en France pour tous les enfants de 3 à 16 ans. Aucune raison religieuse ne justifie l'absence à l'école. Les convictions personnelles ne peuvent pas primer sur l'obligation scolaire."
+  },
+  {
+    "id": "pv_022",
+    "category": "principes_valeurs",
+    "levels": ["CR"],
+    "type": "connaissance",
+    "question": "La laïcité impose-t-elle aux agents publics d'être neutres vis-à-vis des usagers ?",
+    "options": ["Non, les agents peuvent afficher leurs convictions religieuses", "Oui, ils ne doivent pas manifester leurs opinions religieuses dans l'exercice de leurs fonctions", "Non, uniquement en dehors des heures de travail", "Oui, mais seulement pour les enseignants"],
+    "correct_index": 1,
+    "explanation": "Les agents publics ont une obligation de neutralité : ils ne peuvent pas manifester leurs convictions religieuses, politiques ou philosophiques dans l'exercice de leurs fonctions, afin d'assurer l'égalité de traitement des usagers."
+  },
+  {
+    "id": "pv_023",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Lequel de ces éléments est un symbole OFFICIEL de la République française ?",
+    "options": ["Le coq gaulois", "La tour Eiffel", "Le drapeau tricolore", "Le château de Versailles"],
+    "correct_index": 2,
+    "explanation": "Le drapeau tricolore (bleu, blanc, rouge) est un symbole officiel de la République française. Le coq gaulois et la tour Eiffel sont des symboles culturels mais pas officiels au sens constitutionnel."
+  },
+  {
+    "id": "pv_024",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Une personne a-t-elle le droit de ne pas croire en une religion en France ?",
+    "options": ["Non, tout résident doit déclarer une appartenance religieuse", "Non, la France est une nation chrétienne", "Oui, la liberté de conscience inclut le droit de ne pas croire", "Oui, mais uniquement pour les citoyens français"],
+    "correct_index": 2,
+    "explanation": "La liberté de conscience garantie par la laïcité inclut le droit de ne pas croire en une religion, d'être athée ou agnostique. L'État ne peut imposer aucune croyance."
+  },
+  {
+    "id": "pv_025",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Où peut-on voir la devise de la République française ?",
+    "options": ["Uniquement sur les billets de banque", "Sur les frontons des bâtiments publics et les documents officiels", "Seulement sur le drapeau national", "Dans les écoles uniquement"],
+    "correct_index": 1,
+    "explanation": "La devise « Liberté, Égalité, Fraternité » est inscrite sur les frontons des bâtiments publics (mairies, tribunaux, écoles...) et figure sur les documents et pièces officiels de la République."
+  },
+  {
+    "id": "pv_026",
+    "category": "principes_valeurs",
+    "levels": ["CR"],
+    "type": "connaissance",
+    "question": "Parmi les propositions suivantes, laquelle constitue une participation citoyenne ?",
+    "options": ["Refuser de payer ses impôts", "Voter lors des élections", "Ignorer les affaires publiques", "Éviter de s'inscrire sur les listes électorales"],
+    "correct_index": 1,
+    "explanation": "La participation citoyenne comprend notamment le vote lors des élections, la participation à des associations, l'engagement dans la vie de la cité. Le vote est un droit et un devoir civique fondamental."
+  },
+  {
+    "id": "pv_027",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quelle est la liberté qui permet à chacun d'exprimer ses idées et opinions ?",
+    "options": ["La liberté de circulation", "La liberté d'association", "La liberté d'expression", "La liberté de culte"],
+    "correct_index": 2,
+    "explanation": "La liberté d'expression est le droit fondamental permettant à chacun d'exprimer librement ses idées, opinions et convictions, dans le respect des limites posées par la loi."
+  },
+  {
+    "id": "pv_028",
+    "category": "principes_valeurs",
+    "levels": ["CR"],
+    "type": "connaissance",
+    "question": "Qu'est-ce que la liberté d'association ?",
+    "options": ["Le droit de voter pour des partis politiques", "Le droit de se regrouper librement pour défendre des intérêts communs", "L'obligation de rejoindre un syndicat professionnel", "Le droit de circuler librement dans l'Union européenne"],
+    "correct_index": 1,
+    "explanation": "La liberté d'association (loi de 1901) permet à toute personne de créer librement une association avec d'autres pour défendre des intérêts communs, sans autorisation préalable de l'État."
+  },
+  {
+    "id": "pv_029",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quel est l'un des rôles des associations dans la République française ?",
+    "options": ["Remplacer les services de l'État", "Permettre la participation citoyenne et défendre des causes communes", "Administrer les communes", "Lever des impôts locaux"],
+    "correct_index": 1,
+    "explanation": "Les associations jouent un rôle essentiel dans la vie démocratique française : elles permettent aux citoyens de se regrouper, de participer à la vie publique et de défendre des causes culturelles, sociales, humanitaires, etc."
+  },
+  {
+    "id": "pv_030",
+    "category": "principes_valeurs",
+    "levels": ["CR"],
+    "type": "connaissance",
+    "question": "Un employeur refuse d'embaucher des femmes. Que dit la loi ?",
+    "options": ["C'est légal si c'est justifié par la nature du poste", "C'est toléré dans certains secteurs d'activité", "C'est interdit : c'est une discrimination fondée sur le sexe", "C'est légal avec l'accord des syndicats"],
+    "correct_index": 2,
+    "explanation": "Refuser d'embaucher une personne en raison de son sexe est une discrimination illégale en France, sanctionnée par la loi. Le principe d'égalité homme/femme est garanti par la Constitution et le Code du travail."
+  },
+  {
+    "id": "inst_001",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Qui nomme le Premier ministre en France ?",
+    "options": ["Le Parlement", "Le Président de la République", "Les citoyens par vote direct", "Le Conseil constitutionnel"],
+    "correct_index": 1,
+    "explanation": "Selon l'article 8 de la Constitution, le Président de la République nomme le Premier ministre. Le Premier ministre dirige ensuite l'action du Gouvernement."
+  },
+  {
+    "id": "inst_002",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "De quoi est composé le Parlement français ?",
+    "options": ["De l'Assemblée nationale et du Conseil d'État", "Du Sénat et du Conseil économique et social", "De l'Assemblée nationale et du Sénat", "Du Parlement européen et de l'Assemblée nationale"],
+    "correct_index": 2,
+    "explanation": "Le Parlement français est bicaméral : il est composé de l'Assemblée nationale (577 députés) et du Sénat (348 sénateurs). Ces deux chambres exercent le pouvoir législatif."
+  },
+  {
+    "id": "inst_003",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Qui possède le pouvoir exécutif en France ?",
+    "options": ["Le Parlement", "Le Président de la République et le Gouvernement", "Le Conseil constitutionnel", "Les maires et préfets"],
+    "correct_index": 1,
+    "explanation": "Le pouvoir exécutif est exercé par le Président de la République et le Gouvernement (Premier ministre et ministres). Il est chargé d'appliquer les lois et de conduire la politique nationale."
+  },
+  {
+    "id": "inst_004",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Qui vote les lois en France ?",
+    "options": ["Le Président de la République", "Le Gouvernement", "Le Parlement (Assemblée nationale et Sénat)", "Le Conseil constitutionnel"],
+    "correct_index": 2,
+    "explanation": "Le Parlement détient le pouvoir législatif : l'Assemblée nationale et le Sénat votent les lois. En cas de désaccord entre les deux chambres, l'Assemblée nationale a le dernier mot."
+  },
+  {
+    "id": "inst_005",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quels sont les trois pouvoirs dans une démocratie comme la France ?",
+    "options": ["Législatif, militaire et judiciaire", "Exécutif, législatif et judiciaire", "Présidentiel, parlementaire et communal", "National, régional et communal"],
+    "correct_index": 1,
+    "explanation": "La séparation des pouvoirs est un principe fondamental : le pouvoir exécutif (gouverner), le pouvoir législatif (faire les lois) et le pouvoir judiciaire (rendre la justice) sont exercés par des institutions distinctes."
+  },
+  {
+    "id": "inst_006",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Qui élit les députés à l'Assemblée nationale ?",
+    "options": ["Les maires", "Les sénateurs", "Les citoyens français au suffrage universel direct", "Le Président de la République"],
+    "correct_index": 2,
+    "explanation": "Les 577 députés de l'Assemblée nationale sont élus directement par les citoyens français lors des élections législatives, au scrutin uninominal majoritaire à deux tours."
+  },
+  {
+    "id": "inst_007",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Pour combien de temps est élu le Président de la République française ?",
+    "options": ["4 ans", "5 ans", "6 ans", "7 ans"],
+    "correct_index": 1,
+    "explanation": "Depuis la révision constitutionnelle de 2000, le Président de la République est élu pour un mandat de 5 ans (quinquennat). Il peut être réélu une fois."
+  },
+  {
+    "id": "inst_008",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "À partir de quel âge a-t-on le droit de voter en France ?",
+    "options": ["16 ans", "18 ans", "21 ans", "25 ans"],
+    "correct_index": 1,
+    "explanation": "Le droit de vote en France est accordé à partir de 18 ans à tous les citoyens français inscrits sur les listes électorales."
+  },
+  {
+    "id": "inst_009",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Que signifie « suffrage universel » ?",
+    "options": ["Seuls les propriétaires peuvent voter", "Seuls les hommes peuvent voter", "Tous les citoyens majeurs peuvent voter", "Seuls les diplômés universitaires peuvent voter"],
+    "correct_index": 2,
+    "explanation": "Le suffrage universel signifie que tous les citoyens majeurs (18 ans) ont le droit de vote, sans distinction de sexe, de fortune, de diplôme ou d'origine. En France, les femmes ont obtenu ce droit en 1944."
+  },
+  {
+    "id": "inst_010",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Qui réside au palais de l'Élysée ?",
+    "options": ["Le Premier ministre", "Le Président de la République", "Le Président du Sénat", "Le Président de l'Assemblée nationale"],
+    "correct_index": 1,
+    "explanation": "Le palais de l'Élysée, situé à Paris, est la résidence officielle et le lieu de travail du Président de la République française."
+  },
+  {
+    "id": "inst_011",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quel est le rôle du préfet ?",
+    "options": ["Il dirige le Conseil municipal", "Il représente l'État dans un département ou une région", "Il préside l'Assemblée nationale", "Il nomme les maires"],
+    "correct_index": 1,
+    "explanation": "Le préfet est le représentant de l'État nommé par le gouvernement dans chaque département et région. Il est chargé d'appliquer les lois et les décisions du gouvernement sur le territoire."
+  },
+  {
+    "id": "inst_012",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Qui dirige une commune en France ?",
+    "options": ["Le préfet", "Le président du Conseil régional", "Le maire", "Le sous-préfet"],
+    "correct_index": 2,
+    "explanation": "Le maire est l'exécutif de la commune. Il est élu par le Conseil municipal et représente à la fois la commune et l'État sur son territoire."
+  },
+  {
+    "id": "inst_013",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quel est le régime politique de la France ?",
+    "options": ["Une monarchie constitutionnelle", "Une dictature militaire", "Une République (Ve République)", "Une fédération d'États"],
+    "correct_index": 2,
+    "explanation": "La France est une République depuis 1792. Nous vivons sous la Ve République, dont la Constitution a été adoptée en 1958 à l'initiative du général de Gaulle."
+  },
+  {
+    "id": "inst_014",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quelle est la monnaie utilisée en France ?",
+    "options": ["Le franc français", "La livre sterling", "Le dollar", "L'euro"],
+    "correct_index": 3,
+    "explanation": "La France utilise l'euro (€) depuis le 1er janvier 2002. L'euro est la monnaie commune à la zone euro, qui regroupe 20 des 27 États membres de l'Union européenne."
+  },
+  {
+    "id": "inst_015",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Combien d'États font partie de l'Union européenne au 1er janvier 2025 ?",
+    "options": ["25", "27", "30", "32"],
+    "correct_index": 1,
+    "explanation": "L'Union européenne compte 27 États membres au 1er janvier 2025. Le Royaume-Uni a quitté l'UE le 31 janvier 2020 (Brexit)."
+  },
+  {
+    "id": "inst_016",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quand célèbre-t-on la Journée de l'Europe ?",
+    "options": ["Le 1er janvier", "Le 25 mars", "Le 9 mai", "Le 11 novembre"],
+    "correct_index": 2,
+    "explanation": "La Journée de l'Europe est célébrée le 9 mai, date anniversaire de la déclaration Schuman (1950) qui a posé les bases de la construction européenne."
+  },
+  {
+    "id": "inst_017",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "À quelle fréquence sont organisées les élections européennes ?",
+    "options": ["Tous les 3 ans", "Tous les 4 ans", "Tous les 5 ans", "Tous les 7 ans"],
+    "correct_index": 2,
+    "explanation": "Les élections du Parlement européen ont lieu tous les 5 ans. Les citoyens européens élisent leurs représentants au suffrage universel direct."
+  },
+  {
+    "id": "inst_018",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quel est le rôle de l'autorité judiciaire ?",
+    "options": ["Voter les lois", "Gouverner le pays", "Appliquer les lois et rendre la justice", "Représenter l'État dans les départements"],
+    "correct_index": 2,
+    "explanation": "L'autorité judiciaire est indépendante. Elle est chargée de faire respecter les droits des citoyens, de juger les infractions et d'appliquer les lois. En France, elle est gardienne des libertés individuelles."
+  },
+  {
+    "id": "inst_019",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Combien y a-t-il de départements en France (métropole et outre-mer) ?",
+    "options": ["89", "95", "96", "101"],
+    "correct_index": 3,
+    "explanation": "La France compte 101 départements : 96 en métropole (dont la Corse qui compte 2 départements) et 5 départements d'outre-mer (Guadeloupe, Martinique, Guyane, La Réunion, Mayotte)."
+  },
+  {
+    "id": "inst_020",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Comment sont élus les sénateurs ?",
+    "options": ["Par les citoyens au suffrage universel direct", "Par le Président de la République", "Par les grands électeurs (élus locaux) au suffrage indirect", "Par l'Assemblée nationale"],
+    "correct_index": 2,
+    "explanation": "Les sénateurs sont élus au suffrage universel indirect par les « grands électeurs » : les députés, les conseillers régionaux, les conseillers départementaux et les conseillers municipaux."
+  },
+  {
+    "id": "inst_021",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Est-ce que le Président de la République a tous les pouvoirs en France ?",
+    "options": ["Oui, c'est lui qui gouverne seul", "Oui, pendant son mandat il est tout-puissant", "Non, les pouvoirs sont séparés et contrôlés", "Non, il partage tous ses pouvoirs avec le Premier ministre"],
+    "correct_index": 2,
+    "explanation": "Le Président n'a pas tous les pouvoirs. La Constitution de 1958 organise la séparation des pouvoirs : le législatif (Parlement), l'exécutif (Président + Gouvernement) et le judiciaire sont distincts et s'équilibrent."
+  },
+  {
+    "id": "inst_022",
+    "category": "institutions",
+    "levels": ["CR"],
+    "type": "connaissance",
+    "question": "Qu'est-ce que l'État de droit ?",
+    "options": ["Un État où le gouvernement peut agir librement sans contrainte", "Un État où la loi s'applique à tous, y compris aux gouvernants", "Un État dirigé par des juristes", "Un État sans constitution écrite"],
+    "correct_index": 1,
+    "explanation": "L'État de droit est un système dans lequel la loi s'impose à tous, y compris aux gouvernants. Personne n'est au-dessus des lois. Les droits fondamentaux des citoyens sont garantis et protégés."
+  },
+  {
+    "id": "inst_023",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Qui dirige l'action du Gouvernement ?",
+    "options": ["Le Président de la République directement", "Le Président de l'Assemblée nationale", "Le Premier ministre", "Le ministre de l'Intérieur"],
+    "correct_index": 2,
+    "explanation": "Selon l'article 21 de la Constitution, le Premier ministre dirige l'action du Gouvernement et coordonne le travail des ministres sous l'autorité du Président de la République."
+  },
+  {
+    "id": "inst_024",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Pour combien de temps sont élus les députés à l'Assemblée nationale ?",
+    "options": ["3 ans", "4 ans", "5 ans", "6 ans"],
+    "correct_index": 2,
+    "explanation": "Les députés de l'Assemblée nationale sont élus pour une législature de 5 ans, sauf dissolution anticipée de l'Assemblée par le Président de la République."
+  },
+  {
+    "id": "inst_025",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quel pays est un pays fondateur de la Communauté européenne ?",
+    "options": ["L'Espagne", "La Pologne", "La France", "La Suède"],
+    "correct_index": 2,
+    "explanation": "La France est l'un des 6 pays fondateurs de la Communauté économique européenne (CEE) créée par le traité de Rome en 1957, avec l'Allemagne, l'Italie, la Belgique, les Pays-Bas et le Luxembourg."
+  },
+  {
+    "id": "dd_001",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "En quelle année a été adoptée la Déclaration des droits de l'homme et du citoyen ?",
+    "options": ["1789", "1804", "1848", "1905"],
+    "correct_index": 0,
+    "explanation": "La Déclaration des droits de l'homme et du citoyen a été adoptée le 26 août 1789 par l'Assemblée nationale constituante, lors de la Révolution française. Elle proclame les droits naturels et imprescriptibles de tout être humain."
+  },
+  {
+    "id": "dd_002",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quel texte fondamental garantit les droits et libertés en France ?",
+    "options": ["Le Code civil napoléonien", "La Déclaration des droits de l'homme et du citoyen de 1789 et la Constitution", "La loi de séparation de 1905", "Le traité de Rome de 1957"],
+    "correct_index": 1,
+    "explanation": "La Déclaration des droits de l'homme et du citoyen de 1789, intégrée au bloc de constitutionnalité, ainsi que la Constitution de 1958 garantissent les droits et libertés fondamentaux en France."
+  },
+  {
+    "id": "dd_003",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "La peine de mort en France est :",
+    "options": ["Légale et appliquée pour les crimes les plus graves", "Suspendue mais pas abolie", "Abolie depuis 1981", "Réservée aux cas de trahison nationale"],
+    "correct_index": 2,
+    "explanation": "La peine de mort a été abolie en France par la loi du 9 octobre 1981, sous le gouvernement de François Mitterrand. Robert Badinter, alors garde des Sceaux, a porté cette réforme historique."
+  },
+  {
+    "id": "dd_004",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "En France, est-ce légal d'être marié à plusieurs personnes en même temps (polygamie) ?",
+    "options": ["Oui, si le mariage a été contracté à l'étranger", "Oui, dans certaines communautés culturelles", "Non, la polygamie est interdite par la loi française", "Oui, sous certaines conditions administratives"],
+    "correct_index": 2,
+    "explanation": "La polygamie est interdite en France. La loi française interdit le mariage d'une personne déjà mariée (bigamie). Toute personne souhaitant s'installer en France doit respecter le principe de monogamie."
+  },
+  {
+    "id": "dd_005",
+    "category": "droits_devoirs",
+    "levels": ["CR"],
+    "type": "connaissance",
+    "question": "La répudiation de sa femme est-elle légale en France ?",
+    "options": ["Oui, si elle est pratiquée conformément à la religion", "Oui, si les deux époux sont de nationalité étrangère", "Non, elle est interdite et non reconnue juridiquement", "Oui, sous réserve d'une déclaration à la mairie"],
+    "correct_index": 2,
+    "explanation": "La répudiation (acte par lequel un mari peut mettre fin au mariage unilatéralement) n'est pas reconnue par le droit français, même si elle a été prononcée à l'étranger. En France, le divorce doit être prononcé par un juge."
+  },
+  {
+    "id": "dd_006",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Est-il toujours possible de divorcer en France ?",
+    "options": ["Non, le divorce est interdit par la loi", "Non, seulement en cas d'adultère prouvé", "Oui, le divorce est légal et accessible à tout couple marié", "Oui, mais uniquement après 5 ans de mariage"],
+    "correct_index": 2,
+    "explanation": "Le divorce est légal en France depuis 1884. Il existe plusieurs formes de divorce : par consentement mutuel, pour faute, ou pour altération définitive du lien conjugal. Tout couple marié peut demander le divorce."
+  },
+  {
+    "id": "dd_007",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Que risque une personne qui commet une infraction pénale ?",
+    "options": ["Rien, si c'est sa première infraction", "Des sanctions allant de l'amende à la prison selon la gravité", "Seulement une amende administrative", "Une expulsion automatique du territoire"],
+    "correct_index": 1,
+    "explanation": "Toute personne qui commet une infraction (contravention, délit ou crime) risque des sanctions pénales proportionnelles à la gravité des faits : amendes, travaux d'intérêt général, peines de prison, etc."
+  },
+  {
+    "id": "dd_008",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quel est le rôle de la police nationale et de la gendarmerie ?",
+    "options": ["Uniquement collecter les impôts", "Maintenir l'ordre public et protéger les personnes et les biens", "Uniquement surveiller les frontières", "Gérer les élections"],
+    "correct_index": 1,
+    "explanation": "La police nationale et la gendarmerie assurent la sécurité des personnes et des biens, maintiennent l'ordre public, préviennent et répriment les infractions pénales."
+  },
+  {
+    "id": "dd_009",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Que doit faire une personne qui est témoin d'un accident ou d'une personne en danger ?",
+    "options": ["Partir rapidement pour ne pas être impliquée", "Filmer et publier sur les réseaux sociaux", "Porter secours ou alerter immédiatement les services de secours", "Attendre que d'autres personnes agissent"],
+    "correct_index": 2,
+    "explanation": "Le non-assistance à personne en danger est un délit en France. Toute personne qui ne porte pas secours ou qui n'alerte pas les services de secours (15, 18 ou 112) peut être poursuivie pénalement."
+  },
+  {
+    "id": "dd_010",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quelle est l'infraction la plus grave dans l'échelle pénale française ?",
+    "options": ["La contravention", "Le délit", "Le crime", "La transgression"],
+    "correct_index": 2,
+    "explanation": "Il existe 3 catégories d'infractions par ordre de gravité croissant : les contraventions (ex : stationnement interdit), les délits (ex : vol), et les crimes (ex : meurtre). Les crimes sont jugés par la cour d'assises."
+  },
+  {
+    "id": "dd_011",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "En quoi consiste la traite des êtres humains ?",
+    "options": ["Un commerce légal de main-d'œuvre étrangère", "L'exploitation de personnes par la contrainte : c'est un crime grave", "Une forme de travail saisonnier encadré par la loi", "L'immigration illégale organisée"],
+    "correct_index": 1,
+    "explanation": "La traite des êtres humains consiste à exploiter des personnes (travail forcé, prostitution, mendicité) par la contrainte, la tromperie ou l'abus de vulnérabilité. C'est un crime sévèrement puni par la loi française."
+  },
+  {
+    "id": "dd_012",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Que doit faire une victime de violences conjugales ?",
+    "options": ["Garder le silence pour protéger la famille", "Porter plainte auprès de la police ou de la gendarmerie", "Régler le problème uniquement en famille", "Attendre que la situation s'améliore"],
+    "correct_index": 1,
+    "explanation": "Les violences conjugales sont un délit grave. Les victimes peuvent porter plainte à la police ou gendarmerie, appeler le 3919 (numéro national violences femmes info) ou se rendre aux urgences. La loi protège les victimes."
+  },
+  {
+    "id": "dd_013",
+    "category": "droits_devoirs",
+    "levels": ["CR"],
+    "type": "connaissance",
+    "question": "Que garantit l'État de droit ?",
+    "options": ["Que le gouvernement peut agir sans contrôle", "Que les droits fondamentaux sont protégés et que les gouvernants respectent la loi", "Que seuls les citoyens français ont des droits", "Que la loi est différente selon le statut social"],
+    "correct_index": 1,
+    "explanation": "L'État de droit garantit que les droits fondamentaux de chaque personne sont protégés, que les institutions respectent la loi, et qu'il existe des recours juridiques effectifs en cas de violation des droits."
+  },
+  {
+    "id": "dd_014",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Pourquoi doit-on payer des impôts en France ?",
+    "options": ["C'est facultatif pour les étrangers", "Pour financer les services publics et les dépenses de l'État", "Pour enrichir l'État exclusivement", "Seulement si on gagne plus de 50 000 € par an"],
+    "correct_index": 1,
+    "explanation": "Le paiement des impôts est une obligation civique. Les impôts financent les services publics (éducation, santé, sécurité, justice) et les dépenses de l'État. Ne pas les payer est une infraction."
+  },
+  {
+    "id": "dd_015",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "La liberté de circulation permet à toute personne de :",
+    "options": ["Se déplacer uniquement dans son département", "Se déplacer librement sur le territoire français", "Circuler sans document d'identité", "Travailler dans tous les pays du monde sans visa"],
+    "correct_index": 1,
+    "explanation": "La liberté de circulation est un droit fondamental permettant à toute personne en situation régulière de se déplacer librement sur le territoire français. Elle s'étend dans l'espace Schengen pour les ressortissants européens."
+  },
+  {
+    "id": "dd_016",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Jeter des déchets dans la rue est :",
+    "options": ["Toléré si c'est un petit déchet", "Une pratique acceptable en zone rurale", "Un acte illégal passible d'une amende", "Autorisé la nuit uniquement"],
+    "correct_index": 2,
+    "explanation": "Jeter des déchets dans la rue (déchets sauvages) est interdit et passible d'une amende. Les citoyens ont un devoir de respect de l'environnement. Il existe des poubelles publiques et des déchetteries pour gérer les déchets."
+  },
+  {
+    "id": "dd_017",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "À quoi sert un titre de séjour ?",
+    "options": ["À voyager gratuitement en train", "À prouver que l'on est citoyen français", "À permettre à un étranger de séjourner légalement en France", "À obtenir la nationalité française automatiquement"],
+    "correct_index": 2,
+    "explanation": "Un titre de séjour (carte de séjour, carte de résident) est le document officiel qui autorise un ressortissant étranger à résider légalement sur le territoire français pendant une durée déterminée."
+  },
+  {
+    "id": "dd_018",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Que permet la citoyenneté française ?",
+    "options": ["Uniquement de voyager sans passeport en Europe", "De voter, d'être élu et d'accéder à certains droits réservés aux citoyens", "D'être exempté de certains impôts", "De travailler dans tous les pays du monde"],
+    "correct_index": 1,
+    "explanation": "La citoyenneté française donne le droit de voter, d'être élu, d'accéder à la fonction publique et confère la plénitude des droits civiques. Elle s'accompagne aussi de devoirs envers la République."
+  },
+  {
+    "id": "hist_001",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "En quelle année a débuté la Révolution française ?",
+    "options": ["1789", "1799", "1815", "1848"],
+    "correct_index": 0,
+    "explanation": "La Révolution française a débuté en 1789, marquée par la prise de la Bastille le 14 juillet. Elle a renversé la monarchie absolue et posé les bases de la démocratie et des droits de l'homme."
+  },
+  {
+    "id": "hist_002",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Dans quelle République vivons-nous aujourd'hui ?",
+    "options": ["IIIe République", "IVe République", "Ve République", "VIe République"],
+    "correct_index": 2,
+    "explanation": "La France vit sous la Ve République depuis l'adoption de la Constitution du 4 octobre 1958. Elle a été fondée par le général de Gaulle. C'est un régime semi-présidentiel."
+  },
+  {
+    "id": "hist_003",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Qu'est-ce que la Shoah ?",
+    "options": ["La Première Guerre mondiale (1914-1918)", "Le génocide des Juifs perpétré par les nazis pendant la Seconde Guerre mondiale", "La colonisation française en Afrique", "La guerre d'Algérie (1954-1962)"],
+    "correct_index": 1,
+    "explanation": "La Shoah est le génocide de six millions de Juifs d'Europe, planifié et exécuté par l'Allemagne nazie entre 1941 et 1945. La France reconnaît la responsabilité de l'État français dans la déportation des Juifs."
+  },
+  {
+    "id": "hist_004",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Qui a rendu l'école gratuite, laïque et obligatoire en France ?",
+    "options": ["Napoléon Ier", "Victor Hugo", "Jules Ferry", "Charles de Gaulle"],
+    "correct_index": 2,
+    "explanation": "Jules Ferry, ministre de l'Instruction publique puis président du Conseil sous la IIIe République, a instauré les lois de 1881-1882 rendant l'école primaire publique gratuite, laïque et obligatoire."
+  },
+  {
+    "id": "hist_005",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quand a eu lieu la Seconde Guerre mondiale ?",
+    "options": ["1914-1918", "1939-1945", "1940-1944", "1941-1946"],
+    "correct_index": 1,
+    "explanation": "La Seconde Guerre mondiale s'est déroulée de 1939 à 1945. La France a été occupée par l'Allemagne nazie de 1940 à 1944. Elle s'est terminée par la victoire des Alliés le 8 mai 1945 en Europe."
+  },
+  {
+    "id": "hist_006",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "À quelle date commémore-t-on l'armistice de la Première Guerre mondiale ?",
+    "options": ["Le 8 mai", "Le 14 juillet", "Le 11 novembre", "Le 1er septembre"],
+    "correct_index": 2,
+    "explanation": "Le 11 novembre est un jour férié en France. Il commémore l'armistice signé le 11 novembre 1918 à 11h00, qui a mis fin aux combats de la Première Guerre mondiale (1914-1918)."
+  },
+  {
+    "id": "hist_007",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Qui a fondé la Ve République française ?",
+    "options": ["Napoléon Bonaparte", "Léon Blum", "Charles de Gaulle", "François Mitterrand"],
+    "correct_index": 2,
+    "explanation": "Le général Charles de Gaulle a fondé la Ve République en 1958. À la suite d'une grave crise politique, il a fait adopter une nouvelle Constitution et a été élu premier Président de la Ve République."
+  },
+  {
+    "id": "hist_008",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "En quelle année l'esclavage a-t-il été définitivement aboli en France ?",
+    "options": ["1789", "1794", "1848", "1905"],
+    "correct_index": 2,
+    "explanation": "L'esclavage a été définitivement aboli en France par le décret du 27 avril 1848, sous la IIe République, notamment grâce à l'action de Victor Schoelcher. Une première abolition avait eu lieu en 1794 mais avait été annulée."
+  },
+  {
+    "id": "hist_009",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quelle est la capitale de la France ?",
+    "options": ["Lyon", "Marseille", "Bordeaux", "Paris"],
+    "correct_index": 3,
+    "explanation": "Paris est la capitale de la France. C'est le siège du gouvernement, du Parlement et de la plupart des institutions nationales. Paris est aussi la ville la plus peuplée de France."
+  },
+  {
+    "id": "hist_010",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Sur quel continent se situe la France métropolitaine ?",
+    "options": ["L'Asie", "L'Afrique", "L'Europe", "L'Amérique"],
+    "correct_index": 2,
+    "explanation": "La France métropolitaine est située en Europe occidentale. Elle est bordée par l'Atlantique à l'ouest, la Manche au nord, la Méditerranée au sud, et partage des frontières avec la Belgique, l'Allemagne, la Suisse, l'Italie, l'Espagne et Monaco."
+  },
+  {
+    "id": "hist_011",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quel océan borde la côte ouest de la France ?",
+    "options": ["L'océan Indien", "L'océan Arctique", "L'océan Pacifique", "L'océan Atlantique"],
+    "correct_index": 3,
+    "explanation": "La côte ouest de la France est bordée par l'océan Atlantique. Les villes de Nantes, Bordeaux, Brest et La Rochelle se trouvent sur cette côte atlantique."
+  },
+  {
+    "id": "hist_012",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quelle est la mer qui borde le sud de la France métropolitaine ?",
+    "options": ["La mer du Nord", "La mer Caspienne", "La mer Méditerranée", "La mer Baltique"],
+    "correct_index": 2,
+    "explanation": "Le sud de la France métropolitaine est bordé par la mer Méditerranée. Les villes de Nice, Marseille, Montpellier et Toulon se trouvent sur cette côte méditerranéenne."
+  },
+  {
+    "id": "hist_013",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Combien y a-t-il de régions en France métropolitaine ?",
+    "options": ["10", "13", "18", "22"],
+    "correct_index": 1,
+    "explanation": "La France métropolitaine est divisée en 13 régions depuis la réforme territoriale de 2016. S'y ajoutent 5 régions d'outre-mer (Guadeloupe, Martinique, Guyane, La Réunion, Mayotte)."
+  },
+  {
+    "id": "hist_014",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Qui était Molière ?",
+    "options": ["Un peintre impressionniste du XIXe siècle", "Un dramaturge et comédien du XVIIe siècle", "Un philosophe des Lumières du XVIIIe siècle", "Un général de la Révolution française"],
+    "correct_index": 1,
+    "explanation": "Molière (Jean-Baptiste Poquelin, 1622-1673) est l'un des plus grands dramaturges français. Il a écrit de nombreuses comédies célèbres : L'Avare, Le Bourgeois gentilhomme, Tartuffe, etc. Il a joué sous Louis XIV."
+  },
+  {
+    "id": "hist_015",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Qui était Simone de Beauvoir ?",
+    "options": ["Une reine de France du XVIIIe siècle", "Une résistante de la Seconde Guerre mondiale", "Une philosophe et écrivaine féministe du XXe siècle", "Une scientifique française prix Nobel"],
+    "correct_index": 2,
+    "explanation": "Simone de Beauvoir (1908-1986) est une philosophe, écrivaine et intellectuelle française, figure majeure du féminisme. Son œuvre principale, Le Deuxième Sexe (1949), est une référence du mouvement des femmes."
+  },
+  {
+    "id": "hist_016",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Qui était Joséphine Baker ?",
+    "options": ["Une reine de France", "Une chanteuse américaine naturalisée française, résistante, entrée au Panthéon", "Une peintre impressionniste du XIXe siècle", "La première femme élue à l'Assemblée nationale"],
+    "correct_index": 1,
+    "explanation": "Joséphine Baker (1906-1975) est une chanteuse et danseuse américaine naturalisée française. Elle a joué un rôle important dans la Résistance française. En 2021, elle est entrée au Panthéon, honneur suprême de la République."
+  },
+  {
+    "id": "hist_017",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Qu'est-ce que le Louvre ?",
+    "options": ["Le siège du gouvernement français", "La résidence officielle du Président", "L'un des plus grands musées du monde, situé à Paris", "La plus grande cathédrale de France"],
+    "correct_index": 2,
+    "explanation": "Le musée du Louvre, situé à Paris, est l'un des plus grands et des plus visités au monde. Il abrite notamment la Joconde de Léonard de Vinci. C'est un ancien palais royal transformé en musée en 1793."
+  },
+  {
+    "id": "hist_018",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Dans quelle ville se trouve la tour Eiffel ?",
+    "options": ["Lyon", "Marseille", "Paris", "Bordeaux"],
+    "correct_index": 2,
+    "explanation": "La tour Eiffel est située à Paris, au bord de la Seine. Elle a été construite par Gustave Eiffel pour l'Exposition universelle de 1889. C'est le monument le plus visité au monde."
+  },
+  {
+    "id": "hist_019",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Qui était Albert Camus ?",
+    "options": ["Un général de la Première Guerre mondiale", "Un peintre cubiste", "Un écrivain et philosophe français, prix Nobel de littérature", "Un homme politique de la IVe République"],
+    "correct_index": 2,
+    "explanation": "Albert Camus (1913-1960) est un écrivain, philosophe et journaliste français né en Algérie. Il a reçu le prix Nobel de littérature en 1957. Ses œuvres majeures incluent L'Étranger et La Peste."
+  },
+  {
+    "id": "hist_020",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Combien y a-t-il eu de Républiques en France ?",
+    "options": ["3", "4", "5", "6"],
+    "correct_index": 2,
+    "explanation": "La France a connu 5 Républiques : Ire (1792), IIe (1848), IIIe (1870), IVe (1946) et Ve (1958, actuelle). Entre les Républiques, la France a connu des monarchies et le régime impérial."
+  },
+  {
+    "id": "hist_021",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quel était le roi de France au moment de la Révolution française ?",
+    "options": ["Louis XIV", "Louis XV", "Louis XVI", "Charles X"],
+    "correct_index": 2,
+    "explanation": "Louis XVI était le roi de France lors de la Révolution française. Il a été renversé par la Révolution et guillotiné le 21 janvier 1793. Son règne absolu a été mis en cause par la crise économique et les idées des Lumières."
+  },
+  {
+    "id": "hist_022",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Qui était Marie Curie ?",
+    "options": ["La première femme Présidente de la République française", "Une scientifique franco-polonaise, première femme prix Nobel", "Une résistante de la Première Guerre mondiale", "Une philosophe des Lumières"],
+    "correct_index": 1,
+    "explanation": "Marie Curie (1867-1934) est une physicienne et chimiste d'origine polonaise naturalisée française. Elle a été la première femme à recevoir un prix Nobel (physique en 1903) et la première personne à en recevoir deux (chimie en 1911). Elle a découvert le polonium et le radium."
+  },
+  {
+    "id": "hist_023",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Que commémore le 8 mai en France ?",
+    "options": ["La fin de la Première Guerre mondiale", "La victoire des Alliés sur l'Allemagne nazie (fin de la Seconde Guerre mondiale en Europe)", "Le débarquement en Normandie", "La libération de Paris"],
+    "correct_index": 1,
+    "explanation": "Le 8 mai est un jour férié en France. Il commémore la capitulation de l'Allemagne nazie le 8 mai 1945, marquant la fin de la Seconde Guerre mondiale en Europe (Victoire des Alliés)."
+  },
+  {
+    "id": "hist_024",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Où se situe la Corse ?",
+    "options": ["Dans l'océan Atlantique, au large de Bordeaux", "Dans la mer Méditerranée, au large de la Provence et de la Ligurie", "Dans la Manche, au large de la Normandie", "Dans la mer du Nord"],
+    "correct_index": 1,
+    "explanation": "La Corse est une île de la mer Méditerranée. C'est une collectivité territoriale française dotée d'un statut particulier. Sa capitale est Ajaccio, ville natale de Napoléon Bonaparte."
+  },
+  {
+    "id": "hist_025",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Laquelle de ces îles est un département et région d'outre-mer (DROM) français ?",
+    "options": ["La Sicile", "Malte", "La Martinique", "Les îles Canaries"],
+    "correct_index": 2,
+    "explanation": "La Martinique, comme la Guadeloupe, la Guyane, La Réunion et Mayotte, est un département et région d'outre-mer (DROM) français. Les habitants de ces territoires sont des citoyens français à part entière."
+  },
+  {
+    "id": "vie_001",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quel numéro d'urgence permet d'appeler le SAMU (urgences médicales) ?",
+    "options": ["17", "15", "18", "112"],
+    "correct_index": 1,
+    "explanation": "Le 15 est le numéro du SAMU (Service d'Aide Médicale Urgente). À appeler en cas d'urgence médicale. Le 17 est la police, le 18 les pompiers, et le 112 est le numéro d'urgence européen universel."
+  },
+  {
+    "id": "vie_002",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quel numéro d'urgence permet d'appeler les pompiers ?",
+    "options": ["15", "17", "18", "115"],
+    "correct_index": 2,
+    "explanation": "Le 18 est le numéro des sapeurs-pompiers, à appeler en cas d'incendie, d'accident ou de toute autre urgence nécessitant leur intervention. Le 112 est aussi utilisable dans toute l'Union européenne."
+  },
+  {
+    "id": "vie_003",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quelle est la durée légale du temps de travail par semaine en France ?",
+    "options": ["32 heures", "35 heures", "39 heures", "40 heures"],
+    "correct_index": 1,
+    "explanation": "La durée légale du travail en France est de 35 heures par semaine depuis la loi Aubry de 2000. Les heures au-delà sont des heures supplémentaires, qui doivent être rémunérées ou compensées."
+  },
+  {
+    "id": "vie_004",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Qu'est-ce que le SMIC ?",
+    "options": ["Un type de contrat de travail à durée déterminée", "Le salaire minimum légal en dessous duquel un employeur ne peut pas payer un salarié", "Un diplôme professionnel reconnu", "Une allocation chômage"],
+    "correct_index": 1,
+    "explanation": "Le SMIC (Salaire Minimum Interprofessionnel de Croissance) est le salaire horaire minimum légal en France. Aucun employeur ne peut payer un salarié en dessous de ce seuil. Il est réévalué chaque année."
+  },
+  {
+    "id": "vie_005",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Le travail non déclaré (travail au noir) est :",
+    "options": ["Toléré pour les petits travaux à domicile", "Légal s'il est entre particuliers", "Illégal et passible de sanctions pour l'employeur ET le salarié", "Autorisé pour les étrangers en attente de régularisation"],
+    "correct_index": 2,
+    "explanation": "Le travail non déclaré est illégal en France. Il prive le travailleur de ses droits (congés payés, chômage, retraite, couverture maladie). L'employeur et le salarié risquent tous deux des sanctions pénales et financières."
+  },
+  {
+    "id": "vie_006",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "En cas de problème de santé non urgent, à qui faut-il s'adresser en premier lieu ?",
+    "options": ["Directement aux urgences de l'hôpital", "Au médecin traitant", "Au spécialiste directement", "À la pharmacie uniquement"],
+    "correct_index": 1,
+    "explanation": "En France, le parcours de soins coordonné impose de consulter d'abord son médecin traitant (médecin généraliste choisi et déclaré à la CPAM). Il oriente ensuite le patient vers un spécialiste si nécessaire."
+  },
+  {
+    "id": "vie_007",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Jusqu'à quel âge l'école est-elle obligatoire en France ?",
+    "options": ["14 ans", "15 ans", "16 ans", "18 ans"],
+    "correct_index": 2,
+    "explanation": "L'instruction est obligatoire en France de 3 à 16 ans. Au-delà de 16 ans, les jeunes peuvent choisir de poursuivre leurs études mais ce n'est plus une obligation légale."
+  },
+  {
+    "id": "vie_008",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "À partir de quel âge l'école est-elle obligatoire en France ?",
+    "options": ["2 ans", "3 ans", "5 ans", "6 ans"],
+    "correct_index": 1,
+    "explanation": "Depuis la loi du 26 juillet 2019, l'instruction est obligatoire dès l'âge de 3 ans en France. La maternelle (petite section) est donc obligatoire, même si elle reste gratuite dans les écoles publiques."
+  },
+  {
+    "id": "vie_009",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quel diplôme obtient-on à la fin du lycée en France ?",
+    "options": ["Le brevet des collèges", "Le CAP (Certificat d'aptitude professionnelle)", "Le baccalauréat", "La licence universitaire"],
+    "correct_index": 2,
+    "explanation": "Le baccalauréat (le « bac ») est le diplôme obtenu à la fin du lycée, généralement à 17-18 ans. Il marque la fin de la scolarité secondaire et donne accès aux études supérieures."
+  },
+  {
+    "id": "vie_010",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Dans quels établissements vont les élèves après l'école élémentaire (primaire) ?",
+    "options": ["Directement au lycée", "Au collège", "À l'université", "En centre de formation"],
+    "correct_index": 1,
+    "explanation": "Après l'école élémentaire (CE1, CE2, CM1, CM2), les élèves entrent au collège (6e, 5e, 4e, 3e) entre 11 et 15 ans. Ils passent ensuite au lycée pour préparer le baccalauréat."
+  },
+  {
+    "id": "vie_011",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "À quoi sert la carte Vitale ?",
+    "options": ["À prouver son identité dans les administrations", "À voyager gratuitement dans les transports en commun", "À s'identifier auprès de l'Assurance maladie pour le remboursement des soins", "À bénéficier de réductions dans les pharmacies"],
+    "correct_index": 2,
+    "explanation": "La carte Vitale est la carte d'assuré social. Elle permet de s'identifier lors des consultations médicales et facilite le remboursement des soins par l'Assurance maladie (Sécurité sociale) sans avoir à avancer de formulaires papier."
+  },
+  {
+    "id": "vie_012",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Auprès de quel organisme faut-il demander le remboursement des frais de santé ?",
+    "options": ["La mairie", "Le médecin traitant", "La Caisse Primaire d'Assurance Maladie (CPAM / Sécurité sociale)", "Le ministère de la Santé"],
+    "correct_index": 2,
+    "explanation": "La CPAM (Caisse Primaire d'Assurance Maladie), communément appelée Sécurité sociale ou « la Sécu », est l'organisme qui gère le remboursement des soins médicaux pour les assurés sociaux."
+  },
+  {
+    "id": "vie_013",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "À quoi sert une mutuelle santé ?",
+    "options": ["À remplacer entièrement la Sécurité sociale", "À rembourser les soins non couverts par la Sécurité sociale (ticket modérateur, dépassements)", "À payer les médicaments à la pharmacie", "À couvrir les accidents du travail"],
+    "correct_index": 1,
+    "explanation": "La mutuelle (complémentaire santé) rembourse tout ou partie des frais de santé non pris en charge par la Sécurité sociale : le ticket modérateur, les dépassements d'honoraires, l'optique, le dentaire, etc."
+  },
+  {
+    "id": "vie_014",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Qui est aidé par France Travail (anciennement Pôle emploi) ?",
+    "options": ["Uniquement les citoyens français", "Les entreprises qui cherchent à recruter uniquement", "Les demandeurs d'emploi pour trouver un emploi et percevoir des allocations", "Les retraités pour gérer leurs pensions"],
+    "correct_index": 2,
+    "explanation": "France Travail (anciennement Pôle emploi) accompagne les demandeurs d'emploi dans leur recherche d'emploi et gère le versement des allocations chômage (ARE - Aide au Retour à l'Emploi) pour les personnes éligibles."
+  },
+  {
+    "id": "vie_015",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "À quelle condition un mariage est-il reconnu juridiquement en France ?",
+    "options": ["S'il a été célébré à l'église ou dans un lieu de culte", "S'il a été célébré devant l'officier d'état civil en mairie (mariage civil)", "S'il a été organisé par la famille selon les traditions", "S'il a été enregistré par un notaire"],
+    "correct_index": 1,
+    "explanation": "En France, seul le mariage civil célébré devant l'officier d'état civil en mairie a une valeur juridique. Le mariage religieux n'a pas d'effet légal. La cérémonie religieuse peut suivre, mais ne peut pas précéder le mariage civil."
+  },
+  {
+    "id": "vie_016",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Quand faut-il déclarer la naissance d'un enfant à la mairie ?",
+    "options": ["Dans les 24 heures suivant la naissance", "Dans les 5 jours suivant la naissance", "Dans le mois suivant la naissance", "Avant la fin de l'année civile"],
+    "correct_index": 1,
+    "explanation": "La naissance d'un enfant doit être déclarée à la mairie du lieu de naissance dans les 5 jours suivant l'accouchement. Cette déclaration est obligatoire et permet l'établissement de l'acte de naissance."
+  },
+  {
+    "id": "vie_017",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "L'autorité parentale impose aux parents l'obligation de :",
+    "options": ["Uniquement subvenir aux besoins financiers de l'enfant", "Assurer l'éducation, la santé, la sécurité et le développement de l'enfant", "Décider seuls du métier que leur enfant exercera", "Choisir la religion de leur enfant sans son consentement"],
+    "correct_index": 1,
+    "explanation": "L'autorité parentale est un ensemble de droits et de devoirs ayant pour finalité l'intérêt de l'enfant. Elle implique de prendre soin de l'enfant, d'assurer sa sécurité, sa santé et son éducation."
+  },
+  {
+    "id": "vie_018",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Qu'est-ce que le PACS (Pacte Civil de Solidarité) ?",
+    "options": ["Un contrat de travail particulier", "Un type de crédit immobilier", "Une union civile entre deux personnes qui souhaitent organiser leur vie commune", "Un statut réservé aux étrangers en France"],
+    "correct_index": 2,
+    "explanation": "Le PACS est un contrat conclu entre deux personnes majeures, de sexe différent ou de même sexe, pour organiser leur vie commune. Il crée des droits et obligations entre partenaires (impôts, héritage, etc.) sans être équivalent au mariage."
+  },
+  {
+    "id": "vie_019",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "Une personne étrangère en situation régulière peut-elle créer une entreprise en France ?",
+    "options": ["Non, seuls les citoyens français peuvent créer une entreprise", "Oui, mais uniquement dans certains secteurs d'activité", "Oui, une personne en situation régulière peut librement créer son entreprise", "Non, il faut d'abord obtenir la nationalité française"],
+    "correct_index": 2,
+    "explanation": "Une personne étrangère en situation régulière (titulaire d'un titre de séjour valide) peut créer et gérer une entreprise en France, dans le respect des mêmes conditions que les citoyens français."
+  },
+  {
+    "id": "vie_020",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "À quelle première démarche doit-on procéder pour chercher un emploi officiellement en France ?",
+    "options": ["Contacter directement les entreprises", "S'inscrire à France Travail (anciennement Pôle emploi)", "Consulter un avocat spécialisé", "Déposer son CV en mairie"],
+    "correct_index": 1,
+    "explanation": "Pour rechercher un emploi et bénéficier des services de l'État (allocations, accompagnement), la première démarche est de s'inscrire à France Travail. Cet organisme aide à trouver un emploi et gère les droits au chômage."
+  },
+  {
+    "id": "sit_001",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "Votre enfant a 7 ans et refuse d'aller à l'école en disant qu'il est fatigué. Que faites-vous ?",
+    "options": ["Vous le laissez rester à la maison car sa santé passe avant tout", "Vous le laissez décider lui-même s'il veut aller à l'école", "Vous l'obligez à aller à l'école car la scolarité est obligatoire de 3 à 16 ans", "Vous attendez qu'il soit motivé avant de l'inscrire"],
+    "correct_index": 2,
+    "explanation": "L'instruction est obligatoire en France de 3 à 16 ans. Aucune raison comme la fatigue ou le refus de l'enfant ne justifie l'absence scolaire. En cas de maladie avérée, un certificat médical est nécessaire."
+  },
+  {
+    "id": "sit_002",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "Vous avez mal à la gorge depuis 3 jours et vous avez de la fièvre. Que faites-vous ?",
+    "options": ["Vous allez directement aux urgences de l'hôpital", "Vous attendez que ça passe sans consulter de médecin", "Vous consultez votre médecin traitant", "Vous appelez le SAMU (15) en urgence"],
+    "correct_index": 2,
+    "explanation": "En cas de problème de santé non urgent comme une angine ou une grippe, il faut consulter son médecin traitant. Les urgences hospitalières sont réservées aux situations réellement urgentes. Le SAMU est pour les urgences vitales."
+  },
+  {
+    "id": "sit_003",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "Votre employeur vous propose de travailler sans contrat de travail et sans déclaration. Que faites-vous ?",
+    "options": ["Vous acceptez car vous avez besoin d'argent rapidement", "Vous acceptez temporairement en attendant une régularisation", "Vous refusez car le travail non déclaré est illégal et vous prive de vos droits", "Vous acceptez si le salaire proposé est au-dessus du SMIC"],
+    "correct_index": 2,
+    "explanation": "Le travail non déclaré est illégal. En l'acceptant, vous perdez vos droits à la retraite, aux allocations chômage, à la couverture maladie et aux congés payés. L'employeur et le salarié risquent tous deux des poursuites pénales."
+  },
+  {
+    "id": "sit_004",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "Vous êtes victime de discrimination au travail en raison de votre origine. Que pouvez-vous faire ?",
+    "options": ["Vous n'avez aucun recours légal", "Vous devez accepter cette situation", "Vous pouvez saisir le Défenseur des droits, les prud'hommes ou porter plainte", "Vous devez quitter votre emploi sans indemnités"],
+    "correct_index": 2,
+    "explanation": "La discrimination au travail est illégale. Vous pouvez saisir le Défenseur des droits (institution indépendante), le Conseil des prud'hommes (tribunal du travail) ou porter plainte auprès de la police. Des associations peuvent aussi vous accompagner."
+  },
+  {
+    "id": "sit_005",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "Vous êtes témoin d'un accident de voiture avec des blessés. Que faites-vous ?",
+    "options": ["Vous continuez votre chemin pour ne pas être impliqué", "Vous filmez la scène et publiez sur les réseaux sociaux", "Vous appelez immédiatement le 15 (SAMU), le 18 (pompiers) ou le 112, et portez secours si vous pouvez", "Vous attendez que d'autres personnes agissent"],
+    "correct_index": 2,
+    "explanation": "Ne pas porter secours à une personne en danger est un délit (non-assistance à personne en danger). Appelez le 15 (SAMU), le 18 (pompiers) ou le 112. Sécurisez les lieux si possible et portez les premiers secours si vous êtes formé."
+  },
+  {
+    "id": "sit_006",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "Vous êtes victime de violences de la part de votre conjoint(e). Que devez-vous faire ?",
+    "options": ["Garder le silence pour ne pas briser la famille", "Régler la situation en famille sans impliquer la police", "Porter plainte à la police ou à la gendarmerie et appeler le 3919", "Attendre que la situation s'améliore d'elle-même"],
+    "correct_index": 2,
+    "explanation": "Les violences conjugales sont un délit grave. Vous pouvez appeler le 3919 (numéro national violences femmes info, gratuit et anonyme), porter plainte à la police ou gendarmerie, ou aller aux urgences. La loi vous protège."
+  },
+  {
+    "id": "sit_007",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "Vous souhaitez voter aux prochaines élections. Que devez-vous faire au préalable ?",
+    "options": ["Rien, vous pouvez voter sans inscription préalable", "Acheter une carte d'électeur en mairie", "Vous inscrire sur les listes électorales en mairie ou sur service-public.fr", "Demander l'autorisation de vote à la préfecture"],
+    "correct_index": 2,
+    "explanation": "Pour voter en France, il faut être citoyen français, majeur (18 ans) et être inscrit sur les listes électorales. L'inscription se fait en mairie ou sur le site service-public.fr. La carte électorale est ensuite envoyée automatiquement."
+  },
+  {
+    "id": "sit_008",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "Votre enfant ne parle pas français au moment de son inscription à l'école. Que se passe-t-il ?",
+    "options": ["L'école peut refuser d'inscrire un enfant qui ne parle pas français", "L'enfant est renvoyé jusqu'à ce qu'il apprenne le français", "L'école accueille l'enfant et met en place des dispositifs d'aide (UPE2A) pour l'apprentissage du français", "L'enfant doit passer un test de langue avant d'être accepté"],
+    "correct_index": 2,
+    "explanation": "L'école est obligatoire pour tous les enfants de 3 à 16 ans, quelle que soit leur origine ou leur maîtrise du français. Des dispositifs spécifiques (UPE2A - Unités Pédagogiques pour Élèves Allophones Arrivants) existent pour faciliter leur intégration."
+  },
+  {
+    "id": "sit_009",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "Vous perdez votre emploi. Quelles sont les premières démarches à effectuer ?",
+    "options": ["Rien, les allocations sont versées automatiquement", "Attendre une lettre de l'État", "S'inscrire à France Travail dans les meilleurs délais pour bénéficier des allocations et d'un accompagnement", "Contacter uniquement votre ancienne entreprise"],
+    "correct_index": 2,
+    "explanation": "Après la perte de votre emploi, inscrivez-vous rapidement à France Travail (anciennement Pôle emploi). Cette inscription déclenche le processus d'ouverture de vos droits aux allocations chômage (ARE) si vous y avez droit."
+  },
+  {
+    "id": "sit_010",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "Vous souhaitez créer une association. Quelle démarche faut-il effectuer ?",
+    "options": ["Obtenir l'autorisation du Président de la République", "Déclarer l'association en préfecture (loi 1901) : c'est simple et gratuit", "Passer devant un notaire et payer des frais importants", "Obtenir un agrément du ministère concerné"],
+    "correct_index": 1,
+    "explanation": "En France, créer une association (loi du 1er juillet 1901) est simple et gratuit : il suffit de déclarer l'association à la préfecture ou sous-préfecture avec les statuts et la liste des dirigeants. La liberté d'association est un droit fondamental."
+  },
+  {
+    "id": "sit_011",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "Vous trouvez un portefeuille plein d'argent dans la rue. Que faites-vous ?",
+    "options": ["Vous le gardez car l'argent est une bonne fortune", "Vous le partagez avec les personnes autour de vous", "Vous le remettez à la police ou à la gendarmerie", "Vous cherchez le propriétaire sur les réseaux sociaux uniquement"],
+    "correct_index": 2,
+    "explanation": "Garder un objet trouvé que l'on sait appartenir à autrui est assimilé à un vol. La loi française impose de remettre l'objet trouvé à la police ou à la mairie afin qu'il puisse être restitué à son propriétaire."
+  },
+  {
+    "id": "sit_012",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "Votre logement est dans un état très dégradé (humidité, chauffage en panne) et votre propriétaire ne fait rien. Que pouvez-vous faire ?",
+    "options": ["Accepter la situation et ne pas payer le loyer", "Partir sans préavis car le logement est inhabitable", "Contacter la mairie, l'Agence Nationale de l'Habitat (ANAH) ou saisir la justice", "Ne rien faire pour éviter les conflits"],
+    "correct_index": 2,
+    "explanation": "Un propriétaire a l'obligation légale de fournir un logement décent. En cas de manquement, le locataire peut contacter la mairie, la CAF, l'ANAH ou saisir le tribunal judiciaire. Des aides et médiateurs existent."
+  },
+  {
+    "id": "sit_013",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "Votre employeur ne respecte pas votre contrat de travail (non-paiement des heures supplémentaires, conditions de travail dangereuses). Que faites-vous ?",
+    "options": ["Vous acceptez la situation par crainte de perdre votre emploi", "Vous contactez l'Inspection du travail qui contrôle le respect du droit du travail", "Vous résignez votre poste sans recours possible", "Vous attendez que la situation se règle d'elle-même"],
+    "correct_index": 1,
+    "explanation": "L'Inspection du travail veille au respect du droit du travail. Vous pouvez la contacter anonymement. Le Conseil des prud'hommes (tribunal du travail) peut aussi être saisi si vous avez un litige avec votre employeur."
+  },
+  {
+    "id": "sit_014",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "Votre bébé vient de naître. Quelle démarche administrative est urgente ?",
+    "options": ["Inscrire l'enfant à l'école maternelle immédiatement", "Déclarer la naissance à la mairie dans les 5 jours", "Obtenir la carte Vitale de l'enfant avant de quitter la maternité", "Enregistrer l'enfant à la préfecture"],
+    "correct_index": 1,
+    "explanation": "La déclaration de naissance doit être faite à la mairie du lieu de naissance dans les 5 jours suivant l'accouchement. Cette démarche obligatoire permet d'établir l'acte de naissance et l'état civil de l'enfant."
+  },
+  {
+    "id": "sit_015",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "Un ami vous propose du travail au noir avec une bonne rémunération. Il dit que c'est courant et sans risque. Que faites-vous ?",
+    "options": ["Vous acceptez car le risque est faible", "Vous acceptez temporairement en attendant un emploi déclaré", "Vous refusez car c'est illégal pour vous et pour lui, et cela vous prive de droits sociaux", "Vous acceptez si c'est un travail ponctuel"],
+    "correct_index": 2,
+    "explanation": "Le travail non déclaré est illégal quelles que soient les circonstances. Il vous prive de couverture maladie, de retraite, d'allocations chômage et congés payés. Vous et l'employeur risquez des sanctions financières et pénales."
+  },
+  {
+    "id": "sit_016",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "Votre enfant de 2 ans n'a pas reçu les vaccins obligatoires. Que devez-vous faire ?",
+    "options": ["Rien, les vaccins sont optionnels en France", "Attendre que l'enfant soit plus grand", "Consulter un médecin pour mettre à jour le calendrier vaccinal, les vaccins obligatoires doivent être faits", "Demander une dérogation religieuse"],
+    "correct_index": 2,
+    "explanation": "En France, 11 vaccins sont obligatoires pour les enfants nés depuis le 1er janvier 2018. Le non-respect de cette obligation peut entraîner des difficultés pour l'inscription en collectivité (crèche, école). Consultez votre médecin traitant."
+  },
+  {
+    "id": "sit_017",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "Vous êtes arrêté par la police pour une vérification d'identité. Quels sont vos droits ?",
+    "options": ["Vous n'avez aucun droit lors d'un contrôle de police", "Vous pouvez refuser de montrer vos papiers", "Vous avez le droit d'être informé de vos droits, y compris d'être assisté par un avocat si vous êtes gardé à vue", "Vous pouvez ignorer les injonctions de la police"],
+    "correct_index": 2,
+    "explanation": "Lors d'un contrôle, vous devez vous identifier. Si vous êtes placé en garde à vue, vous avez le droit d'être informé des raisons, de contacter un proche, d'être examiné par un médecin et d'être assisté par un avocat."
+  },
+  {
+    "id": "sit_018",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "Vous souhaitez vous marier avec votre compagnon/compagne en France. Quelle est la démarche obligatoire ?",
+    "options": ["Vous célébrez uniquement le mariage religieux dans votre lieu de culte", "Vous vous mariez d'abord civilement en mairie, le mariage religieux est ensuite facultatif", "Vous déposez une demande à la préfecture", "Vous faites appel à un notaire uniquement"],
+    "correct_index": 1,
+    "explanation": "En France, seul le mariage civil, célébré devant l'officier d'état civil en mairie, est reconnu juridiquement. Le mariage religieux n'a pas de valeur légale. Il peut avoir lieu après le mariage civil mais jamais avant."
+  },
+  {
+    "id": "sit_019",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "Vous avez besoin d'une aide financière urgente (loyer, alimentation). Vers qui vous tournez-vous ?",
+    "options": ["Vous ne pouvez rien faire en tant qu'étranger en France", "Vous contactez la CAF, le CCAS de votre mairie ou une association d'aide sociale", "Vous retournez dans votre pays d'origine", "Vous empruntez de l'argent à des personnes dans la rue"],
+    "correct_index": 1,
+    "explanation": "En France, des aides sociales existent : la CAF (allocations familiales, APL...), le CCAS (Centre Communal d'Action Sociale) de la mairie, et de nombreuses associations (Croix-Rouge, Secours populaire...) peuvent vous aider selon votre situation."
+  },
+  {
+    "id": "sit_020",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "Votre enfant est harcelé à l'école par ses camarades. Que faites-vous ?",
+    "options": ["Vous lui dites d'ignorer ses camarades et de ne rien dire", "Vous prenez en main la situation directement avec les parents des autres enfants", "Vous contactez l'école (enseignant, directeur), et si nécessaire les autorités compétentes", "Vous retirez votre enfant de l'école"],
+    "correct_index": 2,
+    "explanation": "Le harcèlement scolaire est une forme de violence punissable par la loi. Signalez immédiatement la situation à l'enseignant et au directeur de l'école. Si ça ne s'arrange pas, contactez le 3020 (numéro national contre le harcèlement) ou la police."
+  },
+  {
+    "id": "sit_021",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "Vous avez reçu une convocation d'un tribunal. Que faites-vous ?",
+    "options": ["Vous ignorez la convocation car vous ne comprenez pas la langue", "Vous partez à l'étranger pour éviter la convocation", "Vous vous présentez à la convocation ou consultez un avocat pour vous aider", "Vous envoyez un membre de votre famille à votre place"],
+    "correct_index": 2,
+    "explanation": "Une convocation judiciaire est une obligation légale. Ne pas y répondre peut entraîner des sanctions supplémentaires. Vous avez le droit à un avocat (commis d'office si vous n'en avez pas les moyens). Des traducteurs peuvent être mis à disposition."
+  },
+  {
+    "id": "sit_022",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "Vous souhaitez vous intégrer en France et améliorer votre français. Que pouvez-vous faire ?",
+    "options": ["Rien, l'État ne propose pas d'aide pour l'apprentissage du français", "Suivre les cours de français proposés dans le cadre du Contrat d'Intégration Républicaine (CIR) et d'autres organismes", "Attendre d'apprendre le français par vous-même", "Payer des cours très coûteux dans une école privée uniquement"],
+    "correct_index": 1,
+    "explanation": "Le Contrat d'Intégration Républicaine (CIR) inclut des cours de français gratuits pour les nouveaux arrivants. Des associations, des centres de formation et des organismes publics proposent aussi des cours de FLE (Français Langue Étrangère)."
+  },
+  {
+    "id": "sit_023",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "En tant que parent, pouvez-vous refuser que votre enfant participe aux cours d'éducation physique pour des raisons religieuses ?",
+    "options": ["Oui, si cela est contraire à vos valeurs religieuses", "Oui, à condition d'une demande écrite à l'école", "Non, les parents ne peuvent pas refuser les cours obligatoires du programme scolaire pour des raisons religieuses", "Oui, à partir de 10 ans si l'enfant le refuse aussi"],
+    "correct_index": 2,
+    "explanation": "Le principe de laïcité s'applique à l'école publique. Les parents ne peuvent pas s'opposer aux cours du programme officiel (EPS, SVT, etc.) pour des raisons religieuses. L'école dispense un enseignement neutre accessible à tous."
+  },
+  {
+    "id": "sit_024",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "Vous découvrez que vous avez une maladie chronique. Comment accéder aux soins en France ?",
+    "options": ["Vous devez payer tous les soins vous-même sans remboursement", "Vous pouvez bénéficier d'une prise en charge à 100% via l'Affection Longue Durée (ALD) après avis médical", "Vous ne pouvez pas être soigné en tant qu'étranger", "Vous devez souscrire à une assurance privée uniquement"],
+    "correct_index": 1,
+    "explanation": "Les personnes atteintes d'une affection longue durée (ALD) peuvent bénéficier d'une prise en charge à 100% des soins liés à leur maladie par l'Assurance maladie. Il faut une demande du médecin traitant auprès de la CPAM."
+  },
+  {
+    "id": "sit_025",
+    "category": "droits_devoirs",
+    "levels": ["CR"],
+    "type": "situation",
+    "question": "Vous souhaitez naturalisé(e) français(e). Votre conjoint(e) exige que vous renonciez à votre culture d'origine. Qu'en dit la loi française ?",
+    "options": ["La loi impose d'abandonner sa culture d'origine pour obtenir la nationalité", "La loi française n'impose pas d'abandonner sa culture, mais exige l'adhésion aux valeurs de la République", "La loi exige de ne pratiquer que la culture française", "Votre conjoint a légalement le droit de vous l'imposer"],
+    "correct_index": 1,
+    "explanation": "La naturalisation française exige de respecter les valeurs de la République et de maîtriser le français, mais ne demande pas d'abandonner sa culture d'origine. La France est un pays d'immigration où les cultures se côtoient dans le respect des lois communes."
+  }
+]
