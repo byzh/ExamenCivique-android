@@ -36,6 +36,8 @@ interface Strings {
     val finish: String
     val next: String
     val chooseAnswer: String
+    val answerCorrect: String
+    val answerWrong: String
     val noQuestions: String
     val tryAnotherCategory: String
     val sessionFinished: String
@@ -176,6 +178,8 @@ object FrenchStrings : Strings {
     override val finish = "Terminer"
     override val next = "Suivant"
     override val chooseAnswer = "Choisissez une réponse"
+    override val answerCorrect = "Bonne réponse"
+    override val answerWrong = "Mauvaise réponse"
     override val noQuestions = "Aucune question"
     override val tryAnotherCategory = "Essayez une autre catégorie."
     override val sessionFinished = "Session terminée !"
@@ -317,6 +321,8 @@ object ChineseStrings : Strings {
     override val finish = "完成"
     override val next = "下一题"
     override val chooseAnswer = "请选择答案"
+    override val answerCorrect = "回答正确"
+    override val answerWrong = "回答错误"
     override val noQuestions = "暂无题目"
     override val tryAnotherCategory = "请尝试其他类别。"
     override val sessionFinished = "练习结束！"

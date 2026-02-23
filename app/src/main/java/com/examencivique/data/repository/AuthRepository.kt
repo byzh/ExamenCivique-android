@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.credentials.CredentialManager
 import androidx.credentials.CustomCredential
 import androidx.credentials.GetCredentialRequest
-import com.examencivique.R
+import com.examencivique.BuildConfig
 import com.google.android.libraries.identity.googleid.GetGoogleIdOption
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
 import com.google.firebase.auth.FirebaseAuth
@@ -58,11 +58,9 @@ class AuthRepository(private val context: Context) {
 
     suspend fun signInWithGoogle(activityContext: Context): AuthResult {
         return try {
-            val webClientId = context.getString(R.string.default_web_client_id)
-
             val googleIdOption = GetGoogleIdOption.Builder()
                 .setFilterByAuthorizedAccounts(false)
-                .setServerClientId(webClientId)
+                .setServerClientId(BuildConfig.WEB_CLIENT_ID)
                 .build()
 
             val request = GetCredentialRequest.Builder()

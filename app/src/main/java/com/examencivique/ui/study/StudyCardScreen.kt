@@ -1,5 +1,7 @@
 package com.examencivique.ui.study
 
+import android.os.Build
+import android.view.HapticFeedbackConstants
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
@@ -24,6 +26,7 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -149,6 +152,9 @@ private fun OptionButton(
     val isSelected = selectedIndex == index
     val isCorrect  = index == question.correctIndex
 
+    val view = LocalView.current
+    val s = LocalStrings.current
+
     // Bouncy press animation
     var isPressed by remember { mutableStateOf(false) }
     val scale by animateFloatAsState(
@@ -217,6 +223,18 @@ private fun OptionButton(
                             isPressed = true
                             tryAwaitRelease()
                             isPressed = false
+                            val correct = index == question.correctIndex
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                                view.performHapticFeedback(
+                                    if (correct) HapticFeedbackConstants.CONFIRM
+                                    else HapticFeedbackConstants.REJECT
+                                )
+                            } else {
+                                view.performHapticFeedback(
+                                    if (correct) HapticFeedbackConstants.VIRTUAL_KEY
+                                    else HapticFeedbackConstants.LONG_PRESS
+                                )
+                            }
                             onClick()
                         }
                     )
@@ -260,7 +278,7 @@ private fun OptionButton(
                 )
                 Icon(
                     if (isCorrect) Icons.Filled.CheckCircle else Icons.Filled.Cancel,
-                    contentDescription = null,
+                    contentDescription = if (isCorrect) s.answerCorrect else s.answerWrong,
                     tint = if (isCorrect) Color(0xFF2E7D32) else Color(0xFFC62828),
                     modifier = Modifier
                         .size(24.dp)

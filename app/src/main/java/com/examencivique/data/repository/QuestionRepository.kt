@@ -6,19 +6,36 @@ import com.examencivique.data.model.Question
 import com.examencivique.data.model.QuestionCategory
 import com.examencivique.data.model.QuestionType
 import com.examencivique.data.model.ProgressData
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
 import java.io.InputStreamReader
 
 class QuestionRepository(context: Context) {
 
     private val json = Json { ignoreUnknownKeys = true }
+    private val scope = CoroutineScope(Dispatchers.IO + SupervisorJob())
 
-    val allQuestions: List<Question> = loadQuestions(context)
+    private val _allQuestions = MutableStateFlow<List<Question>>(emptyList())
+    val allQuestionsFlow: StateFlow<List<Question>> = _allQuestions.asStateFlow()
+    val allQuestions: List<Question> get() = _allQuestions.value
+
+    init {
+        scope.launch {
+            _allQuestions.value = loadQuestions(context)
+        }
+    }
 
     // MARK: - Loading
 
-    private fun loadQuestions(context: Context): List<Question> {
-        return try {
+    private suspend fun loadQuestions(context: Context): List<Question> = withContext(Dispatchers.IO) {
+        try {
             val text = context.assets.open("questions.json").use { stream ->
                 InputStreamReader(stream).readText()
             }
@@ -44,8 +61,8 @@ class QuestionRepository(context: Context) {
         }
     }
 
-    private fun loadChineseTranslations(context: Context): Map<String, Question> {
-        return try {
+    private suspend fun loadChineseTranslations(context: Context): Map<String, Question> = withContext(Dispatchers.IO) {
+        try {
             val text = context.assets.open("questions_zh.json").use { stream ->
                 InputStreamReader(stream).readText()
             }

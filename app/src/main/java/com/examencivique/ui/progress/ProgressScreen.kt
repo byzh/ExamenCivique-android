@@ -56,7 +56,7 @@ fun ProgressScreen(
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text(s.accountTitle, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
             IconButton(onClick = { showResetAlert = true }) {
-                Icon(Icons.Filled.Delete, s.reset, tint = Color(0xFFC62828))
+                Icon(Icons.Filled.RestartAlt, s.reset, tint = Color(0xFFC62828))
             }
         }
 

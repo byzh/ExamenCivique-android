@@ -38,6 +38,7 @@ fun StudyScreen(
     onNavigateToCards: (String, String?) -> Unit
 ) {
     val progress by progressRepo.progress.collectAsState()
+    val questions by questionRepo.allQuestionsFlow.collectAsState()
     val scrollState = rememberScrollState()
     val s = LocalStrings.current
 
@@ -69,7 +70,7 @@ fun StudyScreen(
                     Column {
                         Text(s.studyBannerTitle, color = Color.White, fontWeight = FontWeight.Bold, fontSize = 18.sp)
                         Text(
-                            s.studyBannerSubtitle(questionRepo.allQuestions.size),
+                            s.studyBannerSubtitle(questions.size),
                             color = Color.White.copy(alpha = 0.85f),
                             fontSize = 12.sp
                         )
@@ -84,7 +85,7 @@ fun StudyScreen(
             QuickButton(
                 modifier = Modifier.weight(1f),
                 title = s.studyAll,
-                count = "${questionRepo.allQuestions.size}",
+                count = "${questions.size}",
                 icon = Icons.Filled.List,
                 color = FrenchBlue
             ) { onNavigateToCards("ALL", null) }
@@ -112,7 +113,7 @@ fun StudyScreen(
             CategoryRow(
                 category = cat,
                 count = questionRepo.questionsForCategory(cat).size,
-                accuracy = progress.accuracy(cat, questionRepo.allQuestions),
+                accuracy = progress.accuracy(cat, questions),
                 onClick = { onNavigateToCards("CATEGORY", cat.key) }
             )
         }
