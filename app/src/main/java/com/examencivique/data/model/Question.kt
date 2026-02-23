@@ -8,8 +8,10 @@ import androidx.compose.material.icons.filled.Scale
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import com.examencivique.ui.i18n.Strings
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.Transient
 
 // MARK: - Category
 
@@ -54,6 +56,14 @@ enum class QuestionCategory(
         fun fromKey(key: String): QuestionCategory =
             entries.first { it.key == key }
     }
+
+    fun localizedName(s: Strings): String = when (this) {
+        PRINCIPES_VALEURS -> s.catPrincipesValeurs
+        INSTITUTIONS -> s.catInstitutions
+        DROITS_DEVOIRS -> s.catDroitsDevoirs
+        HISTOIRE_GEO_CULTURE -> s.catHistoireGeoCulture
+        VIE_EN_FRANCE -> s.catVieEnFrance
+    }
 }
 
 // MARK: - Type & Level
@@ -89,6 +99,16 @@ enum class ExamLevel(
     companion object {
         fun fromKey(key: String): ExamLevel = entries.first { it.key == key }
     }
+
+    fun localizedName(s: Strings): String = when (this) {
+        CSP -> s.levelCspName
+        CR -> s.levelCrName
+    }
+
+    fun localizedDesc(s: Strings): String = when (this) {
+        CSP -> s.levelCspDesc
+        CR -> s.levelCrDesc
+    }
 }
 
 // MARK: - Question (JSON-serializable)
@@ -102,7 +122,10 @@ data class Question(
     val question: String,
     val options: List<String>,
     @SerialName("correct_index") val correctIndex: Int,
-    val explanation: String? = null
+    val explanation: String? = null,
+    @Transient val questionZh: String? = null,
+    @Transient val optionsZh: List<String>? = null,
+    @Transient val explanationZh: String? = null
 ) {
     val category: QuestionCategory get() = QuestionCategory.fromKey(categoryKey)
     val type: QuestionType get() = QuestionType.fromKey(typeKey)

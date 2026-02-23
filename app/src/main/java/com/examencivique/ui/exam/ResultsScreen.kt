@@ -25,6 +25,7 @@ import androidx.compose.ui.unit.sp
 import com.examencivique.data.model.ExamResult
 import com.examencivique.data.model.QuestionCategory
 import com.examencivique.data.repository.QuestionRepository
+import com.examencivique.ui.i18n.LocalStrings
 import com.examencivique.ui.theme.FrenchBlue
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -34,13 +35,14 @@ fun ResultsScreen(
     questionRepo: QuestionRepository,
     onDismiss: () -> Unit
 ) {
+    val s = LocalStrings.current
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Résultats") },
+                title = { Text(s.results) },
                 navigationIcon = {
                     IconButton(onClick = onDismiss) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "Retour")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, s.back)
                     }
                 }
             )
@@ -63,6 +65,7 @@ fun ResultsScreen(
 
 @Composable
 private fun ScoreCard(result: ExamResult) {
+    val s = LocalStrings.current
     Card(
         shape = RoundedCornerShape(20.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
@@ -72,7 +75,6 @@ private fun ScoreCard(result: ExamResult) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
-            // Badge
             val passColor = if (result.isPassed) Color(0xFF2E7D32) else Color(0xFFC62828)
             Box(
                 modifier = Modifier.background(passColor, RoundedCornerShape(20.dp)).padding(horizontal = 14.dp, vertical = 6.dp)
@@ -83,13 +85,12 @@ private fun ScoreCard(result: ExamResult) {
                         null, tint = Color.White, modifier = Modifier.size(16.dp)
                     )
                     Text(
-                        if (result.isPassed) "RÉUSSI" else "ÉCHOUÉ",
+                        if (result.isPassed) s.passed else s.failed,
                         color = Color.White, fontWeight = FontWeight.Bold, fontSize = 12.sp
                     )
                 }
             }
 
-            // Score ring
             Box(contentAlignment = Alignment.Center, modifier = Modifier.size(160.dp)) {
                 val pct = result.scorePercentage.toFloat()
                 Canvas(modifier = Modifier.fillMaxSize()) {
@@ -101,26 +102,23 @@ private fun ScoreCard(result: ExamResult) {
                 }
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text("${result.score}", fontWeight = FontWeight.Bold, fontSize = 44.sp, color = passColor)
-                    Text("sur ${result.totalQuestions}", fontSize = 14.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text(s.scoreOutOf(result.totalQuestions), fontSize = 14.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             }
 
-            // Sub-stats
             Row(modifier = Modifier.fillMaxWidth()) {
-                SubStat(Modifier.weight(1f), "${(result.scorePercentage * 100).toInt()}%", "Score", passColor)
-                SubStat(Modifier.weight(1f), "${result.score}/${result.totalQuestions}", "Bonnes rép.")
-                SubStat(Modifier.weight(1f), result.formattedDuration, "Durée")
+                SubStat(Modifier.weight(1f), "${(result.scorePercentage * 100).toInt()}%", s.score, passColor)
+                SubStat(Modifier.weight(1f), "${result.score}/${result.totalQuestions}", s.correctAnswers)
+                SubStat(Modifier.weight(1f), result.formattedDuration, s.duration)
             }
 
-            // Message
             Text(
-                if (result.isPassed) "Félicitations ! Vous avez atteint le seuil de réussite (32/40)."
-                else "Pas encore. Le seuil est de 32/40 (80%). Continuez à réviser !",
+                if (result.isPassed) s.passMessage else s.failMessage,
                 fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurfaceVariant, textAlign = TextAlign.Center
             )
 
             Text(
-                "Examen ${result.level.shortName}",
+                s.examLevelLabel(result.level.shortName),
                 fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
@@ -137,9 +135,8 @@ private fun SubStat(modifier: Modifier, value: String, label: String, color: Col
 
 @Composable
 private fun CategoryBreakdown(result: ExamResult, questionRepo: QuestionRepository) {
-    // NOTE: we don't have per-question answers stored in the result for simplicity.
-    // We show the overall category stats from the question pool instead.
-    Text("Résumé par thème", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+    val s = LocalStrings.current
+    Text(s.summaryByTheme, fontWeight = FontWeight.Bold, fontSize = 16.sp)
 
     QuestionCategory.entries.forEach { cat ->
         val catTotal = questionRepo.questionsForCategory(cat).size
@@ -153,8 +150,8 @@ private fun CategoryBreakdown(result: ExamResult, questionRepo: QuestionReposito
                 horizontalArrangement = Arrangement.spacedBy(12.dp)
             ) {
                 Icon(cat.icon, null, tint = cat.color, modifier = Modifier.size(20.dp))
-                Text(cat.displayName, fontSize = 13.sp, modifier = Modifier.weight(1f))
-                Text("$catTotal questions", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text(cat.localizedName(s), fontSize = 13.sp, modifier = Modifier.weight(1f))
+                Text(s.studyQuestionCount(catTotal), fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
         }
     }
@@ -162,6 +159,7 @@ private fun CategoryBreakdown(result: ExamResult, questionRepo: QuestionReposito
 
 @Composable
 private fun ActionButtons(onDismiss: () -> Unit) {
+    val s = LocalStrings.current
     Button(
         onClick = onDismiss,
         modifier = Modifier.fillMaxWidth(),
@@ -170,6 +168,6 @@ private fun ActionButtons(onDismiss: () -> Unit) {
     ) {
         Icon(Icons.AutoMirrored.Filled.ArrowBack, null, modifier = Modifier.size(18.dp))
         Spacer(Modifier.width(8.dp))
-        Text("Retour à l'accueil", fontWeight = FontWeight.Bold)
+        Text(s.backToHome, fontWeight = FontWeight.Bold)
     }
 }

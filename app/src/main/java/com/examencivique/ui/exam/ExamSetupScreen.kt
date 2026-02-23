@@ -15,7 +15,6 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
@@ -24,6 +23,7 @@ import androidx.compose.ui.unit.sp
 import com.examencivique.data.model.ExamLevel
 import com.examencivique.data.repository.ProgressRepository
 import com.examencivique.data.repository.QuestionRepository
+import com.examencivique.ui.i18n.LocalStrings
 import com.examencivique.ui.theme.FrenchBlue
 
 @Composable
@@ -34,6 +34,7 @@ fun ExamSetupScreen(
 ) {
     var selectedLevel by remember { mutableStateOf(ExamLevel.CSP) }
     val progress by progressRepo.progress.collectAsState()
+    val s = LocalStrings.current
 
     Column(
         modifier = Modifier
@@ -43,32 +44,32 @@ fun ExamSetupScreen(
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(20.dp)
     ) {
-        Text("Examen blanc", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
+        Text(s.examTitle, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
 
         // Info card
         Card(shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
             Column(modifier = Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     Icon(Icons.Filled.Info, null, tint = FrenchBlue)
-                    Text("Format officiel de l'examen", fontWeight = FontWeight.Bold)
+                    Text(s.examOfficialFormat, fontWeight = FontWeight.Bold)
                 }
 
                 Row(modifier = Modifier.fillMaxWidth()) {
-                    InfoCell(Modifier.weight(1f), Icons.Filled.Tag, "40", "Questions", FrenchBlue)
-                    InfoCell(Modifier.weight(1f), Icons.Filled.Timer, "45", "Minutes", Color(0xFFE65100))
-                    InfoCell(Modifier.weight(1f), Icons.Filled.CheckCircle, "32", "Pour réussir", Color(0xFF2E7D32))
+                    InfoCell(Modifier.weight(1f), Icons.Filled.Tag, "40", s.examQuestions, FrenchBlue)
+                    InfoCell(Modifier.weight(1f), Icons.Filled.Timer, "45", s.examMinutes, Color(0xFFE65100))
+                    InfoCell(Modifier.weight(1f), Icons.Filled.CheckCircle, "32", s.examToPass, Color(0xFF2E7D32))
                 }
 
                 Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                    BulletRow(Icons.Filled.Description, "28 questions de connaissance", FrenchBlue)
-                    BulletRow(Icons.Filled.PersonSearch, "12 questions de situation", Color(0xFF7B1FA2))
-                    BulletRow(Icons.Filled.Percent, "Seuil de réussite : 80 % (32/40)", Color(0xFF2E7D32))
+                    BulletRow(Icons.Filled.Description, s.exam28Connaissance, FrenchBlue)
+                    BulletRow(Icons.Filled.PersonSearch, s.exam12Situation, Color(0xFF7B1FA2))
+                    BulletRow(Icons.Filled.Percent, s.examPassThreshold, Color(0xFF2E7D32))
                 }
             }
         }
 
         // Level selection
-        Text("Choisir le niveau", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+        Text(s.examChooseLevel, fontWeight = FontWeight.Bold, fontSize = 16.sp)
 
         ExamLevel.entries.forEach { level ->
             val isSelected = selectedLevel == level
@@ -107,8 +108,8 @@ fun ExamSetupScreen(
 
                     Column(modifier = Modifier.weight(1f)) {
                         Text(level.shortName, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-                        Text(level.description, fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant, lineHeight = 16.sp)
-                        Text("$conn conn. · $sit situations", fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        Text(level.localizedDesc(s), fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant, lineHeight = 16.sp)
+                        Text(s.examLevelDetail(conn, sit), fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     }
                 }
             }
@@ -117,13 +118,13 @@ fun ExamSetupScreen(
         // Past exam stats
         val pastExams = progress.examResults.filter { it.levelKey == selectedLevel.key }
         if (pastExams.isNotEmpty()) {
-            Text("Votre historique", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+            Text(s.examHistory, fontWeight = FontWeight.Bold, fontSize = 16.sp)
             val last = pastExams.first()
             val passed = pastExams.count { it.isPassed }
             Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                StatMini(Modifier.weight(1f), "${pastExams.size}", "Examens")
-                StatMini(Modifier.weight(1f), "$passed", "Réussis", Color(0xFF2E7D32))
-                StatMini(Modifier.weight(1f), "${(last.scorePercentage * 100).toInt()}%", "Dernier", if (last.isPassed) Color(0xFF2E7D32) else Color(0xFFC62828))
+                StatMini(Modifier.weight(1f), "${pastExams.size}", s.examExams)
+                StatMini(Modifier.weight(1f), "$passed", s.examPassed, Color(0xFF2E7D32))
+                StatMini(Modifier.weight(1f), "${(last.scorePercentage * 100).toInt()}%", s.examLast, if (last.isPassed) Color(0xFF2E7D32) else Color(0xFFC62828))
             }
         }
 
@@ -140,11 +141,11 @@ fun ExamSetupScreen(
         ) {
             Icon(Icons.Filled.PlayArrow, null)
             Spacer(Modifier.width(8.dp))
-            Text("Commencer l'examen blanc", fontWeight = FontWeight.Bold)
+            Text(s.examStart, fontWeight = FontWeight.Bold)
         }
 
         if (!canStart) {
-            Text("Pas assez de questions pour ce niveau.", fontSize = 12.sp, color = Color(0xFFC62828))
+            Text(s.examNotEnough, fontSize = 12.sp, color = Color(0xFFC62828))
         }
 
         Spacer(Modifier.height(8.dp))

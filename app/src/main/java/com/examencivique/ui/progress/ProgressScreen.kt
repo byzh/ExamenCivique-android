@@ -1,8 +1,12 @@
 package com.examencivique.ui.progress
 
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
@@ -12,7 +16,6 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Canvas
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
@@ -20,13 +23,18 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.examencivique.data.model.ExamResult
 import com.examencivique.data.model.QuestionCategory
+import com.examencivique.data.repository.LanguageManager
+import com.examencivique.ui.i18n.AppLanguage
+import com.examencivique.ui.i18n.LocalStrings
 import com.examencivique.ui.theme.FrenchBlue
 import java.text.SimpleDateFormat
 import java.util.*
 
 @Composable
-fun ProgressScreen(viewModel: ProgressViewModel) {
+fun ProgressScreen(viewModel: ProgressViewModel, languageManager: LanguageManager) {
     val progress by viewModel.progress.collectAsState()
+    val s = LocalStrings.current
+    val currentLang by languageManager.language.collectAsState()
     var showResetAlert by remember { mutableStateOf(false) }
 
     Column(
@@ -38,69 +46,129 @@ fun ProgressScreen(viewModel: ProgressViewModel) {
         verticalArrangement = Arrangement.spacedBy(20.dp)
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            Text("Mes Progrès", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
+            Text(s.accountTitle, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
             IconButton(onClick = { showResetAlert = true }) {
-                Icon(Icons.Filled.Delete, "Réinitialiser", tint = Color(0xFFC62828))
+                Icon(Icons.Filled.Delete, s.reset, tint = Color(0xFFC62828))
+            }
+        }
+
+        // Language switcher (Modern Segmented Picker style)
+        Card(
+            shape = RoundedCornerShape(20.dp),
+            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f))
+        ) {
+            Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Icon(Icons.Filled.Language, null, tint = FrenchBlue, modifier = Modifier.size(18.dp))
+                    Text(s.language, style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
+                }
+                
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(48.dp)
+                        .clip(RoundedCornerShape(12.dp))
+                        .background(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.05f))
+                        .padding(4.dp)
+                ) {
+                    Row(modifier = Modifier.fillMaxSize()) {
+                        AppLanguage.entries.forEach { lang ->
+                            val isSelected = currentLang == lang
+                            val backgroundColor by animateColorAsState(
+                                if (isSelected) MaterialTheme.colorScheme.surface else Color.Transparent,
+                                label = "bg"
+                            )
+                            val textColor by animateColorAsState(
+                                if (isSelected) FrenchBlue else MaterialTheme.colorScheme.onSurfaceVariant,
+                                label = "text"
+                            )
+                            val elevation by animateDpAsState(
+                                if (isSelected) 2.dp else 0.dp,
+                                label = "elev"
+                            )
+
+                            Surface(
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .fillMaxHeight()
+                                    .clip(RoundedCornerShape(8.dp))
+                                    .clickable { languageManager.setLanguage(lang) },
+                                color = backgroundColor,
+                                shape = RoundedCornerShape(8.dp),
+                                shadowElevation = elevation
+                            ) {
+                                Box(contentAlignment = Alignment.Center) {
+                                    Text(
+                                        text = lang.displayName,
+                                        style = MaterialTheme.typography.labelLarge,
+                                        fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
+                                        color = textColor
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
 
         // Overview card
-        Card(shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
+        Card(shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
             Column(modifier = Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
-                Text("Vue d'ensemble", fontWeight = FontWeight.Bold)
+                Text(s.overview, fontWeight = FontWeight.Bold)
 
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    // Accuracy ring
                     Box(contentAlignment = Alignment.Center, modifier = Modifier.size(90.dp)) {
                         CircularProgressIndicator(
                             progress = { progress.overallAccuracy.toFloat() },
                             modifier = Modifier.fillMaxSize(),
-                            strokeWidth = 10.dp,
+                            strokeWidth = 8.dp,
                             color = accuracyColor(progress.overallAccuracy),
-                            trackColor = Color.Gray.copy(alpha = 0.15f)
+                            trackColor = Color.Gray.copy(alpha = 0.1f),
+                            strokeCap = androidx.compose.ui.graphics.StrokeCap.Round
                         )
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Text("${(progress.overallAccuracy * 100).toInt()}%", fontWeight = FontWeight.Bold, fontSize = 18.sp)
-                            Text("exact.", fontSize = 10.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                            Text("${(progress.overallAccuracy * 100).toInt()}%", fontWeight = FontWeight.Bold, fontSize = 20.sp)
+                            Text(s.accuracy, fontSize = 10.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                         }
                     }
 
-                    Spacer(Modifier.width(16.dp))
+                    Spacer(Modifier.width(20.dp))
 
-                    Column(verticalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.weight(1f)) {
-                        StatRow(Icons.Filled.CheckCircle, Color(0xFF2E7D32), "Bonnes réponses", "${progress.totalCorrect}")
-                        StatRow(Icons.Filled.Description, FrenchBlue, "Tentatives totales", "${progress.totalAttempts}")
-                        StatRow(Icons.Filled.Star, Color(0xFFFBC02D), "Questions maîtrisées", "${progress.masteredCount}")
-                        StatRow(Icons.Filled.EmojiEvents, Color(0xFFE65100), "Examens réussis", "${progress.examsPassedCount}")
+                    Column(verticalArrangement = Arrangement.spacedBy(10.dp), modifier = Modifier.weight(1f)) {
+                        StatRow(Icons.Filled.CheckCircle, Color(0xFF2E7D32), s.correctAnswersLabel, "${progress.totalCorrect}")
+                        StatRow(Icons.Filled.Description, FrenchBlue, s.totalAttempts, "${progress.totalAttempts}")
+                        StatRow(Icons.Filled.Star, Color(0xFFFBC02D), s.masteredQuestions, "${progress.masteredCount}")
+                        StatRow(Icons.Filled.EmojiEvents, Color(0xFFE65100), s.examsPassed, "${progress.examsPassedCount}")
                     }
                 }
             }
         }
 
         // Per-category
-        Text("Par thème", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+        Text(s.byTheme, fontWeight = FontWeight.Bold, fontSize = 16.sp)
 
         QuestionCategory.entries.forEach { cat ->
             val acc   = viewModel.categoryAccuracy(cat)
             val tried = viewModel.triedCount(cat)
             val total = viewModel.questionRepo.questionsForCategory(cat).size
 
-            Card(shape = RoundedCornerShape(14.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
+            Card(shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
                 Row(
                     modifier = Modifier.padding(12.dp),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
                     Box(
-                        modifier = Modifier.size(40.dp).clip(RoundedCornerShape(10.dp)).background(cat.color.copy(alpha = 0.1f)),
+                        modifier = Modifier.size(44.dp).clip(RoundedCornerShape(12.dp)).background(cat.color.copy(alpha = 0.1f)),
                         contentAlignment = Alignment.Center
                     ) {
-                        Icon(cat.icon, null, tint = cat.color, modifier = Modifier.size(20.dp))
+                        Icon(cat.icon, null, tint = cat.color, modifier = Modifier.size(22.dp))
                     }
 
-                    Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                    Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                         Row(verticalAlignment = Alignment.CenterVertically) {
-                            Text(cat.displayName, fontSize = 14.sp, fontWeight = FontWeight.SemiBold)
+                            Text(cat.localizedName(s), fontSize = 14.sp, fontWeight = FontWeight.SemiBold)
                             Spacer(Modifier.weight(1f))
                             if (tried > 0) {
                                 Text("${(acc * 100).toInt()}%", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = accuracyColor(acc))
@@ -111,29 +179,30 @@ fun ProgressScreen(viewModel: ProgressViewModel) {
 
                         LinearProgressIndicator(
                             progress = { acc.toFloat() },
-                            modifier = Modifier.fillMaxWidth().height(6.dp).clip(RoundedCornerShape(3.dp)),
+                            modifier = Modifier.fillMaxWidth().height(8.dp).clip(CircleShape),
                             color = accuracyColor(acc),
-                            trackColor = Color.Gray.copy(alpha = 0.12f)
+                            trackColor = Color.Gray.copy(alpha = 0.1f),
+                            strokeCap = androidx.compose.ui.graphics.StrokeCap.Round
                         )
 
-                        Text("$tried/$total questions essayées", fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        Text(s.questionsTried(tried, total), fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     }
                 }
             }
         }
 
         // Exam history
-        Text("Historique des examens", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+        Text(s.examHistoryTitle, fontWeight = FontWeight.Bold, fontSize = 16.sp)
 
         if (progress.examResults.isEmpty()) {
-            Card(shape = RoundedCornerShape(14.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
+            Card(shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
                 Column(
-                    modifier = Modifier.fillMaxWidth().padding(24.dp),
+                    modifier = Modifier.fillMaxWidth().padding(32.dp),
                     horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
-                    Icon(Icons.Filled.Search, null, tint = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.size(36.dp))
-                    Text("Aucun examen blanc effectué", fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Icon(Icons.Filled.History, null, tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f), modifier = Modifier.size(40.dp))
+                    Text(s.noExamsTaken, fontSize = 14.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             }
         } else {
@@ -142,22 +211,21 @@ fun ProgressScreen(viewModel: ProgressViewModel) {
             }
         }
 
-        Spacer(Modifier.height(8.dp))
+        Spacer(Modifier.height(16.dp))
     }
 
-    // Reset dialog
     if (showResetAlert) {
         AlertDialog(
             onDismissRequest = { showResetAlert = false },
-            title = { Text("Réinitialiser la progression ?") },
-            text = { Text("Toute votre progression (questions répondues et historique d'examens) sera effacée.") },
+            title = { Text(s.resetProgressTitle) },
+            text = { Text(s.resetProgressBody) },
             confirmButton = {
                 TextButton(onClick = { viewModel.resetProgress(); showResetAlert = false }) {
-                    Text("Réinitialiser", color = Color(0xFFC62828))
+                    Text(s.resetConfirm, color = Color(0xFFC62828))
                 }
             },
             dismissButton = {
-                TextButton(onClick = { showResetAlert = false }) { Text("Annuler") }
+                TextButton(onClick = { showResetAlert = false }) { Text(s.cancel) }
             }
         )
     }
@@ -165,49 +233,62 @@ fun ProgressScreen(viewModel: ProgressViewModel) {
 
 @Composable
 private fun StatRow(icon: ImageVector, color: Color, label: String, value: String) {
-    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-        Icon(icon, null, tint = color, modifier = Modifier.size(16.dp))
+    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+        Icon(icon, null, tint = color.copy(alpha = 0.8f), modifier = Modifier.size(16.dp))
         Text(label, fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.weight(1f))
-        Text(value, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+        Text(value, fontWeight = FontWeight.Bold, fontSize = 15.sp)
     }
 }
 
 @Composable
 private fun ExamHistoryRow(result: ExamResult) {
+    val s = LocalStrings.current
     val passColor = if (result.isPassed) Color(0xFF2E7D32) else Color(0xFFC62828)
     val dateStr = remember(result.timestamp) {
         SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.FRANCE).format(Date(result.timestamp))
     }
 
-    OutlinedCard(
-        shape = RoundedCornerShape(14.dp),
-        border = CardDefaults.outlinedCardBorder().copy(
-            brush = androidx.compose.ui.graphics.SolidColor(passColor.copy(alpha = 0.25f)), width = 1.5.dp
-        )
+    Card(
+        shape = RoundedCornerShape(16.dp),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.6f))
     ) {
         Row(
             modifier = Modifier.fillMaxWidth().padding(14.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            Icon(
-                if (result.isPassed) Icons.Filled.CheckCircle else Icons.Filled.Cancel,
-                null, tint = passColor, modifier = Modifier.size(28.dp)
-            )
+            Box(
+                modifier = Modifier.size(36.dp).clip(CircleShape).background(passColor.copy(alpha = 0.1f)),
+                contentAlignment = Alignment.Center
+            ) {
+                Icon(
+                    if (result.isPassed) Icons.Filled.CheckCircle else Icons.Filled.Cancel,
+                    null, tint = passColor, modifier = Modifier.size(24.dp)
+                )
+            }
 
             Column(modifier = Modifier.weight(1f)) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    Box(modifier = Modifier.background(FrenchBlue.copy(alpha = 0.1f), RoundedCornerShape(6.dp)).padding(horizontal = 8.dp, vertical = 3.dp)) {
-                        Text(result.level.shortName, fontSize = 11.sp, color = FrenchBlue, fontWeight = FontWeight.Bold)
+                    Surface(
+                        color = FrenchBlue.copy(alpha = 0.1f),
+                        shape = RoundedCornerShape(6.dp)
+                    ) {
+                        Text(
+                            result.level.shortName,
+                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 2.dp),
+                            fontSize = 10.sp,
+                            color = FrenchBlue,
+                            fontWeight = FontWeight.Bold
+                        )
                     }
                     Spacer(Modifier.weight(1f))
                     Text(dateStr, fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
-                Spacer(Modifier.height(4.dp))
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text("${result.score}/${result.totalQuestions}", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = passColor)
-                    Text("·", color = MaterialTheme.colorScheme.onSurfaceVariant)
-                    Text("${(result.scorePercentage * 100).toInt()}%", fontSize = 14.sp, color = passColor)
+                Spacer(Modifier.height(6.dp))
+                Row(verticalAlignment = Alignment.Bottom, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text("${result.score}", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = passColor)
+                    Text("/${result.totalQuestions}", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(bottom = 2.dp))
+
                     Spacer(Modifier.weight(1f))
                     Text(result.formattedDuration, fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }

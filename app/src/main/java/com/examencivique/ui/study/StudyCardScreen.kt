@@ -22,6 +22,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.examencivique.data.model.Question
 import com.examencivique.data.model.QuestionType
+import com.examencivique.ui.i18n.AppLanguage
+import com.examencivique.ui.i18n.LocalLanguage
+import com.examencivique.ui.i18n.LocalStrings
 import com.examencivique.ui.theme.FrenchBlue
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -31,6 +34,7 @@ fun StudyCardScreen(
     onBack: () -> Unit
 ) {
     val state by viewModel.state.collectAsState()
+    val s = LocalStrings.current
 
     Scaffold(
         topBar = {
@@ -41,7 +45,7 @@ fun StudyCardScreen(
                 },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "Retour")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, s.back)
                     }
                 }
             )
@@ -64,16 +68,16 @@ fun StudyCardScreen(
 @Composable
 private fun QuestionCard(state: StudyState, viewModel: StudyViewModel) {
     val q = state.currentQuestion ?: return
+    val s = LocalStrings.current
+    val lang = LocalLanguage.current
 
     Column(modifier = Modifier.fillMaxSize()) {
-        // Progress bar
         LinearProgressIndicator(
             progress = { state.progressFraction },
             modifier = Modifier.fillMaxWidth().height(3.dp),
             color = q.category.color
         )
 
-        // Scrollable content
         Column(
             modifier = Modifier
                 .weight(1f)
@@ -83,22 +87,28 @@ private fun QuestionCard(state: StudyState, viewModel: StudyViewModel) {
         ) {
             // Badges
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                Badge(q.category.displayName, q.category.color)
+                Badge(q.category.localizedName(s), q.category.color)
                 Badge(
-                    if (q.type == QuestionType.SITUATION) "Situation" else "Connaissance",
+                    if (q.type == QuestionType.SITUATION) s.situation else s.connaissance,
                     if (q.type == QuestionType.SITUATION) Color(0xFF7B1FA2) else Color.Gray
                 )
             }
 
-            // Question
+            // Question (French always shown)
             Text(q.question, fontWeight = FontWeight.Bold, fontSize = 18.sp, lineHeight = 26.sp)
+            // Chinese translation below
+            if (lang == AppLanguage.ZH && q.questionZh != null) {
+                Text(q.questionZh, fontSize = 14.sp, color = MaterialTheme.colorScheme.onSurfaceVariant, lineHeight = 22.sp)
+            }
 
             // Options
             val letters = listOf("A", "B", "C", "D")
             q.options.forEachIndexed { idx, opt ->
+                val optZh = if (lang == AppLanguage.ZH) q.optionsZh?.getOrNull(idx) else null
                 OptionButton(
                     letter = letters[idx],
                     text = opt,
+                    textZh = optZh,
                     index = idx,
                     question = q,
                     selectedIndex = state.selectedOptionIndex,
@@ -109,11 +119,11 @@ private fun QuestionCard(state: StudyState, viewModel: StudyViewModel) {
 
             // Explanation
             if (state.showAnswer && q.explanation != null) {
-                ExplanationBox(q.explanation)
+                val explZh = if (lang == AppLanguage.ZH) q.explanationZh else null
+                ExplanationBox(q.explanation, explZh)
             }
         }
 
-        // Navigation footer
         NavigationFooter(state, viewModel)
     }
 }
@@ -122,6 +132,7 @@ private fun QuestionCard(state: StudyState, viewModel: StudyViewModel) {
 private fun OptionButton(
     letter: String,
     text: String,
+    textZh: String?,
     index: Int,
     question: Question,
     selectedIndex: Int?,
@@ -178,7 +189,12 @@ private fun OptionButton(
                 Text(letter, color = Color.White, fontSize = 12.sp, fontWeight = FontWeight.Bold)
             }
 
-            Text(text, modifier = Modifier.weight(1f), fontSize = 14.sp)
+            Column(modifier = Modifier.weight(1f)) {
+                Text(text, fontSize = 14.sp)
+                if (textZh != null) {
+                    Text(textZh, fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                }
+            }
 
             if (showAnswer && (isCorrect || isSelected)) {
                 Icon(
@@ -193,7 +209,8 @@ private fun OptionButton(
 }
 
 @Composable
-private fun ExplanationBox(text: String) {
+private fun ExplanationBox(text: String, textZh: String?) {
+    val s = LocalStrings.current
     Card(
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(containerColor = Color(0xFFE65100).copy(alpha = 0.08f))
@@ -201,15 +218,19 @@ private fun ExplanationBox(text: String) {
         Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Row(horizontalArrangement = Arrangement.spacedBy(6.dp), verticalAlignment = Alignment.CenterVertically) {
                 Icon(Icons.Filled.Lightbulb, contentDescription = null, tint = Color(0xFFE65100), modifier = Modifier.size(16.dp))
-                Text("Explication", fontWeight = FontWeight.Bold, fontSize = 12.sp, color = Color(0xFFE65100))
+                Text(s.explanation, fontWeight = FontWeight.Bold, fontSize = 12.sp, color = Color(0xFFE65100))
             }
             Text(text, fontSize = 14.sp, color = MaterialTheme.colorScheme.onSurfaceVariant, lineHeight = 20.sp)
+            if (textZh != null) {
+                Text(textZh, fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f), lineHeight = 18.sp)
+            }
         }
     }
 }
 
 @Composable
 private fun NavigationFooter(state: StudyState, viewModel: StudyViewModel) {
+    val s = LocalStrings.current
     Surface(tonalElevation = 3.dp) {
         Row(
             modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 12.dp),
@@ -219,7 +240,7 @@ private fun NavigationFooter(state: StudyState, viewModel: StudyViewModel) {
                 onClick = { viewModel.previousQuestion() },
                 enabled = state.currentIndex > 0
             ) {
-                Icon(Icons.AutoMirrored.Filled.ArrowBack, "Précédent")
+                Icon(Icons.AutoMirrored.Filled.ArrowBack, s.previous)
             }
 
             Spacer(Modifier.weight(1f))
@@ -229,14 +250,14 @@ private fun NavigationFooter(state: StudyState, viewModel: StudyViewModel) {
                     onClick = { viewModel.nextQuestion() },
                     colors = ButtonDefaults.buttonColors(containerColor = FrenchBlue)
                 ) {
-                    Text(if (state.isLastQuestion) "Terminer" else "Suivant")
+                    Text(if (state.isLastQuestion) s.finish else s.next)
                     if (!state.isLastQuestion) {
                         Spacer(Modifier.width(4.dp))
                         Icon(Icons.AutoMirrored.Filled.NavigateNext, null, modifier = Modifier.size(18.dp))
                     }
                 }
             } else {
-                Text("Choisissez une réponse", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text(s.chooseAnswer, fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
 
             Spacer(Modifier.weight(1f))
@@ -245,7 +266,7 @@ private fun NavigationFooter(state: StudyState, viewModel: StudyViewModel) {
                 onClick = { viewModel.nextQuestion() },
                 enabled = !state.isLastQuestion
             ) {
-                Icon(Icons.AutoMirrored.Filled.NavigateNext, "Suivant")
+                Icon(Icons.AutoMirrored.Filled.NavigateNext, s.next)
             }
         }
     }
@@ -264,6 +285,7 @@ private fun Badge(text: String, color: Color) {
 
 @Composable
 private fun EmptyState(onBack: () -> Unit) {
+    val s = LocalStrings.current
     Column(
         modifier = Modifier.fillMaxSize().padding(32.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -271,16 +293,17 @@ private fun EmptyState(onBack: () -> Unit) {
     ) {
         Icon(Icons.Filled.CheckCircle, null, tint = Color(0xFF2E7D32), modifier = Modifier.size(64.dp))
         Spacer(Modifier.height(16.dp))
-        Text("Aucune question", fontWeight = FontWeight.Bold, fontSize = 20.sp)
+        Text(s.noQuestions, fontWeight = FontWeight.Bold, fontSize = 20.sp)
         Spacer(Modifier.height(8.dp))
-        Text("Essayez une autre catégorie.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 14.sp)
+        Text(s.tryAnotherCategory, color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 14.sp)
         Spacer(Modifier.height(24.dp))
-        Button(onClick = onBack) { Text("Retour") }
+        Button(onClick = onBack) { Text(s.back) }
     }
 }
 
 @Composable
 private fun FinishedState(totalCount: Int, onRestart: () -> Unit, onBack: () -> Unit) {
+    val s = LocalStrings.current
     Column(
         modifier = Modifier.fillMaxSize().padding(32.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -288,14 +311,14 @@ private fun FinishedState(totalCount: Int, onRestart: () -> Unit, onBack: () -> 
     ) {
         Icon(Icons.Filled.Star, null, tint = Color(0xFFFBC02D), modifier = Modifier.size(72.dp))
         Spacer(Modifier.height(20.dp))
-        Text("Session terminée !", fontWeight = FontWeight.Bold, fontSize = 22.sp)
+        Text(s.sessionFinished, fontWeight = FontWeight.Bold, fontSize = 22.sp)
         Spacer(Modifier.height(8.dp))
-        Text("Vous avez répondu à $totalCount questions.", color = MaterialTheme.colorScheme.onSurfaceVariant)
+        Text(s.answeredQuestions(totalCount), color = MaterialTheme.colorScheme.onSurfaceVariant)
         Spacer(Modifier.height(28.dp))
         Button(onClick = onRestart, colors = ButtonDefaults.buttonColors(containerColor = FrenchBlue)) {
-            Text("Recommencer")
+            Text(s.restart)
         }
         Spacer(Modifier.height(8.dp))
-        TextButton(onClick = onBack) { Text("Retour à l'accueil") }
+        TextButton(onClick = onBack) { Text(s.backToHome) }
     }
 }

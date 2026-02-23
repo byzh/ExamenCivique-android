@@ -1,0 +1,1432 @@
+[
+  {
+    "id": "pv_001",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法兰西共和国的国家格言是什么？",
+    "options": ["劳动、家庭、祖国", "自由、平等、博爱", "统一、安全、进步", "和平、正义、团结"],
+    "correct_index": 1,
+    "explanation": "法兰西共和国的国家格言是「自由、平等、博爱」。它被写入1958年宪法第二条，并镌刻在官方建筑的正面。"
+  },
+  {
+    "id": "pv_002",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法国国旗的颜色是什么？",
+    "options": ["红、白、绿", "红、黄、蓝", "蓝、白、红", "白、绿、红"],
+    "correct_index": 2,
+    "explanation": "法国三色旗由三条竖直色带组成：蓝色（左）、白色（中）和红色（右）。它在法国大革命期间被采用。"
+  },
+  {
+    "id": "pv_003",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法国国歌叫什么名字？",
+    "options": ["巴黎之歌", "出征之歌", "马赛曲", "国际歌"],
+    "correct_index": 2,
+    "explanation": "《马赛曲》是法国国歌。它由鲁日·德·利尔于1792年创作，并于1795年成为国歌。"
+  },
+  {
+    "id": "pv_004",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "玛丽安娜是谁？",
+    "options": ["共和国总统的夫人", "法国抵抗运动的女英雄", "法兰西共和国的象征", "法国士兵的守护者"],
+    "correct_index": 2,
+    "explanation": "玛丽安娜是法兰西共和国的人格化象征。她的半身像摆放在所有市政厅中，她的形象出现在硬币和官方邮票上。"
+  },
+  {
+    "id": "pv_005",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法国国庆节是哪一天？",
+    "options": ["5月8日", "11月11日", "5月1日", "7月14日"],
+    "correct_index": 3,
+    "explanation": "法国国庆节在7月14日庆祝，纪念1789年攻占巴士底狱这一法国大革命开始的象征性事件。"
+  },
+  {
+    "id": "pv_006",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "7月14日纪念的是什么？",
+    "options": ["第一次世界大战结束", "第五共和国的宣告", "1789年攻占巴士底狱", "《人权和公民权利宣言》的签署"],
+    "correct_index": 2,
+    "explanation": "7月14日纪念的是1789年攻占巴士底狱要塞的事件。巴士底狱是王权专制的象征，其被攻占标志着法国大革命的开始。"
+  },
+  {
+    "id": "pv_007",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "什么是政教分离（世俗主义）？",
+    "options": ["禁止在法国进行一切宗教活动", "国家赋予天主教优先地位", "国家与宗教分离，保障信仰自由", "所有公民都必须信仰宗教"],
+    "correct_index": 2,
+    "explanation": "政教分离是法兰西共和国的基本原则，保障国家与宗教分离，以及每个人的信仰自由和宗教自由。"
+  },
+  {
+    "id": "pv_008",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "政教分离法是在哪一年通过的？",
+    "options": ["1789", "1848", "1905", "1958"],
+    "correct_index": 2,
+    "explanation": "1905年12月9日的法律确立了法国的政教分离制度。该法律保障信仰自由，并规定国家对各宗教保持中立。"
+  },
+  {
+    "id": "pv_009",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "政教分离原则保障什么？",
+    "options": ["国家资助宗教", "禁止在公共场所佩戴任何宗教标志", "信仰或不信仰的自由", "学校必须教授宗教课程"],
+    "correct_index": 2,
+    "explanation": "政教分离原则保障每个人的信仰自由，即信仰或不信仰某种宗教的权利，国家不强加也不反对任何信仰。"
+  },
+  {
+    "id": "pv_010",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "在公立学校中，谁可以佩戴明显的宗教标志（面纱、基帕、醒目的十字架）？",
+    "options": ["学生可以，但教师不行", "教师可以，但学生不行", "所有人都可以自由佩戴", "谁都不行：学生和工作人员均不可以"],
+    "correct_index": 3,
+    "explanation": "根据2004年3月15日的法律，学生不得在公立学校佩戴明显的宗教标志。公职人员（教师、工作人员）则受中立义务约束。"
+  },
+  {
+    "id": "pv_011",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "共和国格言中「平等」原则的含义是什么？",
+    "options": ["男性比女性拥有更多权利", "所有公民在法律面前享有同等权利", "平等仅适用于法国国民", "外国人不享有与法国人相同的权利"],
+    "correct_index": 1,
+    "explanation": "平等原则意味着所有公民在法律面前享有平等的权利和义务，不因性别、出身、宗教或社会地位而有所区别。"
+  },
+  {
+    "id": "pv_012",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "什么是言论自由？",
+    "options": ["可以毫无限制地说任何话", "在遵守法律的前提下表达自己观点的权利", "可以随意侮辱他人", "可以传播虚假信息"],
+    "correct_index": 1,
+    "explanation": "言论自由是自由表达思想和观点的权利。它受法律约束：不允许诽谤、煽动仇恨或歧视性言论。"
+  },
+  {
+    "id": "pv_013",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "在法国，一个人可以自由改变宗教信仰吗？",
+    "options": ["不可以，不能改变宗教", "不可以，除非获得国家批准", "可以，宗教自由包括改变信仰的权利", "可以，但仅限法国公民"],
+    "correct_index": 2,
+    "explanation": "在法国，信仰自由和宗教自由保障每个人信仰、改变宗教或不信仰任何宗教的权利。国家不得干涉公民的宗教信仰。"
+  },
+  {
+    "id": "pv_014",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "某些职业可以仅限男性从事吗？",
+    "options": ["是的，危险职业如建筑业", "是的，军事和安全职业", "不可以，平等原则禁止基于性别的任何歧视", "可以，只要雇主同意"],
+    "correct_index": 2,
+    "explanation": "宪法规定的男女平等原则禁止在就业中基于性别的任何歧视。任何雇主因此理由拒绝雇用女性即构成违法。"
+  },
+  {
+    "id": "pv_015",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "可以因为某人的出身而公开侮辱他吗？",
+    "options": ["可以，如果这是个人观点", "可以，言论自由允许这样做", "不可以，这是法律惩罚的违法行为", "可以，仅在私人场合"],
+    "correct_index": 2,
+    "explanation": "因他人的出身、宗教或任何其他歧视性标准而公开侮辱他人在法国属于违法行为，将受到法律制裁。言论自由不包括仇恨言论。"
+  },
+  {
+    "id": "pv_016",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "「法国是一个不可分割的、世俗的、民主的和社会的共和国。」这句话出自哪里？",
+    "options": ["1789年《人权和公民权利宣言》", "法国民法典", "1958年宪法", "1905年政教分离法"],
+    "correct_index": 2,
+    "explanation": "这句话出自1958年10月4日宪法第一条，这是法兰西第五共和国的根本大法。"
+  },
+  {
+    "id": "pv_017",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法国国家格言中「博爱」一词的含义是什么？",
+    "options": ["严格遵守法律", "社会成员之间的团结和互助", "保卫祖国的义务", "家庭优先于个人"],
+    "correct_index": 1,
+    "explanation": "博爱是指社会成员之间应当团结互助的精神。它是社会凝聚力和救助权的概念基础。"
+  },
+  {
+    "id": "pv_018",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法兰西共和国的官方语言是什么？",
+    "options": ["法语和英语", "法语、布列塔尼语和阿尔萨斯语", "法语", "法语和奥克语"],
+    "correct_index": 2,
+    "explanation": "根据1958年宪法第二条，法语是法兰西共和国唯一的官方语言。掌握法语对于融入社会和日常生活至关重要。"
+  },
+  {
+    "id": "pv_019",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "可以公开焚烧法国国旗吗？",
+    "options": ["可以，这是一种艺术表达形式", "可以，在抗议活动中", "不可以，这是法律禁止和惩罚的行为", "可以，如果在国外"],
+    "correct_index": 2,
+    "explanation": "公开焚烧或毁损国旗在法国是违法行为，将受到法律制裁。这被视为对国旗的侮辱。"
+  },
+  {
+    "id": "pv_020",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "根据政教分离原则，国家中立意味着什么？",
+    "options": ["国家禁止一切宗教表达", "国家偏向主要宗教", "国家不偏袒也不反对任何宗教", "国家平等资助所有宗教"],
+    "correct_index": 2,
+    "explanation": "国家中立意味着公权力不对任何宗教表态支持或反对。国家保障信仰自由，不干涉公民的宗教信仰。"
+  },
+  {
+    "id": "pv_021",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "孩子可以因为宗教原因拒绝上学吗？",
+    "options": ["可以，如果父母决定的话", "可以，12岁以上可以", "不可以，无论宗教信仰如何，学校教育都是义务性的", "可以，在重要的宗教节日期间"],
+    "correct_index": 2,
+    "explanation": "在法国，所有3至16岁的儿童都必须接受义务教育。任何宗教原因都不能成为缺课的正当理由。个人信仰不能凌驾于义务教育之上。"
+  },
+  {
+    "id": "pv_022",
+    "category": "principes_valeurs",
+    "levels": ["CR"],
+    "type": "connaissance",
+    "question": "政教分离原则是否要求公职人员在面对服务对象时保持中立？",
+    "options": ["不要求，公职人员可以展示自己的宗教信仰", "是的，他们在执行职务时不得表达自己的宗教观点", "不要求，仅在工作时间以外", "是的，但仅适用于教师"],
+    "correct_index": 1,
+    "explanation": "公职人员有保持中立的义务：他们不得在执行职务时表达宗教、政治或哲学信仰，以确保对服务对象的平等对待。"
+  },
+  {
+    "id": "pv_023",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "以下哪个是法兰西共和国的官方象征？",
+    "options": ["高卢雄鸡", "埃菲尔铁塔", "三色旗", "凡尔赛宫"],
+    "correct_index": 2,
+    "explanation": "三色旗（蓝、白、红）是法兰西共和国的官方象征。高卢雄鸡和埃菲尔铁塔是文化象征，但从宪法意义上来说不是官方象征。"
+  },
+  {
+    "id": "pv_024",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "在法国，一个人有权不信仰任何宗教吗？",
+    "options": ["没有，所有居民必须申报宗教归属", "没有，法国是一个基督教国家", "有，信仰自由包括不信仰宗教的权利", "有，但仅限法国公民"],
+    "correct_index": 2,
+    "explanation": "政教分离所保障的信仰自由包括不信仰任何宗教、做无神论者或不可知论者的权利。国家不得强加任何信仰。"
+  },
+  {
+    "id": "pv_025",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "在哪里可以看到法兰西共和国的格言？",
+    "options": ["仅在纸币上", "在公共建筑正面和官方文件上", "仅在国旗上", "仅在学校里"],
+    "correct_index": 1,
+    "explanation": "「自由、平等、博爱」的格言镌刻在公共建筑（市政厅、法院、学校等）的正面，并印在共和国的官方文件和物品上。"
+  },
+  {
+    "id": "pv_026",
+    "category": "principes_valeurs",
+    "levels": ["CR"],
+    "type": "connaissance",
+    "question": "以下哪项属于公民参与？",
+    "options": ["拒绝纳税", "在选举中投票", "忽视公共事务", "避免在选民名册上登记"],
+    "correct_index": 1,
+    "explanation": "公民参与包括在选举中投票、参与社团活动、参与社区生活等。投票是一项基本的公民权利和义务。"
+  },
+  {
+    "id": "pv_027",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "允许每个人表达思想和观点的自由是什么？",
+    "options": ["迁徙自由", "结社自由", "言论自由", "宗教自由"],
+    "correct_index": 2,
+    "explanation": "言论自由是允许每个人在法律规定的范围内自由表达思想、观点和信念的基本权利。"
+  },
+  {
+    "id": "pv_028",
+    "category": "principes_valeurs",
+    "levels": ["CR"],
+    "type": "connaissance",
+    "question": "什么是结社自由？",
+    "options": ["为政党投票的权利", "自由结社以维护共同利益的权利", "加入职业工会的义务", "在欧盟内自由流动的权利"],
+    "correct_index": 1,
+    "explanation": "结社自由（1901年法律）允许任何人与他人自由组建社团以维护共同利益，无需事先获得国家批准。"
+  },
+  {
+    "id": "pv_029",
+    "category": "principes_valeurs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "社团在法兰西共和国中的作用之一是什么？",
+    "options": ["取代国家服务", "促进公民参与和维护共同事业", "管理市镇", "征收地方税"],
+    "correct_index": 1,
+    "explanation": "社团在法国民主生活中发挥着重要作用：它们使公民能够联合起来，参与公共生活，并维护文化、社会、人道主义等各类事业。"
+  },
+  {
+    "id": "pv_030",
+    "category": "principes_valeurs",
+    "levels": ["CR"],
+    "type": "connaissance",
+    "question": "一个雇主拒绝雇用女性。法律怎么说？",
+    "options": ["如果岗位性质要求，这是合法的", "在某些行业是被容忍的", "这是违法的：这是基于性别的歧视", "在工会同意的情况下是合法的"],
+    "correct_index": 2,
+    "explanation": "因性别原因拒绝雇用某人在法国是违法歧视行为，受法律制裁。男女平等原则受宪法和劳动法保障。"
+  },
+  {
+    "id": "inst_001",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "谁任命法国总理？",
+    "options": ["议会", "共和国总统", "公民直接投票", "宪法委员会"],
+    "correct_index": 1,
+    "explanation": "根据宪法第八条，共和国总统任命总理。总理随后领导政府的工作。"
+  },
+  {
+    "id": "inst_002",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法国议会由什么组成？",
+    "options": ["国民议会和国务委员会", "参议院和经济社会委员会", "国民议会和参议院", "欧洲议会和国民议会"],
+    "correct_index": 2,
+    "explanation": "法国议会是两院制的：由国民议会（577名议员）和参议院（348名参议员）组成。这两个议院行使立法权。"
+  },
+  {
+    "id": "inst_003",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "谁拥有法国的行政权？",
+    "options": ["议会", "共和国总统和政府", "宪法委员会", "市长和省长"],
+    "correct_index": 1,
+    "explanation": "行政权由共和国总统和政府（总理及各部长）行使。行政机关负责执行法律和制定国家政策。"
+  },
+  {
+    "id": "inst_004",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "谁在法国投票通过法律？",
+    "options": ["共和国总统", "政府", "议会（国民议会和参议院）", "宪法委员会"],
+    "correct_index": 2,
+    "explanation": "议会拥有立法权：国民议会和参议院投票通过法律。如果两院意见不一致，国民议会拥有最终决定权。"
+  },
+  {
+    "id": "inst_005",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "像法国这样的民主国家有哪三种权力？",
+    "options": ["立法权、军事权和司法权", "行政权、立法权和司法权", "总统权、议会权和市镇权", "国家权、地区权和市镇权"],
+    "correct_index": 1,
+    "explanation": "三权分立是一项基本原则：行政权（治理国家）、立法权（制定法律）和司法权（执行司法）由不同的机构分别行使。"
+  },
+  {
+    "id": "inst_006",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "谁选举国民议会的议员？",
+    "options": ["市长们", "参议员们", "法国公民通过普选直接选举", "共和国总统"],
+    "correct_index": 2,
+    "explanation": "国民议会的577名议员由法国公民在立法选举中直接选举产生，采用两轮多数票制。"
+  },
+  {
+    "id": "inst_007",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法兰西共和国总统的任期是多长？",
+    "options": ["4年", "5年", "6年", "7年"],
+    "correct_index": 1,
+    "explanation": "自2000年宪法修改以来，共和国总统的任期为5年（五年制）。总统可以连任一次。"
+  },
+  {
+    "id": "inst_008",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "在法国，从几岁开始有投票权？",
+    "options": ["16岁", "18岁", "21岁", "25岁"],
+    "correct_index": 1,
+    "explanation": "在法国，年满18岁的所有法国公民在登记选民名册后即享有投票权。"
+  },
+  {
+    "id": "inst_009",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "「普选」意味着什么？",
+    "options": ["只有财产所有者可以投票", "只有男性可以投票", "所有成年公民都可以投票", "只有大学毕业生可以投票"],
+    "correct_index": 2,
+    "explanation": "普选意味着所有年满18岁的成年公民都有投票权，不分性别、财富、学历或出身。在法国，女性于1944年获得了这一权利。"
+  },
+  {
+    "id": "inst_010",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "谁住在爱丽舍宫？",
+    "options": ["总理", "共和国总统", "参议院议长", "国民议会议长"],
+    "correct_index": 1,
+    "explanation": "爱丽舍宫位于巴黎，是法兰西共和国总统的官邸和办公场所。"
+  },
+  {
+    "id": "inst_011",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "省长的职责是什么？",
+    "options": ["领导市议会", "代表国家驻省或大区", "主持国民议会", "任命市长"],
+    "correct_index": 1,
+    "explanation": "省长是政府任命的国家代表，驻各省和大区。他负责在所辖地区执行法律和政府决策。"
+  },
+  {
+    "id": "inst_012",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "谁领导法国的市镇？",
+    "options": ["省长", "大区议会主席", "市长", "副省长"],
+    "correct_index": 2,
+    "explanation": "市长是市镇的行政长官。市长由市议会选举产生，同时代表市镇和国家在其辖区内行使职权。"
+  },
+  {
+    "id": "inst_013",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法国的政治制度是什么？",
+    "options": ["君主立宪制", "军事独裁", "共和国（第五共和国）", "联邦制国家"],
+    "correct_index": 2,
+    "explanation": "法国自1792年以来就是共和国。我们生活在第五共和国体制下，其宪法于1958年在戴高乐将军的倡议下通过。"
+  },
+  {
+    "id": "inst_014",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法国使用的货币是什么？",
+    "options": ["法国法郎", "英镑", "美元", "欧元"],
+    "correct_index": 3,
+    "explanation": "法国自2002年1月1日起使用欧元（€）。欧元是欧元区的共同货币，欧元区包括欧盟27个成员国中的20个。"
+  },
+  {
+    "id": "inst_015",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "截至2025年1月1日，欧盟有多少个成员国？",
+    "options": ["25", "27", "30", "32"],
+    "correct_index": 1,
+    "explanation": "截至2025年1月1日，欧盟共有27个成员国。英国于2020年1月31日退出了欧盟（脱欧）。"
+  },
+  {
+    "id": "inst_016",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "欧洲日是什么时候庆祝的？",
+    "options": ["1月1日", "3月25日", "5月9日", "11月11日"],
+    "correct_index": 2,
+    "explanation": "欧洲日于5月9日庆祝，纪念舒曼宣言（1950年）的周年纪念日，该宣言奠定了欧洲一体化建设的基础。"
+  },
+  {
+    "id": "inst_017",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "欧洲议会选举多久举行一次？",
+    "options": ["每3年", "每4年", "每5年", "每7年"],
+    "correct_index": 2,
+    "explanation": "欧洲议会选举每5年举行一次。欧洲公民通过普选直接选举他们的代表。"
+  },
+  {
+    "id": "inst_018",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "司法机关的职责是什么？",
+    "options": ["投票通过法律", "治理国家", "适用法律和执行司法", "代表国家驻各省"],
+    "correct_index": 2,
+    "explanation": "司法机关是独立的。它负责维护公民权利、审判违法行为和适用法律。在法国，司法机关是个人自由的守护者。"
+  },
+  {
+    "id": "inst_019",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法国（本土和海外）共有多少个省？",
+    "options": ["89", "95", "96", "101"],
+    "correct_index": 3,
+    "explanation": "法国共有101个省：本土96个（包括科西嘉的2个省）和5个海外省（瓜德罗普、马提尼克、圭亚那、留尼汪、马约特）。"
+  },
+  {
+    "id": "inst_020",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "参议员是如何选举产生的？",
+    "options": ["由公民直接普选产生", "由共和国总统任命", "由大选举人（地方民选代表）间接选举产生", "由国民议会选举产生"],
+    "correct_index": 2,
+    "explanation": "参议员由「大选举人」通过间接普选产生：包括国民议会议员、大区议员、省议员和市议员。"
+  },
+  {
+    "id": "inst_021",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法兰西共和国总统是否拥有全部权力？",
+    "options": ["是的，他独自治理国家", "是的，在任期内他拥有绝对权力", "不是，权力是分立和受制约的", "不是，他与总理分享所有权力"],
+    "correct_index": 2,
+    "explanation": "总统并不拥有全部权力。1958年宪法规定了三权分立：立法权（议会）、行政权（总统+政府）和司法权各自独立、相互制衡。"
+  },
+  {
+    "id": "inst_022",
+    "category": "institutions",
+    "levels": ["CR"],
+    "type": "connaissance",
+    "question": "什么是法治国家？",
+    "options": ["一个政府可以不受约束自由行事的国家", "一个法律适用于所有人包括统治者的国家", "一个由法律专家领导的国家", "一个没有成文宪法的国家"],
+    "correct_index": 1,
+    "explanation": "法治国家是一种法律对所有人适用（包括统治者）的制度。没有任何人凌驾于法律之上。公民的基本权利得到保障和保护。"
+  },
+  {
+    "id": "inst_023",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "谁领导政府的工作？",
+    "options": ["共和国总统直接领导", "国民议会议长", "总理", "内政部长"],
+    "correct_index": 2,
+    "explanation": "根据宪法第21条，总理领导政府的工作，并在共和国总统的领导下协调各部长的工作。"
+  },
+  {
+    "id": "inst_024",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "国民议会议员的任期是多长？",
+    "options": ["3年", "4年", "5年", "6年"],
+    "correct_index": 2,
+    "explanation": "国民议会议员的任期为5年（一届立法期），除非总统提前解散国民议会。"
+  },
+  {
+    "id": "inst_025",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "哪个国家是欧洲共同体的创始成员国？",
+    "options": ["西班牙", "波兰", "法国", "瑞典"],
+    "correct_index": 2,
+    "explanation": "法国是1957年《罗马条约》创建的欧洲经济共同体（EEC）的6个创始成员国之一，其他5国是德国、意大利、比利时、荷兰和卢森堡。"
+  },
+  {
+    "id": "dd_001",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "《人权和公民权利宣言》是在哪一年通过的？",
+    "options": ["1789", "1804", "1848", "1905"],
+    "correct_index": 0,
+    "explanation": "《人权和公民权利宣言》于1789年8月26日由国民制宪议会在法国大革命期间通过。它宣告了每个人不可剥夺的自然权利。"
+  },
+  {
+    "id": "dd_002",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "哪部基本文件保障了法国的权利和自由？",
+    "options": ["拿破仑民法典", "1789年《人权和公民权利宣言》及宪法", "1905年政教分离法", "1957年罗马条约"],
+    "correct_index": 1,
+    "explanation": "1789年《人权和公民权利宣言》被纳入宪法体系，与1958年宪法共同保障了法国的基本权利和自由。"
+  },
+  {
+    "id": "dd_003",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法国的死刑：",
+    "options": ["合法且适用于最严重的犯罪", "暂停但未废除", "自1981年起已废除", "仅适用于叛国罪"],
+    "correct_index": 2,
+    "explanation": "死刑于1981年10月9日在密特朗政府时期被法律废除。时任司法部长罗贝尔·巴丹泰尔推动了这一历史性改革。"
+  },
+  {
+    "id": "dd_004",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "在法国，同时与多人结婚（一夫多妻/一妻多夫制）合法吗？",
+    "options": ["如果婚姻在国外缔结，则合法", "在某些文化社区中合法", "不合法，一夫多妻/一妻多夫制被法国法律禁止", "在某些行政条件下合法"],
+    "correct_index": 2,
+    "explanation": "一夫多妻/一妻多夫制在法国是违法的。法国法律禁止已婚者再次结婚（重婚罪）。任何希望在法国定居的人都必须遵守一夫一妻制原则。"
+  },
+  {
+    "id": "dd_005",
+    "category": "droits_devoirs",
+    "levels": ["CR"],
+    "type": "connaissance",
+    "question": "休妻在法国合法吗？",
+    "options": ["合法，如果按照宗教惯例进行", "合法，如果夫妻双方都是外国国籍", "不合法，休妻在法律上被禁止且不被承认", "合法，但需向市政厅申报"],
+    "correct_index": 2,
+    "explanation": "休妻（丈夫单方面终止婚姻的行为）在法国法律中不被承认，即使是在国外作出的也不例外。在法国，离婚必须由法官判决。"
+  },
+  {
+    "id": "dd_006",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "在法国，是否总是可以离婚？",
+    "options": ["不可以，离婚是法律禁止的", "不可以，只有在证实通奸的情况下才可以", "可以，离婚是合法的，所有已婚夫妇都可以申请", "可以，但仅限结婚5年后"],
+    "correct_index": 2,
+    "explanation": "离婚在法国自1884年以来就是合法的。离婚有几种形式：协议离婚、过错离婚或因婚姻关系确定破裂而离婚。所有已婚夫妇都可以申请离婚。"
+  },
+  {
+    "id": "dd_007",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "犯罪的人会面临什么后果？",
+    "options": ["如果是初犯则不受处罚", "根据严重程度，从罚款到监禁等处罚", "仅行政罚款", "自动驱逐出境"],
+    "correct_index": 1,
+    "explanation": "任何犯有违法行为（违规、轻罪或重罪）的人都将面临与其行为严重程度相应的刑事处罚：罚款、社区服务、监禁等。"
+  },
+  {
+    "id": "dd_008",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "国家警察和宪兵队的职责是什么？",
+    "options": ["仅负责征收税款", "维护公共秩序，保护人身和财产安全", "仅负责边境监控", "管理选举"],
+    "correct_index": 1,
+    "explanation": "国家警察和宪兵队负责保障人身和财产安全，维护公共秩序，预防和打击刑事犯罪。"
+  },
+  {
+    "id": "dd_009",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "目击事故或发现有人处于危险中时应该怎么做？",
+    "options": ["迅速离开以免被牵连", "拍摄并发到社交网络上", "施救或立即拨打急救电话", "等待其他人采取行动"],
+    "correct_index": 2,
+    "explanation": "在法国，见死不救是违法行为。任何不施救或不拨打急救电话（15、18或112）的人都可能受到刑事追诉。"
+  },
+  {
+    "id": "dd_010",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "在法国刑法体系中，最严重的违法行为是什么？",
+    "options": ["违规行为", "轻罪", "重罪", "过失"],
+    "correct_index": 2,
+    "explanation": "违法行为按严重程度从低到高分为三类：违规行为（如违章停车）、轻罪（如盗窃）和重罪（如谋杀）。重罪由重罪法庭审理。"
+  },
+  {
+    "id": "dd_011",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "人口贩卖是什么？",
+    "options": ["合法的外国劳动力贸易", "通过强迫手段剥削他人：这是严重犯罪", "法律规定的季节性劳动形式", "有组织的非法移民"],
+    "correct_index": 1,
+    "explanation": "人口贩卖是通过强迫、欺骗或利用弱势地位来剥削他人（强迫劳动、卖淫、乞讨），是法国法律严厉惩处的重罪。"
+  },
+  {
+    "id": "dd_012",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "家庭暴力受害者应该怎么做？",
+    "options": ["为了保护家庭保持沉默", "到警察局或宪兵队报案", "仅在家庭内部解决问题", "等待情况改善"],
+    "correct_index": 1,
+    "explanation": "家庭暴力是严重的犯罪行为。受害者可以到警察局或宪兵队报案，拨打3919（全国家暴热线），或前往急诊室。法律保护受害者。"
+  },
+  {
+    "id": "dd_013",
+    "category": "droits_devoirs",
+    "levels": ["CR"],
+    "type": "connaissance",
+    "question": "法治国家保障什么？",
+    "options": ["政府可以不受监督地行事", "基本权利受到保护，统治者遵守法律", "只有法国公民才有权利", "法律因社会地位不同而有所区别"],
+    "correct_index": 1,
+    "explanation": "法治国家保障每个人的基本权利受到保护，各机构遵守法律，并在权利受到侵犯时提供有效的法律救济。"
+  },
+  {
+    "id": "dd_014",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "为什么在法国必须纳税？",
+    "options": ["外国人可以免税", "为公共服务和国家开支提供资金", "仅为了充实国库", "仅当年收入超过5万欧元时"],
+    "correct_index": 1,
+    "explanation": "纳税是公民义务。税收为公共服务（教育、医疗、安全、司法）和国家开支提供资金。逃税是违法行为。"
+  },
+  {
+    "id": "dd_015",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "迁徙自由允许每个人：",
+    "options": ["仅在自己所在省内活动", "在法国领土上自由移动", "不携带身份证件出行", "无需签证在全世界所有国家工作"],
+    "correct_index": 1,
+    "explanation": "迁徙自由是一项基本权利，允许任何合法居留的人在法国领土上自由移动。对于欧洲公民，此权利扩展到申根区。"
+  },
+  {
+    "id": "dd_016",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "在街上乱扔垃圾：",
+    "options": ["如果是小垃圾可以容忍", "在农村地区是可以接受的", "是违法行为，可被处以罚款", "仅在夜间允许"],
+    "correct_index": 2,
+    "explanation": "在街上乱扔垃圾（乱扔废物）是违法行为，可被处以罚款。公民有尊重环境的义务。城市设有公共垃圾桶和垃圾回收站来处理废物。"
+  },
+  {
+    "id": "dd_017",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "居留证有什么用途？",
+    "options": ["免费乘火车", "证明自己是法国公民", "允许外国人在法国合法居留", "自动获得法国国籍"],
+    "correct_index": 2,
+    "explanation": "居留证（居留卡、居民卡）是允许外国公民在法国领土上合法居住一定期限的官方文件。"
+  },
+  {
+    "id": "dd_018",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法国国籍赋予哪些权利？",
+    "options": ["仅可以在欧洲免护照旅行", "投票权、被选举权以及某些公民专属权利", "免除某些税款", "在全世界所有国家工作"],
+    "correct_index": 1,
+    "explanation": "法国国籍赋予投票权、被选举权、进入公务员系统的权利以及完整的公民权利。同时也伴随着对共和国的义务。"
+  },
+  {
+    "id": "hist_001",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法国大革命是在哪一年开始的？",
+    "options": ["1789", "1799", "1815", "1848"],
+    "correct_index": 0,
+    "explanation": "法国大革命始于1789年，以7月14日攻占巴士底狱为标志。大革命推翻了绝对君主制，奠定了民主和人权的基础。"
+  },
+  {
+    "id": "hist_002",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "我们今天生活在第几共和国？",
+    "options": ["第三共和国", "第四共和国", "第五共和国", "第六共和国"],
+    "correct_index": 2,
+    "explanation": "法国自1958年10月4日宪法通过以来处于第五共和国时期。第五共和国由戴高乐将军创立，是一种半总统制政体。"
+  },
+  {
+    "id": "hist_003",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "什么是大屠杀（Shoah）？",
+    "options": ["第一次世界大战（1914-1918）", "二战期间纳粹对犹太人实施的种族灭绝", "法国在非洲的殖民", "阿尔及利亚战争（1954-1962）"],
+    "correct_index": 1,
+    "explanation": "大屠杀（Shoah）是1941年至1945年间纳粹德国策划和实施的对六百万欧洲犹太人的种族灭绝。法国承认法国国家在犹太人遣送中的责任。"
+  },
+  {
+    "id": "hist_004",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "谁使法国学校实现了免费、世俗和义务教育？",
+    "options": ["拿破仑一世", "维克多·雨果", "茹尔·费里", "夏尔·戴高乐"],
+    "correct_index": 2,
+    "explanation": "茹尔·费里在第三共和国时期担任教育部长和政府总理，推行了1881-1882年的法律，使公立小学实现了免费、世俗和义务教育。"
+  },
+  {
+    "id": "hist_005",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "第二次世界大战是什么时候发生的？",
+    "options": ["1914-1918", "1939-1945", "1940-1944", "1941-1946"],
+    "correct_index": 1,
+    "explanation": "第二次世界大战发生在1939年至1945年间。法国在1940年至1944年间被纳粹德国占领。1945年5月8日，盟军在欧洲取得胜利，二战结束。"
+  },
+  {
+    "id": "hist_006",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "第一次世界大战停战纪念日是哪天？",
+    "options": ["5月8日", "7月14日", "11月11日", "9月1日"],
+    "correct_index": 2,
+    "explanation": "11月11日是法国的法定假日。它纪念1918年11月11日上午11时签署的停战协定，结束了第一次世界大战（1914-1918）的战斗。"
+  },
+  {
+    "id": "hist_007",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "谁创立了法兰西第五共和国？",
+    "options": ["拿破仑·波拿巴", "莱昂·布鲁姆", "夏尔·戴高乐", "弗朗索瓦·密特朗"],
+    "correct_index": 2,
+    "explanation": "戴高乐将军于1958年创立了第五共和国。在一场严重的政治危机之后，他推动通过了新宪法，并当选为第五共和国首任总统。"
+  },
+  {
+    "id": "hist_008",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法国最终废除奴隶制是在哪一年？",
+    "options": ["1789", "1794", "1848", "1905"],
+    "correct_index": 2,
+    "explanation": "奴隶制于1848年4月27日在第二共和国时期的法令中被最终废除，这主要归功于维克多·舍尔歇的努力。1794年曾首次废除奴隶制，但后来被撤销。"
+  },
+  {
+    "id": "hist_009",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法国的首都是哪里？",
+    "options": ["里昂", "马赛", "波尔多", "巴黎"],
+    "correct_index": 3,
+    "explanation": "巴黎是法国的首都。它是政府、议会和大多数国家机构的所在地。巴黎也是法国人口最多的城市。"
+  },
+  {
+    "id": "hist_010",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法国本土位于哪个大陆？",
+    "options": ["亚洲", "非洲", "欧洲", "美洲"],
+    "correct_index": 2,
+    "explanation": "法国本土位于西欧。西临大西洋，北隔英吉利海峡，南濒地中海，与比利时、德国、瑞士、意大利、西班牙和摩纳哥接壤。"
+  },
+  {
+    "id": "hist_011",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "哪个大洋濒临法国西海岸？",
+    "options": ["印度洋", "北冰洋", "太平洋", "大西洋"],
+    "correct_index": 3,
+    "explanation": "法国西海岸濒临大西洋。南特、波尔多、布雷斯特和拉罗谢尔等城市位于这条大西洋海岸线上。"
+  },
+  {
+    "id": "hist_012",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "哪个海濒临法国本土的南部？",
+    "options": ["北海", "里海", "地中海", "波罗的海"],
+    "correct_index": 2,
+    "explanation": "法国本土南部濒临地中海。尼斯、马赛、蒙彼利埃和土伦等城市位于这条地中海海岸线上。"
+  },
+  {
+    "id": "hist_013",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法国本土有多少个大区？",
+    "options": ["10", "13", "18", "22"],
+    "correct_index": 1,
+    "explanation": "自2016年地区改革以来，法国本土被划分为13个大区。此外还有5个海外大区（瓜德罗普、马提尼克、圭亚那、留尼汪、马约特）。"
+  },
+  {
+    "id": "hist_014",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "莫里哀是谁？",
+    "options": ["十九世纪的印象派画家", "十七世纪的剧作家和喜剧演员", "十八世纪的启蒙哲学家", "法国大革命时期的将军"],
+    "correct_index": 1,
+    "explanation": "莫里哀（让-巴蒂斯特·波克兰，1622-1673）是法国最伟大的剧作家之一。他创作了众多著名喜剧：《吝啬鬼》、《贵人迷》、《伪君子》等。他在路易十四时期演出。"
+  },
+  {
+    "id": "hist_015",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "西蒙娜·德·波伏瓦是谁？",
+    "options": ["十八世纪的法国王后", "二战抵抗运动战士", "二十世纪的女权主义哲学家和作家", "获诺贝尔奖的法国女科学家"],
+    "correct_index": 2,
+    "explanation": "西蒙娜·德·波伏瓦（1908-1986）是法国哲学家、作家和知识分子，女权运动的重要人物。她的代表作《第二性》（1949年）是女权运动的经典之作。"
+  },
+  {
+    "id": "hist_016",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "约瑟芬·贝克是谁？",
+    "options": ["法国女王", "入祀先贤祠的美国出生的法国归化歌手和抵抗运动战士", "十九世纪的印象派女画家", "首位当选国民议会的女性"],
+    "correct_index": 1,
+    "explanation": "约瑟芬·贝克（1906-1975）是美国出生的歌手和舞者，后归化法国国籍。她在法国抵抗运动中发挥了重要作用。2021年，她入祀先贤祠，获得共和国的最高荣誉。"
+  },
+  {
+    "id": "hist_017",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "卢浮宫是什么？",
+    "options": ["法国政府所在地", "总统官邸", "位于巴黎的世界最大博物馆之一", "法国最大的大教堂"],
+    "correct_index": 2,
+    "explanation": "卢浮宫博物馆位于巴黎，是世界上最大、最受欢迎的博物馆之一。它收藏了达·芬奇的《蒙娜丽莎》等杰作。它是一座1793年改建为博物馆的前皇家宫殿。"
+  },
+  {
+    "id": "hist_018",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "埃菲尔铁塔位于哪个城市？",
+    "options": ["里昂", "马赛", "巴黎", "波尔多"],
+    "correct_index": 2,
+    "explanation": "埃菲尔铁塔位于巴黎，靠近塞纳河畔。它由古斯塔夫·埃菲尔为1889年世界博览会建造，是世界上游客最多的纪念建筑。"
+  },
+  {
+    "id": "hist_019",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "阿尔贝·加缪是谁？",
+    "options": ["第一次世界大战的将军", "立体派画家", "法国作家和哲学家，诺贝尔文学奖得主", "第四共和国的政治家"],
+    "correct_index": 2,
+    "explanation": "阿尔贝·加缪（1913-1960）是法国作家、哲学家和记者，出生于阿尔及利亚。他于1957年获得诺贝尔文学奖。主要作品包括《局外人》和《鼠疫》。"
+  },
+  {
+    "id": "hist_020",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法国历史上共经历了几个共和国？",
+    "options": ["3", "4", "5", "6"],
+    "correct_index": 2,
+    "explanation": "法国共经历了5个共和国：第一（1792年）、第二（1848年）、第三（1870年）、第四（1946年）和第五共和国（1958年至今）。在各共和国之间，法国还经历过君主制和帝制。"
+  },
+  {
+    "id": "hist_021",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法国大革命时期的国王是谁？",
+    "options": ["路易十四", "路易十五", "路易十六", "查理十世"],
+    "correct_index": 2,
+    "explanation": "路易十六是法国大革命时期的国王。他被大革命推翻，并于1793年1月21日被处以断头台。他的专制统治因经济危机和启蒙思想的传播而受到挑战。"
+  },
+  {
+    "id": "hist_022",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "居里夫人是谁？",
+    "options": ["法兰西共和国的第一位女总统", "波兰裔法国科学家，首位获诺贝尔奖的女性", "第一次世界大战的抵抗运动战士", "启蒙时期的女哲学家"],
+    "correct_index": 1,
+    "explanation": "居里夫人（1867-1934）是波兰裔法国物理学家和化学家。她是首位获得诺贝尔奖（1903年物理学奖）的女性，也是首位两度获得诺贝尔奖（1911年化学奖）的人。她发现了钋和镭。"
+  },
+  {
+    "id": "hist_023",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法国5月8日纪念的是什么？",
+    "options": ["第一次世界大战结束", "盟军战胜纳粹德国（欧洲二战结束）", "诺曼底登陆", "巴黎解放"],
+    "correct_index": 1,
+    "explanation": "5月8日是法国的法定假日。它纪念1945年5月8日纳粹德国的投降，标志着第二次世界大战在欧洲的结束（盟军胜利）。"
+  },
+  {
+    "id": "hist_024",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "科西嘉岛位于哪里？",
+    "options": ["大西洋，波尔多沿海", "地中海，普罗旺斯和利古里亚沿海", "英吉利海峡，诺曼底沿海", "北海"],
+    "correct_index": 1,
+    "explanation": "科西嘉是地中海上的一个岛屿。它是法国的一个具有特殊地位的领土集体。其首府为阿雅克肖，是拿破仑·波拿巴的出生地。"
+  },
+  {
+    "id": "hist_025",
+    "category": "histoire_geo_culture",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "以下哪个岛屿是法国的海外省和大区（DROM）？",
+    "options": ["西西里岛", "马耳他", "马提尼克", "加那利群岛"],
+    "correct_index": 2,
+    "explanation": "马提尼克与瓜德罗普、圭亚那、留尼汪和马约特一样，是法国的海外省和大区（DROM）。这些领土的居民是享有完全权利的法国公民。"
+  },
+  {
+    "id": "vie_001",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "拨打哪个紧急电话号码可以联系急救中心（SAMU）？",
+    "options": ["17", "15", "18", "112"],
+    "correct_index": 1,
+    "explanation": "15是急救中心（SAMU）的电话号码，在医疗紧急情况下拨打。17是警察电话，18是消防电话，112是欧洲通用紧急电话号码。"
+  },
+  {
+    "id": "vie_002",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "拨打哪个紧急电话号码可以联系消防队？",
+    "options": ["15", "17", "18", "115"],
+    "correct_index": 2,
+    "explanation": "18是消防队的电话号码，在火灾、事故或其他需要消防员出动的紧急情况下拨打。112也可在整个欧盟范围内使用。"
+  },
+  {
+    "id": "vie_003",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法国每周法定工作时间是多少？",
+    "options": ["32小时", "35小时", "39小时", "40小时"],
+    "correct_index": 1,
+    "explanation": "根据2000年奥布里法，法国的法定工作时间为每周35小时。超出部分为加班时间，必须以报酬或补休方式补偿。"
+  },
+  {
+    "id": "vie_004",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "什么是最低工资（SMIC）？",
+    "options": ["一种固定期限劳动合同", "雇主不得低于此标准支付工资的法定最低工资", "一种受认可的职业文凭", "一种失业补贴"],
+    "correct_index": 1,
+    "explanation": "最低工资（SMIC，全称为跨行业增长最低工资）是法国的法定最低小时工资。任何雇主都不得低于此标准支付工资。它每年调整一次。"
+  },
+  {
+    "id": "vie_005",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "未申报劳动（黑工）是：",
+    "options": ["小型家务活可以容忍", "个人之间合法", "违法行为，雇主和雇员都将受到处罚", "等待合法化的外国人可以从事"],
+    "correct_index": 2,
+    "explanation": "未申报劳动在法国是违法的。它剥夺了劳动者的权利（带薪假、失业金、退休金、医疗保障）。雇主和雇员都面临刑事和经济处罚的风险。"
+  },
+  {
+    "id": "vie_006",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "非紧急健康问题，应该首先联系谁？",
+    "options": ["直接去医院急诊", "家庭医生（全科医生）", "直接找专科医生", "仅去药房"],
+    "correct_index": 1,
+    "explanation": "在法国，协调就医制度要求先咨询家庭医生（在医保局登记的全科医生）。如有需要，他会将患者转介给专科医生。"
+  },
+  {
+    "id": "vie_007",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "在法国，义务教育到几岁？",
+    "options": ["14岁", "15岁", "16岁", "18岁"],
+    "correct_index": 2,
+    "explanation": "在法国，3至16岁为义务教育阶段。16岁以后，年轻人可以选择继续学业，但不再是法律义务。"
+  },
+  {
+    "id": "vie_008",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "在法国，义务教育从几岁开始？",
+    "options": ["2岁", "3岁", "5岁", "6岁"],
+    "correct_index": 1,
+    "explanation": "根据2019年7月26日的法律，法国的义务教育从3岁开始。幼儿园（小班）因此成为义务教育阶段，公立幼儿园仍然免费。"
+  },
+  {
+    "id": "vie_009",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "在法国，高中毕业时获得什么文凭？",
+    "options": ["初中毕业证书", "职业能力证书（CAP）", "高中毕业会考证书（Baccalauréat）", "大学学士学位"],
+    "correct_index": 2,
+    "explanation": "高中毕业会考证书（Baccalauréat，简称「Bac」）是高中毕业时获得的文凭，通常在17-18岁取得。它标志着中等教育的结束，是进入高等教育的通行证。"
+  },
+  {
+    "id": "vie_010",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "小学毕业后学生进入什么学校？",
+    "options": ["直接进入高中", "初中", "大学", "培训中心"],
+    "correct_index": 1,
+    "explanation": "小学（CE1、CE2、CM1、CM2）毕业后，学生在11至15岁之间进入初中（六年级、五年级、四年级、三年级）。之后进入高中准备高中毕业会考。"
+  },
+  {
+    "id": "vie_011",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "医保卡（Carte Vitale）有什么用？",
+    "options": ["在行政机构证明身份", "免费乘坐公共交通", "在医疗保险机构进行身份识别以获得医疗费用报销", "在药房享受折扣"],
+    "correct_index": 2,
+    "explanation": "医保卡是社会保险参保人的身份卡。它用于就医时进行身份识别，方便医疗保险（社会保障）报销医疗费用，无需纸质表格。"
+  },
+  {
+    "id": "vie_012",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "应该向哪个机构申请医疗费用报销？",
+    "options": ["市政厅", "家庭医生", "初级医疗保险基金（CPAM/社会保障局）", "卫生部"],
+    "correct_index": 2,
+    "explanation": "初级医疗保险基金（CPAM），通常称为社会保障局，是负责管理参保人医疗费用报销的机构。"
+  },
+  {
+    "id": "vie_013",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "补充医疗保险（互助保险）有什么用？",
+    "options": ["完全替代社会保障", "报销社会保障未覆盖的医疗费用（自付部分、超标费用）", "在药房支付药品费用", "覆盖工伤事故"],
+    "correct_index": 1,
+    "explanation": "补充医疗保险（互助保险）报销社会保障未承担的全部或部分医疗费用：自付部分、超标诊费、眼镜、牙科等。"
+  },
+  {
+    "id": "vie_014",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "法国就业中心（原就业服务中心Pôle emploi）帮助谁？",
+    "options": ["仅帮助法国公民", "仅帮助招聘企业", "帮助求职者找到工作和领取失业补贴", "帮助退休人员管理养老金"],
+    "correct_index": 2,
+    "explanation": "法国就业中心（原Pôle emploi）协助求职者寻找工作，并管理符合条件者的失业补贴（再就业援助金ARE）发放。"
+  },
+  {
+    "id": "vie_015",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "在法国，婚姻在什么条件下才具有法律效力？",
+    "options": ["在教堂或宗教场所举行", "在市政厅由户籍官员主持民事婚礼", "由家人按照传统习俗组织", "由公证人登记"],
+    "correct_index": 1,
+    "explanation": "在法国，只有在市政厅由户籍官员主持的民事婚礼才具有法律效力。宗教婚礼没有法律效力。宗教仪式可以在民事婚礼之后举行，但不能在之前。"
+  },
+  {
+    "id": "vie_016",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "何时必须到市政厅申报新生儿出生？",
+    "options": ["出生后24小时内", "出生后5天内", "出生后一个月内", "在日历年度结束前"],
+    "correct_index": 1,
+    "explanation": "新生儿出生必须在分娩后5天内向出生地的市政厅申报。这一申报是强制性的，用于建立出生证明。"
+  },
+  {
+    "id": "vie_017",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "父母权利义务要求父母必须：",
+    "options": ["仅提供孩子的经济需求", "确保孩子的教育、健康、安全和成长发展", "独自决定孩子将来从事的职业", "在未经孩子同意的情况下选择其宗教信仰"],
+    "correct_index": 1,
+    "explanation": "父母权利义务是以孩子利益为目的的一系列权利和义务。它要求照顾孩子，保障其安全、健康和教育。"
+  },
+  {
+    "id": "vie_018",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "什么是民事互助契约（PACS）？",
+    "options": ["一种特殊的劳动合同", "一种住房贷款", "两个人为组织共同生活而签订的民事结合", "专为法国境内的外国人设立的身份"],
+    "correct_index": 2,
+    "explanation": "民事互助契约（PACS）是两个成年人（异性或同性）为组织共同生活而签订的合同。它在伴侣之间创设了权利和义务（税务、继承等），但不等同于婚姻。"
+  },
+  {
+    "id": "vie_019",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "合法居留的外国人可以在法国创办企业吗？",
+    "options": ["不可以，只有法国公民才能创办企业", "可以，但仅限于某些行业", "可以，合法居留的外国人可以自由创办企业", "不可以，必须先获得法国国籍"],
+    "correct_index": 2,
+    "explanation": "合法居留的外国人（持有有效居留证）可以在法国创办和管理企业，条件与法国公民相同。"
+  },
+  {
+    "id": "vie_020",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "connaissance",
+    "question": "在法国正式求职的第一步应该做什么？",
+    "options": ["直接联系企业", "在法国就业中心（原Pôle emploi）登记注册", "咨询专业律师", "向市政厅提交简历"],
+    "correct_index": 1,
+    "explanation": "要找工作并享受国家服务（补贴、就业指导），第一步是在法国就业中心登记注册。该机构帮助求职者找工作并管理失业金权利。"
+  },
+  {
+    "id": "sit_001",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "您7岁的孩子以疲劳为由拒绝上学。您该怎么做？",
+    "options": ["让他留在家里，因为健康最重要", "让他自己决定是否上学", "让他必须上学，因为3至16岁为义务教育阶段", "等他有动力了再送他上学"],
+    "correct_index": 2,
+    "explanation": "在法国，3至16岁为义务教育阶段。疲劳或孩子的拒绝都不能成为缺课的理由。如果确实生病，需要提供医生证明。"
+  },
+  {
+    "id": "sit_002",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "您喉咙痛了3天并且发烧了。您该怎么做？",
+    "options": ["直接去医院急诊", "不看医生，等自己好", "去看您的家庭医生", "拨打急救电话（15）"],
+    "correct_index": 2,
+    "explanation": "对于非紧急的健康问题如咽炎或流感，应该咨询家庭医生。医院急诊应留给真正紧急的情况。急救电话用于危及生命的紧急情况。"
+  },
+  {
+    "id": "sit_003",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "您的雇主提议让您没有劳动合同、不申报地工作。您该怎么做？",
+    "options": ["接受，因为您急需要钱", "暂时接受，等待合法化", "拒绝，因为黑工是违法的，会剥夺您的权利", "如果工资高于最低工资就接受"],
+    "correct_index": 2,
+    "explanation": "黑工是违法的。接受黑工，您将失去退休金、失业金、医疗保障和带薪假期的权利。雇主和雇员都面临刑事追诉的风险。"
+  },
+  {
+    "id": "sit_004",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "您因出身原因在工作中遭受歧视。您可以怎么做？",
+    "options": ["您没有任何法律救济途径", "您必须接受这种情况", "您可以向权利维护者、劳动仲裁法庭投诉或报案", "您必须无补偿地辞职"],
+    "correct_index": 2,
+    "explanation": "工作中的歧视是违法的。您可以向权利维护者（独立机构）、劳动仲裁法庭投诉或向警方报案。也有协会可以帮助您。"
+  },
+  {
+    "id": "sit_005",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "您目击了一起有伤者的交通事故。您该怎么做？",
+    "options": ["继续赶路以免被牵连", "拍摄现场并发到社交网络上", "立即拨打15（急救中心）、18（消防队）或112，如果可以的话进行救助", "等待其他人采取行动"],
+    "correct_index": 2,
+    "explanation": "不对处于危险中的人施以援手是违法行为（见死不救罪）。请拨打15（急救中心）、18（消防队）或112。如果可能，请保护现场安全，如果您接受过培训，请进行急救。"
+  },
+  {
+    "id": "sit_006",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "您遭受配偶的暴力行为。您应该怎么做？",
+    "options": ["为了不拆散家庭保持沉默", "在家庭内部解决，不要让警察介入", "到警察局或宪兵队报案，并拨打3919", "等待情况自行改善"],
+    "correct_index": 2,
+    "explanation": "家庭暴力是严重的违法行为。您可以拨打3919（全国家暴热线，免费且匿名），到警察局或宪兵队报案，或前往急诊室。法律保护您。"
+  },
+  {
+    "id": "sit_007",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "您希望在下一次选举中投票。您需要事先做什么？",
+    "options": ["不需要做任何事，无需事先登记即可投票", "到市政厅购买选民证", "到市政厅或通过service-public.fr网站登记选民名册", "向省政府申请投票许可"],
+    "correct_index": 2,
+    "explanation": "要在法国投票，必须是法国公民、年满18岁并在选民名册上登记。登记可在市政厅或service-public.fr网站上进行。选民证随后会自动邮寄给您。"
+  },
+  {
+    "id": "sit_008",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "您的孩子在入学时不会说法语。会怎样？",
+    "options": ["学校可以拒绝不会说法语的孩子入学", "孩子将被退回直到学会法语", "学校接收孩子并设置帮助措施（UPE2A）来帮助其学习法语", "孩子必须通过语言测试才能被录取"],
+    "correct_index": 2,
+    "explanation": "无论儿童的出身或法语水平如何，3至16岁的所有儿童都必须接受义务教育。学校设有专门的措施（UPE2A——新到来非法语母语学生教学单元）来帮助他们融入。"
+  },
+  {
+    "id": "sit_009",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "您失业了。首先应该采取什么步骤？",
+    "options": ["不需要做任何事，补贴会自动发放", "等待国家来信", "尽快到法国就业中心登记，以获得补贴和就业指导", "仅联系前雇主"],
+    "correct_index": 2,
+    "explanation": "失业后，请尽快到法国就业中心（原Pôle emploi）登记注册。登记将启动您的失业金（再就业援助金ARE）权利审批程序（如果您符合条件）。"
+  },
+  {
+    "id": "sit_010",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "您想创办一个协会。需要办什么手续？",
+    "options": ["获得共和国总统的批准", "到省政府申报协会（1901年法律）：手续简单且免费", "通过公证人办理并支付高额费用", "获得相关部门的批准"],
+    "correct_index": 1,
+    "explanation": "在法国，根据1901年7月1日的法律，创办协会简单且免费：只需向省政府或副省政府提交协会章程和负责人名单进行申报即可。结社自由是一项基本权利。"
+  },
+  {
+    "id": "sit_011",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "您在街上捡到一个装满钱的钱包。您该怎么做？",
+    "options": ["留着，捡到就是运气好", "和周围的人分享", "交给警察局或宪兵队", "仅在社交网络上寻找失主"],
+    "correct_index": 2,
+    "explanation": "保留明知属于他人的拾得物等同于盗窃。法国法律规定，必须将拾得物交给警察局或市政厅，以便归还给失主。"
+  },
+  {
+    "id": "sit_012",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "您的住房状况很差（潮湿、暖气坏了），房东不作为。您可以怎么做？",
+    "options": ["接受现状并停止交租", "不打招呼直接搬走，因为住房不适合居住", "联系市政厅、国家住房署（ANAH）或诉诸司法", "什么都不做以避免冲突"],
+    "correct_index": 2,
+    "explanation": "房东有法律义务提供体面的住房。如果房东不履行义务，租户可以联系市政厅、住房补贴基金（CAF）、国家住房署（ANAH）或向法院起诉。相关援助和调解机构可以提供帮助。"
+  },
+  {
+    "id": "sit_013",
+    "category": "institutions",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "您的雇主不遵守劳动合同（不支付加班费、危险的工作条件）。您该怎么做？",
+    "options": ["因为怕失去工作而接受现状", "联系劳动监察局，该机构负责监督劳动法的执行", "无可奈何地辞职", "等待情况自行解决"],
+    "correct_index": 1,
+    "explanation": "劳动监察局负责监督劳动法的执行。您可以匿名向其反映情况。如果您与雇主有争议，也可以向劳动仲裁法庭提起诉讼。"
+  },
+  {
+    "id": "sit_014",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "您的宝宝刚出生。哪项行政手续最为紧急？",
+    "options": ["立即为孩子注册幼儿园", "在5天内到市政厅申报出生", "在离开产科医院前办好孩子的医保卡", "到省政府登记孩子"],
+    "correct_index": 1,
+    "explanation": "出生申报必须在分娩后5天内向出生地的市政厅办理。这是一项强制性手续，用于建立出生证明和孩子的户籍。"
+  },
+  {
+    "id": "sit_015",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "一个朋友给您介绍一份报酬丰厚的黑工。他说这很常见且没有风险。您该怎么做？",
+    "options": ["接受，因为风险很小", "暂时接受，等找到正式工作再说", "拒绝，因为这对您和他都是违法的，而且会剥夺您的社会保障权利", "如果是临时工作就接受"],
+    "correct_index": 2,
+    "explanation": "无论什么情况，黑工都是违法的。它会剥夺您的医疗保障、退休金、失业金和带薪假期。您和雇主都面临经济和刑事处罚的风险。"
+  },
+  {
+    "id": "sit_016",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "您2岁的孩子尚未接种强制疫苗。您应该怎么做？",
+    "options": ["不需要做任何事，在法国疫苗是自愿的", "等孩子长大一些再说", "咨询医生更新疫苗接种计划，强制疫苗必须接种", "申请宗教免除"],
+    "correct_index": 2,
+    "explanation": "在法国，2018年1月1日以后出生的儿童必须接种11种疫苗。不遵守此义务可能导致孩子无法进入托儿所、幼儿园等集体场所。请咨询您的家庭医生。"
+  },
+  {
+    "id": "sit_017",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "您被警察拦下进行身份检查。您有什么权利？",
+    "options": ["在警察检查时您没有任何权利", "您可以拒绝出示证件", "您有权被告知您的权利，包括如果被拘留有权获得律师协助", "您可以忽视警察的指令"],
+    "correct_index": 2,
+    "explanation": "接受检查时，您必须表明身份。如果被拘留，您有权被告知拘留理由、联系亲属、接受医生检查以及获得律师协助。"
+  },
+  {
+    "id": "sit_018",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "您想和伴侣在法国结婚。必须经过什么手续？",
+    "options": ["仅在宗教场所举行宗教婚礼", "先在市政厅办理民事婚礼，宗教婚礼之后可选择性举行", "向省政府提交申请", "仅通过公证人办理"],
+    "correct_index": 1,
+    "explanation": "在法国，只有在市政厅由户籍官员主持的民事婚礼才具有法律效力。宗教婚礼没有法律效力。宗教仪式可以在民事婚礼之后举行，但绝不能在之前。"
+  },
+  {
+    "id": "sit_019",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "您急需经济援助（房租、食物）。您可以向谁求助？",
+    "options": ["作为外国人，您什么都做不了", "联系家庭补贴基金（CAF）、市政社会行动中心（CCAS）或社会援助协会", "回原籍国", "向街上的路人借钱"],
+    "correct_index": 1,
+    "explanation": "法国设有社会援助体系：家庭补贴基金CAF（家庭补贴、住房补贴APL等）、市政社会行动中心CCAS，以及众多协会（红十字会、人民救助会等）可根据您的情况提供帮助。"
+  },
+  {
+    "id": "sit_020",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "您的孩子在学校被同学欺凌。您该怎么做？",
+    "options": ["让孩子忽视同学，不要声张", "直接与其他孩子的家长交涉处理", "联系学校（老师、校长），必要时联系相关部门", "让孩子退学"],
+    "correct_index": 2,
+    "explanation": "校园欺凌是一种受法律惩罚的暴力行为。请立即向老师和校长反映情况。如果问题未得到解决，请拨打3020（全国反欺凌热线）或联系警方。"
+  },
+  {
+    "id": "sit_021",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "您收到了法院传票。您该怎么做？",
+    "options": ["因为不懂语言就忽视传票", "出国躲避传票", "按时出庭或咨询律师寻求帮助", "派家人代替您出庭"],
+    "correct_index": 2,
+    "explanation": "法院传票是法律义务。不响应传票可能导致额外的处罚。您有权获得律师协助（如果经济困难可申请指定律师）。如有需要，可提供翻译。"
+  },
+  {
+    "id": "sit_022",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "您想融入法国社会并提高法语水平。您可以怎么做？",
+    "options": ["什么都做不了，国家不提供法语学习帮助", "参加共和国融入合同（CIR）框架内和其他机构提供的法语课程", "等着自学法语", "只能在昂贵的私立学校付费学习"],
+    "correct_index": 1,
+    "explanation": "共和国融入合同（CIR）为新来者提供免费的法语课程。此外，协会、培训中心和公共机构也提供法语作为外语（FLE）的课程。"
+  },
+  {
+    "id": "sit_023",
+    "category": "droits_devoirs",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "作为家长，您可以因为宗教原因拒绝让孩子参加体育课吗？",
+    "options": ["可以，如果这违反您的宗教价值观", "可以，只要向学校提交书面申请", "不可以，家长不能因宗教原因拒绝学校课程的必修内容", "可以，如果孩子10岁以上且自己也拒绝"],
+    "correct_index": 2,
+    "explanation": "政教分离原则适用于公立学校。家长不能以宗教原因反对官方教学大纲中的课程（体育、生物等）。学校提供面向所有人的中立教育。"
+  },
+  {
+    "id": "sit_024",
+    "category": "vie_en_france",
+    "levels": ["CSP", "CR"],
+    "type": "situation",
+    "question": "您发现自己患有慢性病。在法国如何获得医疗服务？",
+    "options": ["您必须自费支付所有医疗费用，不能报销", "经医生诊断后，您可以通过长期病症（ALD）制度获得100%的医疗费用报销", "作为外国人，您无法获得治疗", "您只能购买私人保险"],
+    "correct_index": 1,
+    "explanation": "患有长期病症（ALD）的人可以通过医疗保险获得与其疾病相关的医疗费用100%报销。需要由家庭医生向初级医疗保险基金（CPAM）提出申请。"
+  },
+  {
+    "id": "sit_025",
+    "category": "droits_devoirs",
+    "levels": ["CR"],
+    "type": "situation",
+    "question": "您希望入籍法国。您的配偶要求您放弃原有文化。法国法律怎么说？",
+    "options": ["法律要求获得国籍时必须放弃原有文化", "法国法律不要求放弃原有文化，但要求认同共和国价值观", "法律要求只实践法国文化", "您的配偶在法律上有权要求您这样做"],
+    "correct_index": 1,
+    "explanation": "法国入籍要求尊重共和国价值观和掌握法语，但不要求放弃原有文化。法国是一个移民国家，各种文化在尊重共同法律的前提下共存。"
+  }
+]

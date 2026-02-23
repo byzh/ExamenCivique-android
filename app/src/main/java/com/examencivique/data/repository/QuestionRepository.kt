@@ -22,10 +22,36 @@ class QuestionRepository(context: Context) {
             val text = context.assets.open("questions.json").use { stream ->
                 InputStreamReader(stream).readText()
             }
-            json.decodeFromString<List<Question>>(text)
+            val questions = json.decodeFromString<List<Question>>(text)
+
+            // Load Chinese translations and merge
+            val zhMap = loadChineseTranslations(context)
+            if (zhMap.isNotEmpty()) {
+                questions.map { q ->
+                    val zh = zhMap[q.id]
+                    if (zh != null) {
+                        q.copy(
+                            questionZh = zh.question,
+                            optionsZh = zh.options,
+                            explanationZh = zh.explanation
+                        )
+                    } else q
+                }
+            } else questions
         } catch (e: Exception) {
             e.printStackTrace()
             emptyList()
+        }
+    }
+
+    private fun loadChineseTranslations(context: Context): Map<String, Question> {
+        return try {
+            val text = context.assets.open("questions_zh.json").use { stream ->
+                InputStreamReader(stream).readText()
+            }
+            json.decodeFromString<List<Question>>(text).associateBy { it.id }
+        } catch (_: Exception) {
+            emptyMap()
         }
     }
 

@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.sp
 import com.examencivique.data.model.QuestionCategory
 import com.examencivique.data.repository.ProgressRepository
 import com.examencivique.data.repository.QuestionRepository
+import com.examencivique.ui.i18n.LocalStrings
 import com.examencivique.ui.theme.FrenchBlue
 import com.examencivique.ui.theme.FrenchRed
 
@@ -34,10 +35,11 @@ import com.examencivique.ui.theme.FrenchRed
 fun StudyScreen(
     questionRepo: QuestionRepository,
     progressRepo: ProgressRepository,
-    onNavigateToCards: (String, String?) -> Unit  // (mode, catKey?)
+    onNavigateToCards: (String, String?) -> Unit
 ) {
     val progress by progressRepo.progress.collectAsState()
     val scrollState = rememberScrollState()
+    val s = LocalStrings.current
 
     Column(
         modifier = Modifier
@@ -47,10 +49,8 @@ fun StudyScreen(
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(20.dp)
     ) {
-        // Title
-        Text("Réviser", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
+        Text(s.studyTitle, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
 
-        // Banner
         Card(
             shape = RoundedCornerShape(16.dp),
             colors = CardDefaults.cardColors(containerColor = Color.Transparent)
@@ -67,9 +67,9 @@ fun StudyScreen(
                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                     Icon(Icons.Filled.Flag, contentDescription = null, tint = Color.White, modifier = Modifier.size(32.dp))
                     Column {
-                        Text("Examen Civique", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 18.sp)
+                        Text(s.studyBannerTitle, color = Color.White, fontWeight = FontWeight.Bold, fontSize = 18.sp)
                         Text(
-                            "${questionRepo.allQuestions.size} questions officielles",
+                            s.studyBannerSubtitle(questionRepo.allQuestions.size),
                             color = Color.White.copy(alpha = 0.85f),
                             fontSize = 12.sp
                         )
@@ -78,13 +78,12 @@ fun StudyScreen(
             }
         }
 
-        // Quick access
-        Text("Accès rapide", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+        Text(s.studyQuickAccess, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
 
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             QuickButton(
                 modifier = Modifier.weight(1f),
-                title = "Toutes",
+                title = s.studyAll,
                 count = "${questionRepo.allQuestions.size}",
                 icon = Icons.Filled.List,
                 color = FrenchBlue
@@ -92,7 +91,7 @@ fun StudyScreen(
 
             QuickButton(
                 modifier = Modifier.weight(1f),
-                title = "À revoir",
+                title = s.studyWeak,
                 count = "${questionRepo.weakQuestions(progress).size}",
                 icon = Icons.Filled.Warning,
                 color = Color(0xFFE65100)
@@ -100,15 +99,14 @@ fun StudyScreen(
 
             QuickButton(
                 modifier = Modifier.weight(1f),
-                title = "Nouvelles",
+                title = s.studyNew,
                 count = "${questionRepo.unansweredQuestions(progress).size}",
                 icon = Icons.Filled.NewReleases,
                 color = Color(0xFF2E7D32)
             ) { onNavigateToCards("UNANSWERED", null) }
         }
 
-        // Categories
-        Text("Par thème", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+        Text(s.studyByTheme, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
 
         QuestionCategory.entries.forEach { cat ->
             CategoryRow(
@@ -156,6 +154,8 @@ private fun CategoryRow(
     accuracy: Double,
     onClick: () -> Unit
 ) {
+    val s = LocalStrings.current
+
     Card(
         modifier = Modifier.fillMaxWidth().clickable(onClick = onClick),
         shape = RoundedCornerShape(14.dp),
@@ -166,7 +166,6 @@ private fun CategoryRow(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(14.dp)
         ) {
-            // Icon circle
             Box(
                 modifier = Modifier
                     .size(44.dp)
@@ -179,7 +178,7 @@ private fun CategoryRow(
 
             Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    Text(category.displayName, fontWeight = FontWeight.SemiBold, fontSize = 14.sp)
+                    Text(category.localizedName(s), fontWeight = FontWeight.SemiBold, fontSize = 14.sp)
                     Spacer(Modifier.weight(1f))
                     if (accuracy > 0) {
                         Text(
@@ -194,9 +193,8 @@ private fun CategoryRow(
                         )
                     }
                 }
-                Text("$count questions", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text(s.studyQuestionCount(count), fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
 
-                // Progress bar
                 LinearProgressIndicator(
                     progress = { accuracy.toFloat() },
                     modifier = Modifier.fillMaxWidth().height(4.dp).clip(RoundedCornerShape(2.dp)),
