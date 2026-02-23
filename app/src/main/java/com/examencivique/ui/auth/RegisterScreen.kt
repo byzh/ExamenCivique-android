@@ -153,13 +153,20 @@ fun RegisterScreen(
         BounceButton(
             onClick = {
                 errorMessage = null
+                val trimmedEmail = email.trim()
+                // Client-side validation
+                if (!android.util.Patterns.EMAIL_ADDRESS.matcher(trimmedEmail).matches()) {
+                    errorMessage = s.authErrorInvalidEmail; return@BounceButton
+                }
+                if (password.length < 6) {
+                    errorMessage = s.authErrorWeakPassword; return@BounceButton
+                }
                 if (password != confirmPassword) {
-                    errorMessage = s.authErrorPasswordMismatch
-                    return@BounceButton
+                    errorMessage = s.authErrorPasswordMismatch; return@BounceButton
                 }
                 isLoading = true
                 scope.launch {
-                    when (val result = authRepo.signUpWithEmail(email.trim(), password)) {
+                    when (val result = authRepo.signUpWithEmail(trimmedEmail, password)) {
                         is AuthResult.Success -> onRegisterSuccess()
                         is AuthResult.Error -> errorMessage = s.authErrorMap(result.message)
                     }

@@ -4,7 +4,6 @@ import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
-import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
@@ -26,7 +25,6 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
-import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -155,13 +153,21 @@ fun LoginScreen(
             Spacer(Modifier.height(8.dp))
         }
 
-        // Login button — Duolingo bouncy style
+        // Login button
         BounceButton(
             onClick = {
                 errorMessage = null
+                val trimmedEmail = email.trim()
+                // Client-side validation
+                if (!android.util.Patterns.EMAIL_ADDRESS.matcher(trimmedEmail).matches()) {
+                    errorMessage = s.authErrorInvalidEmail; return@BounceButton
+                }
+                if (password.length < 6) {
+                    errorMessage = s.authErrorWeakPassword; return@BounceButton
+                }
                 isLoading = true
                 scope.launch {
-                    when (val result = authRepo.signInWithEmail(email.trim(), password)) {
+                    when (val result = authRepo.signInWithEmail(trimmedEmail, password)) {
                         is AuthResult.Success -> onLoginSuccess()
                         is AuthResult.Error -> errorMessage = s.authErrorMap(result.message)
                     }
@@ -239,7 +245,7 @@ fun LoginScreen(
 }
 
 /**
- * Duolingo-style button: raised with bottom shadow, bouncy press animation.
+ * Simple bouncy button with scale animation on press.
  */
 @Composable
 fun BounceButton(
@@ -248,66 +254,62 @@ fun BounceButton(
     enabled: Boolean = true,
     containerColor: Color = FrenchBlue,
     contentColor: Color = Color.White,
-    shadowColor: Color = Color(0xFF001A6E),
+    @Suppress("UNUSED_PARAMETER") shadowColor: Color = Color.Transparent,
     border: Boolean = false,
     content: @Composable RowScope.() -> Unit
 ) {
     var isPressed by remember { mutableStateOf(false) }
     val scale by animateFloatAsState(
-        targetValue = if (isPressed) 0.96f else 1f,
-        animationSpec = spring(
-            dampingRatio = Spring.DampingRatioMediumBouncy,
-            stiffness = Spring.StiffnessMediumLow
-        ),
+        targetValue = if (isPressed) 0.97f else 1f,
+        animationSpec = spring(dampingRatio = Spring.DampingRatioMediumBouncy, stiffness = Spring.StiffnessMedium),
         label = "btnScale"
-    )
-    val yOffset by animateFloatAsState(
-        targetValue = if (isPressed) 2f else 0f,
-        animationSpec = spring(stiffness = Spring.StiffnessMedium),
-        label = "btnY"
-    )
-    val elevation by animateFloatAsState(
-        targetValue = if (isPressed) 1f else 4f,
-        label = "btnElev"
     )
 
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .graphicsLayer {
-                scaleX = scale
-                scaleY = scale
-                translationY = yOffset
-            }
+            .graphicsLayer { scaleX = scale; scaleY = scale }
     ) {
-        Button(
-            onClick = {},
-            enabled = enabled,
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(54.dp)
-                .shadow(elevation.dp, RoundedCornerShape(16.dp), spotColor = shadowColor)
-                .pointerInput(enabled) {
-                    if (enabled) {
-                        detectTapGestures(
-                            onPress = {
-                                isPressed = true
-                                tryAwaitRelease()
-                                isPressed = false
-                                onClick()
+        if (border) {
+            OutlinedButton(
+                onClick = { if (enabled) onClick() },
+                enabled = enabled,
+                modifier = Modifier.fillMaxWidth().height(54.dp),
+                shape = RoundedCornerShape(16.dp),
+                colors = ButtonDefaults.outlinedButtonColors(contentColor = contentColor),
+                interactionSource = remember { androidx.compose.foundation.interaction.MutableInteractionSource() }.also {
+                    LaunchedEffect(it) {
+                        it.interactions.collect { interaction ->
+                            when (interaction) {
+                                is androidx.compose.foundation.interaction.PressInteraction.Press -> isPressed = true
+                                is androidx.compose.foundation.interaction.PressInteraction.Release,
+                                is androidx.compose.foundation.interaction.PressInteraction.Cancel -> isPressed = false
                             }
-                        )
+                        }
                     }
                 },
-            shape = RoundedCornerShape(16.dp),
-            colors = ButtonDefaults.buttonColors(
-                containerColor = containerColor,
-                contentColor = contentColor,
-                disabledContainerColor = containerColor.copy(alpha = 0.4f)
-            ),
-            border = if (border) ButtonDefaults.outlinedButtonBorder(enabled) else null,
-            contentPadding = PaddingValues(horizontal = 24.dp),
-            content = content
-        )
+                content = content
+            )
+        } else {
+            Button(
+                onClick = { if (enabled) onClick() },
+                enabled = enabled,
+                modifier = Modifier.fillMaxWidth().height(54.dp),
+                shape = RoundedCornerShape(16.dp),
+                colors = ButtonDefaults.buttonColors(containerColor = containerColor, contentColor = contentColor),
+                interactionSource = remember { androidx.compose.foundation.interaction.MutableInteractionSource() }.also {
+                    LaunchedEffect(it) {
+                        it.interactions.collect { interaction ->
+                            when (interaction) {
+                                is androidx.compose.foundation.interaction.PressInteraction.Press -> isPressed = true
+                                is androidx.compose.foundation.interaction.PressInteraction.Release,
+                                is androidx.compose.foundation.interaction.PressInteraction.Cancel -> isPressed = false
+                            }
+                        }
+                    }
+                },
+                content = content
+            )
+        }
     }
 }

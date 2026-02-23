@@ -59,6 +59,7 @@ class AuthRepository(private val context: Context) {
     suspend fun signInWithGoogle(activityContext: Context): AuthResult {
         return try {
             val webClientId = context.getString(R.string.default_web_client_id)
+
             val googleIdOption = GetGoogleIdOption.Builder()
                 .setFilterByAuthorizedAccounts(false)
                 .setServerClientId(webClientId)
