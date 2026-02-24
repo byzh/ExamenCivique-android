@@ -10,7 +10,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.Flag
-import androidx.compose.material.icons.filled.List
+import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.NewReleases
 import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.*
@@ -86,7 +86,7 @@ fun StudyScreen(
                 modifier = Modifier.weight(1f),
                 title = s.studyAll,
                 count = "${questions.size}",
-                icon = Icons.Filled.List,
+                icon = Icons.AutoMirrored.Filled.List,
                 color = FrenchBlue
             ) { onNavigateToCards("ALL", null) }
 

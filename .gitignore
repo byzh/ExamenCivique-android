@@ -20,3 +20,10 @@ app/google-services.json
 *.jks
 *.keystore
 secrets.properties
+
+# Build scripts
+generate_*.py
+play_store_icon_512*.png
+
+# Claude Code
+.claude/
